@@ -1,0 +1,986 @@
+{
+  "schema_version": "1.3.0",
+  "records": [
+    {
+      "id": "E001",
+      "name": "室内欠曝黄光人像",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "室内暖灯",
+        "subject": "人像",
+        "problems": [
+          "欠曝",
+          "偏黄",
+          "高ISO噪点"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M001",
+        "M008",
+        "M010"
+      ],
+      "required_behaviors": [
+        "先中和白平衡",
+        "人物局部提亮",
+        "锐化降档"
+      ],
+      "forbidden_behaviors": [
+        "直接叠加大幅暖色温",
+        "全局高锐化"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E002",
+      "name": "窗边逆光人像",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "逆光",
+        "subject": "人像",
+        "problems": [
+          "主体偏暗",
+          "窗外高光接近剪切"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M048"
+      ],
+      "required_behaviors": [
+        "主体蒙版",
+        "高光保护"
+      ],
+      "forbidden_behaviors": [
+        "全局阴影拉满",
+        "抹平逆光方向"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E003",
+      "name": "树荫绿脸",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "树荫",
+        "subject": "人像",
+        "problems": [
+          "面部偏绿",
+          "背景亮斑"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M049",
+        "M026"
+      ],
+      "required_behaviors": [
+        "面部色调向洋红微调",
+        "压背景亮斑"
+      ],
+      "forbidden_behaviors": [
+        "全局去绿导致环境枯黄"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E004",
+      "name": "阴天冷白皮自然版",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "阴天",
+        "subject": "人像",
+        "problems": [
+          "肤色偏黄",
+          "画面发灰"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M008",
+        "M002"
+      ],
+      "required_behaviors": [
+        "背景与人物分离处理"
+      ],
+      "forbidden_behaviors": [
+        "把肤色推成青灰"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E005",
+      "name": "深肤色人像",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "自然光",
+        "subject": "人像",
+        "problems": [
+          "需要清透",
+          "肤色较深"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M010",
+        "M002"
+      ],
+      "required_behaviors": [
+        "保持肤色明度层次",
+        "只做中性校正"
+      ],
+      "forbidden_behaviors": [
+        "以冷白皮为目标",
+        "全局大幅抬曝光"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E006",
+      "name": "近景皮肤纹理",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "柔光",
+        "subject": "人像",
+        "problems": [
+          "毛孔明显",
+          "希望自然"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M007",
+        "M010"
+      ],
+      "required_behaviors": [
+        "人脸纹理负值",
+        "眼发边缘保留"
+      ],
+      "forbidden_behaviors": [
+        "全局磨皮",
+        "清晰度大幅正值"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E007",
+      "name": "阴天黄灰海水",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "阴天海边",
+        "subject": "人像+海水",
+        "problems": [
+          "海水偏黄",
+          "画面无距离感"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M032",
+        "M031"
+      ],
+      "required_behaviors": [
+        "海水 HSL 局部处理",
+        "人物肤色保护"
+      ],
+      "forbidden_behaviors": [
+        "全局拉蓝"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E008",
+      "name": "晴天海边高光",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "晴天海边",
+        "subject": "人像+天空",
+        "problems": [
+          "天空高光强",
+          "人物阴影深"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M031",
+        "M030"
+      ],
+      "required_behaviors": [
+        "天空与人物分离"
+      ],
+      "forbidden_behaviors": [
+        "全局 HDR 感"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E009",
+      "name": "云层戏剧",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "多云",
+        "subject": "天空+建筑",
+        "problems": [
+          "云层平",
+          "建筑偏暗"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M034",
+        "M033"
+      ],
+      "required_behaviors": [
+        "天空蒙版去朦胧",
+        "建筑局部提阴影"
+      ],
+      "forbidden_behaviors": [
+        "人物清晰度跟随天空"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E010",
+      "name": "日落高光剪切",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "日落",
+        "subject": "天空+人像",
+        "problems": [
+          "太阳附近接近剪切",
+          "人物偏暗"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M035",
+        "M048",
+        "M034"
+      ],
+      "required_behaviors": [
+        "先降曝光保护太阳",
+        "人物局部恢复"
+      ],
+      "forbidden_behaviors": [
+        "全局色温拉满"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E011",
+      "name": "粉紫晚霞",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "海边晚霞",
+        "subject": "天空",
+        "problems": [
+          "晚霞颜色淡"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M036"
+      ],
+      "required_behaviors": [
+        "克制洋红分级",
+        "检查色带"
+      ],
+      "forbidden_behaviors": [
+        "高饱和造成脏紫"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E012",
+      "name": "雨后森林人像",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "雨后森林",
+        "subject": "人像+绿植",
+        "problems": [
+          "绿植偏黄",
+          "空气层次弱"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M027",
+        "M026"
+      ],
+      "required_behaviors": [
+        "压黄绿饱和",
+        "局部去朦胧"
+      ],
+      "forbidden_behaviors": [
+        "肤色跟随绿色偏青"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E013",
+      "name": "森系荧光绿",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "森林",
+        "subject": "绿植",
+        "problems": [
+          "绿色过饱和"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M026",
+        "M027",
+        "M028"
+      ],
+      "required_behaviors": [
+        "HSL 绿饱和回退"
+      ],
+      "forbidden_behaviors": [
+        "只降全局饱和度"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E014",
+      "name": "蓝调城市夜景",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "蓝调时刻",
+        "subject": "建筑",
+        "problems": [
+          "灯光过曝",
+          "暗部噪点"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M037"
+      ],
+      "required_behaviors": [
+        "降噪优先于锐化",
+        "灯光高光保护"
+      ],
+      "forbidden_behaviors": [
+        "黑位压死"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E015",
+      "name": "霓虹夜景人像",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "霓虹街道",
+        "subject": "人像",
+        "problems": [
+          "肤色被霓虹污染",
+          "高ISO噪点"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M024"
+      ],
+      "required_behaviors": [
+        "人物白平衡局部校正",
+        "降噪"
+      ],
+      "forbidden_behaviors": [
+        "全局去色"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E016",
+      "name": "直闪聚会人像",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "室内直闪",
+        "subject": "人像",
+        "problems": [
+          "额头反光",
+          "背景过黑"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M023"
+      ],
+      "required_behaviors": [
+        "面部高光局部压制",
+        "背景保持深色"
+      ],
+      "forbidden_behaviors": [
+        "全局抬阴影"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E017",
+      "name": "暖光餐厅美食",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "餐厅暖光",
+        "subject": "美食",
+        "problems": [
+          "偏黄",
+          "油光强"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M038"
+      ],
+      "required_behaviors": [
+        "先中和过量黄偏",
+        "压油光高光"
+      ],
+      "forbidden_behaviors": [
+        "继续大幅升色温"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E018",
+      "name": "白色日料清透",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "自然光餐厅",
+        "subject": "美食",
+        "problems": [
+          "白盘偏灰",
+          "食材颜色淡"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M039"
+      ],
+      "required_behaviors": [
+        "白盘中性化",
+        "局部纹理"
+      ],
+      "forbidden_behaviors": [
+        "白盘剪切"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E019",
+      "name": "奶油甜品",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "下午茶",
+        "subject": "甜品",
+        "problems": [
+          "原图暗淡",
+          "希望奶油感"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M040",
+        "M004"
+      ],
+      "required_behaviors": [
+        "柔对比",
+        "甜品局部自然饱和"
+      ],
+      "forbidden_behaviors": [
+        "全局锐度过高"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E020",
+      "name": "白底电商产品",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "白底棚拍",
+        "subject": "产品",
+        "problems": [
+          "背景不够白",
+          "产品边缘灰"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M042"
+      ],
+      "required_behaviors": [
+        "背景与主体分离",
+        "品牌色色差检查"
+      ],
+      "forbidden_behaviors": [
+        "剪掉透明或白色产品边缘"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E021",
+      "name": "暗金香水",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "黑底棚拍",
+        "subject": "香水",
+        "problems": [
+          "金属高光杂乱",
+          "玻璃不通透"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M043",
+        "M045"
+      ],
+      "required_behaviors": [
+        "高光渐变保护",
+        "主体纹理局部化"
+      ],
+      "forbidden_behaviors": [
+        "全局过度去朦胧"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E022",
+      "name": "金属科技产品",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "棚拍",
+        "subject": "金属产品",
+        "problems": [
+          "金属偏黄",
+          "细节弱"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M044"
+      ],
+      "required_behaviors": [
+        "中性灰校正",
+        "局部纹理"
+      ],
+      "forbidden_behaviors": [
+        "金属整体变蓝"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E023",
+      "name": "低清截图",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "社媒截图",
+        "subject": "人像",
+        "problems": [
+          "分辨率低",
+          "压缩噪点"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M002",
+        "M004"
+      ],
+      "required_behaviors": [
+        "细节参数乘0.65",
+        "禁止假细节"
+      ],
+      "forbidden_behaviors": [
+        "高锐化",
+        "高去朦胧",
+        "重颗粒"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "E024",
+      "name": "套图一致性",
+      "status": "research_acceptance_case",
+      "input": {
+        "scene": "同一组写真",
+        "subject": "人像",
+        "problems": [
+          "曝光与白平衡不一致"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M001"
+      ],
+      "required_behaviors": [
+        "逐张中性校正后共享风格向量",
+        "以肤色和白点做锚"
+      ],
+      "forbidden_behaviors": [
+        "直接复制全部参数不复核"
+      ],
+      "execution_scope": "recommendation_and_manual_review_only",
+      "media_type": "photo"
+    },
+    {
+      "id": "V001",
+      "name": "多镜头曝光白平衡不一致",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "旅行Vlog",
+        "subject": "人像+风景",
+        "problems": [
+          "镜头间曝光与白平衡不一致"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M001",
+        "M002"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V002",
+      "name": "室内黄光口播",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "室内暖灯",
+        "subject": "人像",
+        "problems": [
+          "脸黄",
+          "高ISO噪点"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M001",
+        "M008"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V003",
+      "name": "雨夜街道噪点",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "雨夜街道",
+        "subject": "城市",
+        "problems": [
+          "高ISO噪点",
+          "灯光过曝"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M024",
+        "M025",
+        "M021"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V004",
+      "name": "霓虹移动人像",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "霓虹街道",
+        "subject": "人像",
+        "problems": [
+          "肤色被霓虹污染",
+          "人物移动"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M024",
+        "M021"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V005",
+      "name": "森林跟拍",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "雨后森林",
+        "subject": "人像+绿植",
+        "problems": [
+          "绿植偏黄",
+          "镜头移动"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M027",
+        "M026"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V006",
+      "name": "天空渐变航拍",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "蓝调时刻",
+        "subject": "天空+建筑",
+        "problems": [
+          "天空渐变",
+          "压缩色带"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M033",
+        "M034",
+        "M037"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V007",
+      "name": "日落人物剪影",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "日落",
+        "subject": "天空+人像",
+        "problems": [
+          "太阳附近接近剪切",
+          "人物偏暗"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M035",
+        "M036"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V008",
+      "name": "餐厅美食短视频",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "餐厅暖光",
+        "subject": "美食",
+        "problems": [
+          "偏黄",
+          "油光强"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M038",
+        "M039"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V009",
+      "name": "产品转台视频",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "棚拍",
+        "subject": "产品",
+        "problems": [
+          "品牌色需一致",
+          "高光渐变"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M042",
+        "M044",
+        "M045"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V010",
+      "name": "低码率社媒视频",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "社媒视频",
+        "subject": "人像",
+        "problems": [
+          "压缩噪点",
+          "分辨率低"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M001",
+        "M002"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V011",
+      "name": "黑白纪录片",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "街头纪实",
+        "subject": "人像+街景",
+        "problems": [
+          "需要统一黑白层次"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M051",
+        "M052"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    },
+    {
+      "id": "V012",
+      "name": "青橙叙事短片",
+      "status": "research_acceptance_case",
+      "media_type": "video",
+      "input": {
+        "scene": "城市剧情",
+        "subject": "人像",
+        "problems": [
+          "需要青橙分离",
+          "多镜头一致性"
+        ]
+      },
+      "expected_candidate_ids": [
+        "M020",
+        "M015",
+        "M021"
+      ],
+      "required_behaviors": [],
+      "forbidden_behaviors": [],
+      "required_temporal_behaviors": [
+        "先逐镜头校正再共享风格",
+        "回放检查闪烁色带和跳色",
+        "导出前核对音频帧率与色彩标签"
+      ],
+      "forbidden_temporal_behaviors": [
+        "逐帧自动漂移参数",
+        "把照片滑杆当视频软件等价值"
+      ],
+      "execution_scope": "video_guidance_and_manual_review_only"
+    }
+  ]
+}

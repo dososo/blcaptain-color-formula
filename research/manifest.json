@@ -1,0 +1,63 @@
+{
+  "schema_version": "4.8.1",
+  "dataset_status": "research_and_manual_guidance_only",
+  "generated_from": "audited v1.1-v4.0 synthesis plus v4.8 read-only Xiaohongshu candidate observations",
+  "excluded_content": [
+    "60 third-party raw formulas",
+    "third-party media",
+    "commercial presets or LUTs",
+    "unverified executable promotion of the 52 research styles"
+  ],
+  "files": [
+    {
+      "path": "research_candidates.json",
+      "records": 52,
+      "sha256": "51689bcb31aa1aa0fa1fec76194d7b26946f0c8604c38461167d2769a4fd5f38"
+    },
+    {
+      "path": "recommendation_rules.json",
+      "records": 52,
+      "sha256": "c6ade73852827cdce50605f457bf15306c783fb62fd9966b260ab852a8e1d8f9"
+    },
+    {
+      "path": "sources.json",
+      "records": 36,
+      "sha256": "78f0441bd96081688368dbfc415c79d76c88e2e46dbc4238e25b7aecacbb5015"
+    },
+    {
+      "path": "platform_seeds.json",
+      "records": 156,
+      "sha256": "0f16a5e7b91671a7ea7373fc14c6edd1d521171fa8303e8336f9ef2d217acdb0"
+    },
+    {
+      "path": "guidance_seeds.json",
+      "records": 156,
+      "sha256": "577fc9fa8287e122341b13de950b54864db76e5ed6991c052805f374750a20c4"
+    },
+    {
+      "path": "video_guidance_seeds.json",
+      "records": 156,
+      "sha256": "517bdb8176d81f2bdb71e405cd0120203f7d95f9563fff380c590bb6657c5a3e"
+    },
+    {
+      "path": "evaluation_scenarios.json",
+      "records": 36,
+      "sha256": "5ac40661b26f68455712016eb03e16b9895437449d9010f4a3649235adc8a93b"
+    },
+    {
+      "path": "xiaohongshu-v3-candidates.json",
+      "records": 225,
+      "sha256": "f1728b8fe726b44fa521ef3b09a947ab9f086307c1c51fa94964e3800f501350"
+    },
+    {
+      "path": "graduated_candidates.json",
+      "records": 29,
+      "sha256": "de0f6eed5d33558e7198827a1ff6b8cabf4c022bd589a2506d718b33b902994b"
+    },
+    {
+      "path": "promotion_queue.json",
+      "records": 28,
+      "sha256": "f60bfa7a29f534d04e06e28ae9dc606c28039ceecf34a452462a37600b3708c0"
+    }
+  ]
+}

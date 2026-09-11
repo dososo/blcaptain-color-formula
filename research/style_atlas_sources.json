@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "BLCaptain 全配方风格图谱素材许可与输入类型账本；媒体本体始终存放在 Git 仓库外。",
+  "sources": [
+    {
+      "id": "A-P01",
+      "status": "approved-internal",
+      "media_type": "photo",
+      "input_class": "sRGB-display-referred",
+      "landing_page": "https://www.pexels.com/photo/woman-in-white-dress-holding-white-flower-14034433/",
+      "provider": "Pexels",
+      "creator": null,
+      "creator_status": "公开发布前需从落地页固化作者名",
+      "license": {
+        "name": "Pexels License",
+        "url": "https://www.pexels.com/legal-pages/license/"
+      },
+      "local_path": null,
+      "source_sha256": "a921104d70de145ebe5ca89cdef6fdc64ae6e04a98c52f0397d9e000314c7cc7",
+      "attribution_text": null,
+      "modification_notice": "将用于调色前后技术演示，不暗示人物为 BLCaptain 背书。",
+      "rights_risks": [
+        "可识别人物",
+        "不得暗示代言或负面使用"
+      ],
+      "release_allowed": false,
+      "stored_in_git": false,
+      "asset_binding": "A-P01",
+      "availability": "external-not-bundled"
+    },
+    {
+      "id": "A-P02",
+      "status": "approved-internal",
+      "media_type": "photo",
+      "input_class": "sRGB-display-referred",
+      "landing_page": "https://www.pexels.com/photo/portrait-of-a-woman-in-a-white-dress-20695347/",
+      "provider": "Pexels",
+      "creator": null,
+      "creator_status": "公开发布前需从落地页固化作者名",
+      "license": {
+        "name": "Pexels License",
+        "url": "https://www.pexels.com/legal-pages/license/"
+      },
+      "local_path": null,
+      "source_sha256": "cc0a951612da7f901d8eaabd35b92bbc413849b7a29e6320279008e78d38a287",
+      "attribution_text": null,
+      "modification_notice": "将用于调色前后技术演示，不暗示人物为 BLCaptain 背书。",
+      "rights_risks": [
+        "可识别人物",
+        "不得暗示代言或负面使用"
+      ],
+      "release_allowed": false,
+      "stored_in_git": false,
+      "asset_binding": "A-P02",
+      "availability": "external-not-bundled"
+    },
+    {
+      "id": "A-P03",
+      "status": "approved-internal",
+      "media_type": "photo",
+      "input_class": "sRGB-display-referred",
+      "landing_page": "https://www.pexels.com/photo/woman-in-white-dress-holding-a-bouquet-of-flowers-8943105/",
+      "provider": "Pexels",
+      "creator": null,
+      "creator_status": "公开发布前需从落地页固化作者名",
+      "license": {
+        "name": "Pexels License",
+        "url": "https://www.pexels.com/legal-pages/license/"
+      },
+      "local_path": null,
+      "source_sha256": "2510daaed26054e94428bdb651cb2836e10330ded1d504ebcc0cf264a79c45a1",
+      "attribution_text": null,
+      "modification_notice": "将用于调色前后技术演示，不暗示人物为 BLCaptain 背书。",
+      "rights_risks": [
+        "可识别人物",
+        "不得暗示代言或负面使用"
+      ],
+      "release_allowed": false,
+      "stored_in_git": false,
+      "asset_binding": "A-P03",
+      "availability": "external-not-bundled"
+    },
+    {
+      "id": "A-V01",
+      "status": "approved-public",
+      "media_type": "video",
+      "input_class": "Rec.709-SDR-display-referred",
+      "landing_page": "https://commons.wikimedia.org/wiki/File:Flowers_in_park.webm",
+      "provider": "Wikimedia Commons",
+      "creator": "YouTube 用户 Editor",
+      "license": {
+        "name": "CC BY 3.0",
+        "url": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      "local_path": null,
+      "source_sha256": "ef41fbc0317613900939a115fb7820fca0dbfa6c951a25682e1a2fe14ef2f778",
+      "attribution_text": "Flowers in park，作者：YouTube 用户 Editor，来源：Wikimedia Commons，CC BY 3.0。",
+      "modification_notice": "原 WebM 已转为 Rec.709 H.264 MP4，并将生成 BLCaptain 调色前后演示。",
+      "rights_risks": [
+        "背景人物不可被描述为产品代言人"
+      ],
+      "release_allowed": true,
+      "stored_in_git": false,
+      "asset_binding": "A-V01",
+      "availability": "external-not-bundled"
+    },
+    {
+      "id": "B-V01",
+      "status": "approved-public",
+      "media_type": "video-sequence",
+      "input_class": "Rec.709-scene-linear-OpenEXR-16bit",
+      "landing_page": "https://mango.blender.org/production/4-tb-original-4k-footage-available-as-cc-by/",
+      "provider": "Blender Foundation / Xiph.org",
+      "creator": "Tears of Steel production",
+      "license": {
+        "name": "CC BY 3.0",
+        "url": "https://creativecommons.org/licenses/by/3.0/"
+      },
+      "local_path": null,
+      "source_sha256": "f31fa71a59f00349974e68f40c1057194457caf839f8cf54de522b1e1e92d3dd",
+      "attribution_text": "Tears of Steel original footage，(CC) Blender Foundation | mango.blender.org，CC BY 3.0。片段：04_5a 第 00300–00371 帧。",
+      "modification_notice": "从 1920×1012、16-bit Rec.709 scene-linear OpenEXR 序列截取 72 帧，以明确的 linear Rec.709→BT.709 display 变换生成 3 秒中性基线，再用于 BLCaptain 技术调色演示。",
+      "rights_risks": [
+        "演员仍保留肖像权与隐私权",
+        "仅选无可识别人脸的手臂与设备镜头",
+        "不得暗示演员代言",
+        "商业广告用途需另行复核",
+        "不得下载完整 4 TB 数据集"
+      ],
+      "release_scope": "GitHub 技术演示、测试、教程；不作演员商业宣传",
+      "release_allowed": true,
+      "stored_in_git": false,
+      "asset_binding": "B-V01",
+      "availability": "external-not-bundled"
+    },
+    {
+      "id": "U-P01",
+      "status": "approved-internal",
+      "media_type": "photo",
+      "input_class": "sRGB-display-referred-grey-original",
+      "landing_page": "private-source:U-P01",
+      "provider": "队长提供",
+      "creator": null,
+      "creator_status": "公开展示前需补作者、来源与公开许可证明",
+      "license": {
+        "name": "仅获本项目本地验证授权；公开许可待确认",
+        "url": null
+      },
+      "local_path": null,
+      "source_sha256": "31fd4da6b7387d70c5fb24b24550e2a48b0d60de79b7dea149fcede3d86bade5",
+      "attribution_text": null,
+      "modification_notice": "以 sRGB 显示参照灰片生成本地全配方调色图谱；不覆盖原文件。",
+      "rights_risks": [
+        "不是带相机曲线元数据的真实 Log",
+        "公开署名与许可未闭环"
+      ],
+      "release_allowed": false,
+      "stored_in_git": false,
+      "asset_binding": "U-P01",
+      "availability": "external-not-bundled"
+    },
+    {
+      "id": "U-V01",
+      "status": "approved-internal",
+      "media_type": "video",
+      "input_class": "Rec.709-SDR-display-referred-grey-original",
+      "landing_page": "private-source:U-V01",
+      "provider": "队长提供",
+      "creator": null,
+      "creator_status": "公开展示前需补作者、来源、人物肖像与公开许可证明",
+      "license": {
+        "name": "仅获本项目本地验证授权；公开许可待确认",
+        "url": null
+      },
+      "local_path": null,
+      "source_sha256": "b3a2f5491ac6276b256bf662468dab74b6bf9383190e31cfde8d5618b56ba387",
+      "attribution_text": null,
+      "modification_notice": "以 Rec.709 SDR 显示参照灰片生成本地全配方视频图谱；保留音频且不覆盖原文件。",
+      "rights_risks": [
+        "含可识别人脸",
+        "不是带相机 Log 曲线元数据的原始视频",
+        "公开署名、肖像与许可未闭环"
+      ],
+      "release_allowed": false,
+      "stored_in_git": false,
+      "asset_binding": "U-V01",
+      "availability": "external-not-bundled"
+    },
+    {
+      "id": "B-P01-P06",
+      "status": "candidate-license-review",
+      "media_type": "photo",
+      "input_class": "OpenEXR-HDR-and-ACES2065-1-mixed",
+      "landing_page": "https://openexr.com/en/latest/test_images/",
+      "provider": "Academy Software Foundation OpenEXR Project",
+      "creator": null,
+      "license": {
+        "name": "逐文件许可待核验；软件 BSD-3-Clause 不能替代图片许可",
+        "url": null
+      },
+      "local_path": null,
+      "source_sha256": null,
+      "attribution_text": null,
+      "modification_notice": null,
+      "rights_risks": [
+        "图片逐文件版权未闭环"
+      ],
+      "release_allowed": false,
+      "stored_in_git": false,
+      "asset_binding": "B-P01-P06",
+      "availability": "external-not-bundled"
+    },
+    {
+      "id": "B-P07-P18",
+      "status": "candidate-license-review",
+      "media_type": "photo-raw",
+      "input_class": "camera-RAW-mixed",
+      "landing_page": "https://raw.pixls.us/",
+      "provider": "raw.pixls.us / PIXLS.US",
+      "creator": null,
+      "license": {
+        "name": "只接受逐文件明确 CC0 的样本",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "local_path": null,
+      "source_sha256": null,
+      "attribution_text": null,
+      "modification_notice": null,
+      "rights_risks": [
+        "历史样本含非 CC0 文件",
+        "相机 RAW 不等于视频 Log"
+      ],
+      "release_allowed": false,
+      "stored_in_git": false,
+      "asset_binding": "B-P07-P18",
+      "availability": "external-not-bundled"
+    }
+  ],
+  "distribution_mode": "public-export"
+}

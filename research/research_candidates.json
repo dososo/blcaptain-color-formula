@@ -1,0 +1,4418 @@
+{
+  "schema_version": "1.3.0",
+  "records": [
+    {
+      "id": "M001",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "中性校正基线",
+      "aliases": [],
+      "family": "基础校正",
+      "description": "先恢复可用的曝光、白平衡和动态范围，不主动制造风格。",
+      "applicability": {
+        "scenes": [
+          "全部"
+        ],
+        "subjects": [
+          "全部"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.1,
+        "highlights": -25,
+        "shadows": 20,
+        "whites": 5,
+        "blacks": -5,
+        "contrast": 3,
+        "temperature_intent": 0,
+        "tint_intent": 0,
+        "saturation": 0,
+        "vibrance": 5,
+        "clarity": 0,
+        "texture": 0,
+        "dehaze": 0,
+        "sharpening": 8,
+        "noise_reduction": 5,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A01",
+          "A02",
+          "A03",
+          "A04"
+        ],
+        "legacy_inspiration_record_count": 0,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M002",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "清透去灰",
+      "aliases": [],
+      "family": "清透",
+      "description": "压高光、恢复暗部、轻提局部对比和自然饱和度，避免把锐化当作清晰度。",
+      "applicability": {
+        "scenes": [
+          "阴天",
+          "日常",
+          "旅行"
+        ],
+        "subjects": [
+          "人像",
+          "静物",
+          "风景"
+        ],
+        "exclusions": [
+          "严重雾霾且主体肤色占比高"
+        ]
+      },
+      "intent_vector": {
+        "exposure_ev": 0.15,
+        "highlights": -32,
+        "shadows": 24,
+        "whites": 8,
+        "blacks": -8,
+        "contrast": 10,
+        "temperature_intent": 0,
+        "tint_intent": 0,
+        "saturation": 0,
+        "vibrance": 14,
+        "clarity": 8,
+        "texture": 5,
+        "dehaze": 4,
+        "sharpening": 14,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "C14",
+          "B01",
+          "A01",
+          "A04"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M003",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "明亮空气感",
+      "aliases": [],
+      "family": "空气感",
+      "description": "整体轻提亮，压高光、抬阴影、降低硬对比，保持白色干净。",
+      "applicability": {
+        "scenes": [
+          "室内柔光",
+          "阴天",
+          "日常"
+        ],
+        "subjects": [
+          "人像",
+          "家居",
+          "静物"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.35,
+        "highlights": -28,
+        "shadows": 32,
+        "whites": 12,
+        "blacks": 6,
+        "contrast": -14,
+        "temperature_intent": -3,
+        "tint_intent": 0,
+        "saturation": -4,
+        "vibrance": 8,
+        "clarity": -4,
+        "texture": 0,
+        "dehaze": 0,
+        "sharpening": 8,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "C08",
+          "C12",
+          "C15"
+        ],
+        "legacy_inspiration_record_count": 4,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M004",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "奶油清透",
+      "aliases": [
+        "奶油空气感"
+      ],
+      "family": "奶油",
+      "description": "高明度、柔对比、低至中饱和，黑位微抬但保留主体边缘。",
+      "applicability": {
+        "scenes": [
+          "咖啡馆",
+          "室内",
+          "日常"
+        ],
+        "subjects": [
+          "人像",
+          "甜品",
+          "静物"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.3,
+        "highlights": -20,
+        "shadows": 35,
+        "whites": 10,
+        "blacks": 10,
+        "contrast": -20,
+        "temperature_intent": 4,
+        "tint_intent": 5,
+        "saturation": -8,
+        "vibrance": 5,
+        "clarity": -7,
+        "texture": -4,
+        "dehaze": 0,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 6
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "B04",
+          "C08",
+          "C15",
+          "C16"
+        ],
+        "legacy_inspiration_record_count": 6,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M005",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "韩系冷奶油",
+      "aliases": [],
+      "family": "奶油",
+      "description": "奶油的柔和明亮叠加轻冷白平衡，肤色局部回暖避免青灰。",
+      "applicability": {
+        "scenes": [
+          "室内",
+          "阴天",
+          "韩系人像"
+        ],
+        "subjects": [
+          "人像",
+          "静物"
+        ],
+        "exclusions": [
+          "钨丝灯严重偏黄且无法局部修正"
+        ]
+      },
+      "intent_vector": {
+        "exposure_ev": 0.38,
+        "highlights": -24,
+        "shadows": 30,
+        "whites": 10,
+        "blacks": 8,
+        "contrast": -18,
+        "temperature_intent": -16,
+        "tint_intent": 7,
+        "saturation": -10,
+        "vibrance": 4,
+        "clarity": -6,
+        "texture": -5,
+        "dehaze": 0,
+        "sharpening": 6,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 5
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "C12",
+          "C16",
+          "B02",
+          "C08"
+        ],
+        "legacy_inspiration_record_count": 4,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M006",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "日系柔奶油",
+      "aliases": [],
+      "family": "奶油",
+      "description": "偏暖白、柔反差、轻抬阴影，避免日系被误做成过曝和无黑位。",
+      "applicability": {
+        "scenes": [
+          "旅行",
+          "街景",
+          "室内"
+        ],
+        "subjects": [
+          "人像",
+          "风景",
+          "静物"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.28,
+        "highlights": -12,
+        "shadows": 28,
+        "whites": 12,
+        "blacks": 8,
+        "contrast": -17,
+        "temperature_intent": 8,
+        "tint_intent": -2,
+        "saturation": -7,
+        "vibrance": 7,
+        "clarity": -5,
+        "texture": 0,
+        "dehaze": 0,
+        "sharpening": 0,
+        "noise_reduction": 0,
+        "grain": 4,
+        "vignette": 0,
+        "fade": 7
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "C16"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M007",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "粉白人像",
+      "aliases": [],
+      "family": "人像肤色",
+      "description": "整体降黄、轻偏粉，保持嘴唇与腮红的色相，不用全局暴力降饱和。",
+      "applicability": {
+        "scenes": [
+          "室内人像",
+          "自拍",
+          "阴天"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.3,
+        "highlights": -24,
+        "shadows": 28,
+        "whites": 8,
+        "blacks": 2,
+        "contrast": -12,
+        "temperature_intent": -10,
+        "tint_intent": 12,
+        "saturation": -8,
+        "vibrance": 4,
+        "clarity": -8,
+        "texture": -10,
+        "dehaze": 0,
+        "sharpening": 5,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "eyes_teeth_neutrality_review",
+        "background_separation_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "C13",
+          "C01"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M008",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "自然冷白皮",
+      "aliases": [],
+      "family": "人像肤色",
+      "description": "比社交平台极端冷白皮更克制：先校正黄偏，再提亮肤色中间调。",
+      "applicability": {
+        "scenes": [
+          "室内",
+          "户外人像"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.2,
+        "highlights": -28,
+        "shadows": 24,
+        "whites": 6,
+        "blacks": -2,
+        "contrast": -8,
+        "temperature_intent": -12,
+        "tint_intent": 6,
+        "saturation": -6,
+        "vibrance": 3,
+        "clarity": -5,
+        "texture": -7,
+        "dehaze": 0,
+        "sharpening": 4,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "C01",
+          "C13",
+          "A01",
+          "A05"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M009",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "清冷高级白",
+      "aliases": [],
+      "family": "人像肤色",
+      "description": "适合偏时尚的人像，背景冷灰、肤色中性偏粉，保留黑色服装层次。",
+      "applicability": {
+        "scenes": [
+          "时尚人像",
+          "城市",
+          "阴天"
+        ],
+        "subjects": [
+          "人像",
+          "穿搭"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.05,
+        "highlights": -30,
+        "shadows": 18,
+        "whites": 5,
+        "blacks": -10,
+        "contrast": 8,
+        "temperature_intent": -18,
+        "tint_intent": 8,
+        "saturation": -14,
+        "vibrance": 2,
+        "clarity": 4,
+        "texture": 2,
+        "dehaze": 0,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "C01",
+          "B01"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M010",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "自然暖肤负片",
+      "aliases": [],
+      "family": "胶片",
+      "description": "自然暖肤、柔和高光、中等饱和，强调肤色而非橙黄滤镜。",
+      "applicability": {
+        "scenes": [
+          "自然光人像",
+          "婚礼",
+          "旅行"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.2,
+        "highlights": -20,
+        "shadows": 18,
+        "whites": 6,
+        "blacks": 4,
+        "contrast": -8,
+        "temperature_intent": 9,
+        "tint_intent": 5,
+        "saturation": -3,
+        "vibrance": 8,
+        "clarity": -4,
+        "texture": -3,
+        "dehaze": 0,
+        "sharpening": 5,
+        "noise_reduction": 0,
+        "grain": 10,
+        "vignette": 0,
+        "fade": 4
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A09",
+          "B03",
+          "C16"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M011",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "法式暖棕",
+      "aliases": [],
+      "family": "暖棕",
+      "description": "柔反差、暖棕中间调、略压饱和，适合咖啡馆与穿搭。",
+      "applicability": {
+        "scenes": [
+          "咖啡馆",
+          "室内",
+          "秋日"
+        ],
+        "subjects": [
+          "人像",
+          "静物",
+          "穿搭"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.12,
+        "highlights": -24,
+        "shadows": 20,
+        "whites": 2,
+        "blacks": 4,
+        "contrast": -15,
+        "temperature_intent": 12,
+        "tint_intent": -3,
+        "saturation": -12,
+        "vibrance": 5,
+        "clarity": -2,
+        "texture": 0,
+        "dehaze": 0,
+        "sharpening": 0,
+        "noise_reduction": 0,
+        "grain": 7,
+        "vignette": 0,
+        "fade": 5
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "C16",
+          "C02"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M012",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "奶茶暖棕",
+      "aliases": [],
+      "family": "暖棕",
+      "description": "低饱和、高明度、偏暖棕，肤色局部减少橙色饱和。",
+      "applicability": {
+        "scenes": [
+          "下午茶",
+          "室内",
+          "咖啡馆"
+        ],
+        "subjects": [
+          "人像",
+          "饮品",
+          "甜品"
+        ],
+        "exclusions": [
+          "原图已严重偏橙"
+        ]
+      },
+      "intent_vector": {
+        "exposure_ev": 0.2,
+        "highlights": -28,
+        "shadows": 22,
+        "whites": 8,
+        "blacks": 6,
+        "contrast": -20,
+        "temperature_intent": 16,
+        "tint_intent": 4,
+        "saturation": -18,
+        "vibrance": -5,
+        "clarity": -5,
+        "texture": 0,
+        "dehaze": 0,
+        "sharpening": 0,
+        "noise_reduction": 0,
+        "grain": 5,
+        "vignette": 0,
+        "fade": 8
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "C16",
+          "C15"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M013",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "克制低彩纪实",
+      "aliases": [],
+      "family": "胶片纪实",
+      "description": "低饱和、冷阴影、克制高光，适合纪实、时尚、建筑与产品。",
+      "applicability": {
+        "scenes": [
+          "城市",
+          "纪实",
+          "时尚",
+          "室内"
+        ],
+        "subjects": [
+          "人像",
+          "建筑",
+          "产品"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.0,
+        "highlights": -18,
+        "shadows": 8,
+        "whites": -3,
+        "blacks": -8,
+        "contrast": 8,
+        "temperature_intent": -5,
+        "tint_intent": -2,
+        "saturation": -20,
+        "vibrance": 2,
+        "clarity": 5,
+        "texture": 4,
+        "dehaze": 3,
+        "sharpening": 8,
+        "noise_reduction": 0,
+        "grain": 8,
+        "vignette": 4,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A08",
+          "B03",
+          "C04",
+          "A10"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M014",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "青绿反差负片",
+      "aliases": [],
+      "family": "胶片纪实",
+      "description": "较硬色彩对比、青绿阴影、偏洋红高光和轻褪色中间调。",
+      "applicability": {
+        "scenes": [
+          "街景",
+          "旅行",
+          "生活记录"
+        ],
+        "subjects": [
+          "人像",
+          "建筑",
+          "风景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.05,
+        "highlights": -8,
+        "shadows": -8,
+        "whites": 4,
+        "blacks": -12,
+        "contrast": 18,
+        "temperature_intent": -3,
+        "tint_intent": 5,
+        "saturation": 2,
+        "vibrance": 8,
+        "clarity": 3,
+        "texture": 2,
+        "dehaze": 0,
+        "sharpening": 0,
+        "noise_reduction": 0,
+        "grain": 14,
+        "vignette": 5,
+        "fade": 5
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": {
+          "shadows": {
+            "hue_degrees": 175,
+            "saturation": 8
+          },
+          "midtones": {
+            "hue_degrees": 45,
+            "saturation": 3
+          },
+          "highlights": {
+            "hue_degrees": 330,
+            "saturation": 6
+          },
+          "balance": 0
+        }
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A07",
+          "B04",
+          "C11"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M015",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "柔和叙事电影",
+      "aliases": [],
+      "family": "电影",
+      "description": "低对比、低饱和、柔高光，适合叙事和肤色稳定，不追求社交平台高冲击。",
+      "applicability": {
+        "scenes": [
+          "叙事人像",
+          "视频帧",
+          "阴天"
+        ],
+        "subjects": [
+          "人像",
+          "风景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.0,
+        "highlights": -30,
+        "shadows": 20,
+        "whites": -8,
+        "blacks": 5,
+        "contrast": -18,
+        "temperature_intent": -2,
+        "tint_intent": 1,
+        "saturation": -22,
+        "vibrance": 0,
+        "clarity": -4,
+        "texture": -2,
+        "dehaze": 0,
+        "sharpening": 0,
+        "noise_reduction": 0,
+        "grain": 7,
+        "vignette": 0,
+        "fade": 6
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A02",
+          "A03",
+          "A09",
+          "B03"
+        ],
+        "legacy_inspiration_record_count": 1,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M016",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "高彩纯净风景",
+      "aliases": [],
+      "family": "胶片",
+      "description": "高饱和、高锐度、深色纯净，适合风景与产品，避免用于近距离肤色。",
+      "applicability": {
+        "scenes": [
+          "晴天风景",
+          "产品",
+          "建筑"
+        ],
+        "subjects": [
+          "风景",
+          "产品"
+        ],
+        "exclusions": [
+          "近景人像",
+          "红色占比很高的场景"
+        ]
+      },
+      "intent_vector": {
+        "exposure_ev": -0.05,
+        "highlights": -18,
+        "shadows": 10,
+        "whites": 8,
+        "blacks": -12,
+        "contrast": 16,
+        "temperature_intent": 4,
+        "tint_intent": 1,
+        "saturation": 18,
+        "vibrance": 22,
+        "clarity": 8,
+        "texture": 8,
+        "dehaze": 5,
+        "sharpening": 15,
+        "noise_reduction": 0,
+        "grain": 5,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A09",
+          "B04",
+          "B05"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M017",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "轻复古胶片",
+      "aliases": [],
+      "family": "胶片",
+      "description": "轻微褪色、颗粒和暖高光，不破坏现代相机的清晰度。",
+      "applicability": {
+        "scenes": [
+          "日常",
+          "咖啡馆",
+          "旅行"
+        ],
+        "subjects": [
+          "人像",
+          "静物",
+          "街景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.08,
+        "highlights": -12,
+        "shadows": 12,
+        "whites": -3,
+        "blacks": 5,
+        "contrast": -5,
+        "temperature_intent": 4,
+        "tint_intent": 2,
+        "saturation": -8,
+        "vibrance": 4,
+        "clarity": -1,
+        "texture": 0,
+        "dehaze": 0,
+        "sharpening": 5,
+        "noise_reduction": 0,
+        "grain": 12,
+        "vignette": 4,
+        "fade": 9
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "C04",
+          "A10",
+          "C03"
+        ],
+        "legacy_inspiration_record_count": 4,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M018",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "复古美式颗粒",
+      "aliases": [],
+      "family": "美式复古",
+      "description": "偏暖、柔对比、明显颗粒与纹理，保留暗部而非一味压黑。",
+      "applicability": {
+        "scenes": [
+          "街景",
+          "夜晚",
+          "室内"
+        ],
+        "subjects": [
+          "人像",
+          "建筑",
+          "静物"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.12,
+        "highlights": -18,
+        "shadows": 10,
+        "whites": -4,
+        "blacks": -7,
+        "contrast": 4,
+        "temperature_intent": 10,
+        "tint_intent": 7,
+        "saturation": -5,
+        "vibrance": 5,
+        "clarity": 3,
+        "texture": 8,
+        "dehaze": 0,
+        "sharpening": 0,
+        "noise_reduction": 0,
+        "grain": 22,
+        "vignette": 6,
+        "fade": 6
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B05",
+          "C09",
+          "C10"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M019",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "港风怀旧电影",
+      "aliases": [],
+      "family": "电影",
+      "description": "偏暖灯光、深黑位、局部红色突出、轻颗粒，适合旧街与夜晚。",
+      "applicability": {
+        "scenes": [
+          "旧街",
+          "夜晚",
+          "室内暖灯"
+        ],
+        "subjects": [
+          "人像",
+          "街景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.25,
+        "highlights": -12,
+        "shadows": -8,
+        "whites": 2,
+        "blacks": -18,
+        "contrast": 16,
+        "temperature_intent": 8,
+        "tint_intent": 8,
+        "saturation": 4,
+        "vibrance": 7,
+        "clarity": 5,
+        "texture": 4,
+        "dehaze": 0,
+        "sharpening": 0,
+        "noise_reduction": 0,
+        "grain": 18,
+        "vignette": 8,
+        "fade": 3
+      },
+      "advanced_intent": {
+        "hsl": [
+          {
+            "band": "red",
+            "hue": -3,
+            "saturation": 12,
+            "luminance": -4
+          },
+          {
+            "band": "orange",
+            "hue": -4,
+            "saturation": 4,
+            "luminance": 4
+          },
+          {
+            "band": "green",
+            "hue": 12,
+            "saturation": -22,
+            "luminance": -5
+          }
+        ],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "C09",
+          "B01"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M020",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "青橙电影",
+      "aliases": [],
+      "family": "电影",
+      "description": "冷阴影与暖肤色分离，中等对比；禁止把天空和肤色推成纯青与纯橙。",
+      "applicability": {
+        "scenes": [
+          "城市",
+          "旅行",
+          "叙事人像"
+        ],
+        "subjects": [
+          "人像",
+          "建筑"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.08,
+        "highlights": -22,
+        "shadows": 12,
+        "whites": 2,
+        "blacks": -10,
+        "contrast": 14,
+        "temperature_intent": 2,
+        "tint_intent": 3,
+        "saturation": -4,
+        "vibrance": 10,
+        "clarity": 4,
+        "texture": 0,
+        "dehaze": 3,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 8,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": {
+          "shadows": {
+            "hue_degrees": 195,
+            "saturation": 12
+          },
+          "midtones": {
+            "hue_degrees": 35,
+            "saturation": 4
+          },
+          "highlights": {
+            "hue_degrees": 45,
+            "saturation": 10
+          },
+          "balance": 8
+        }
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B01",
+          "A03",
+          "A05"
+        ],
+        "legacy_inspiration_record_count": 0,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M021",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "低饱和冷电影",
+      "aliases": [],
+      "family": "电影",
+      "description": "整体低彩、冷灰、轻压明度，依靠明暗与空间层次制造距离感。",
+      "applicability": {
+        "scenes": [
+          "阴天",
+          "海边",
+          "城市"
+        ],
+        "subjects": [
+          "人像",
+          "风景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.18,
+        "highlights": -26,
+        "shadows": 8,
+        "whites": -5,
+        "blacks": -10,
+        "contrast": 9,
+        "temperature_intent": -12,
+        "tint_intent": -2,
+        "saturation": -25,
+        "vibrance": -6,
+        "clarity": 2,
+        "texture": 0,
+        "dehaze": 2,
+        "sharpening": 0,
+        "noise_reduction": 0,
+        "grain": 7,
+        "vignette": 0,
+        "fade": 4
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B01",
+          "B03",
+          "C11"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M022",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "暗调高级",
+      "aliases": [],
+      "family": "暗调",
+      "description": "保留高光锚点、压中间调和黑位，暗部仍需有纹理与主体分离。",
+      "applicability": {
+        "scenes": [
+          "低光",
+          "夜晚",
+          "室内"
+        ],
+        "subjects": [
+          "人像",
+          "产品",
+          "静物"
+        ],
+        "exclusions": [
+          "高 ISO 严重噪点且没有 RAW"
+        ]
+      },
+      "intent_vector": {
+        "exposure_ev": -0.45,
+        "highlights": -20,
+        "shadows": 8,
+        "whites": 4,
+        "blacks": -20,
+        "contrast": 18,
+        "temperature_intent": -4,
+        "tint_intent": 0,
+        "saturation": -12,
+        "vibrance": 2,
+        "clarity": 7,
+        "texture": 5,
+        "dehaze": 5,
+        "sharpening": 8,
+        "noise_reduction": 10,
+        "grain": 7,
+        "vignette": 10,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "B05",
+          "C11"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M023",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "闪光 CCD",
+      "aliases": [],
+      "family": "复古闪光",
+      "description": "高亮主体、深背景、偏冷白平衡、颗粒与轻色偏，重点保护面部高光。",
+      "applicability": {
+        "scenes": [
+          "直闪",
+          "夜店",
+          "室内聚会"
+        ],
+        "subjects": [
+          "人像",
+          "静物"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.05,
+        "highlights": -38,
+        "shadows": -18,
+        "whites": 10,
+        "blacks": -20,
+        "contrast": 20,
+        "temperature_intent": -8,
+        "tint_intent": 6,
+        "saturation": 3,
+        "vibrance": 8,
+        "clarity": 7,
+        "texture": 4,
+        "dehaze": 0,
+        "sharpening": 9,
+        "noise_reduction": 4,
+        "grain": 24,
+        "vignette": 9,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "face_highlight_review",
+        "red_eye_review",
+        "background_depth_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "C05",
+          "A10",
+          "A04"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M024",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "夜景霓虹",
+      "aliases": [],
+      "family": "夜景",
+      "description": "控制霓虹高光、抬人物暗部、保留蓝紫与红橙分离，降噪先于锐化。",
+      "applicability": {
+        "scenes": [
+          "霓虹街道",
+          "夜景人像"
+        ],
+        "subjects": [
+          "人像",
+          "城市"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.1,
+        "highlights": -45,
+        "shadows": 22,
+        "whites": -5,
+        "blacks": -12,
+        "contrast": 13,
+        "temperature_intent": -10,
+        "tint_intent": 8,
+        "saturation": -6,
+        "vibrance": 13,
+        "clarity": 5,
+        "texture": 0,
+        "dehaze": 4,
+        "sharpening": 4,
+        "noise_reduction": 22,
+        "grain": 5,
+        "vignette": 7,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "B05",
+          "A04",
+          "A05"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M025",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "雨夜蓝绿",
+      "aliases": [],
+      "family": "夜景",
+      "description": "冷蓝绿环境、暖肤色或暖灯点缀，湿地反射作为高光结构。",
+      "applicability": {
+        "scenes": [
+          "雨夜",
+          "湿地反光",
+          "城市"
+        ],
+        "subjects": [
+          "人像",
+          "街景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.2,
+        "highlights": -35,
+        "shadows": 15,
+        "whites": -4,
+        "blacks": -16,
+        "contrast": 15,
+        "temperature_intent": -16,
+        "tint_intent": -5,
+        "saturation": -12,
+        "vibrance": 10,
+        "clarity": 6,
+        "texture": 0,
+        "dehaze": 5,
+        "sharpening": 5,
+        "noise_reduction": 18,
+        "grain": 7,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": {
+          "shadows": {
+            "hue_degrees": 188,
+            "saturation": 14
+          },
+          "midtones": {
+            "hue_degrees": 205,
+            "saturation": 6
+          },
+          "highlights": {
+            "hue_degrees": 38,
+            "saturation": 7
+          },
+          "balance": -5
+        }
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B01",
+          "B03",
+          "A05"
+        ],
+        "legacy_inspiration_record_count": 1,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M026",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "阴天森系",
+      "aliases": [],
+      "family": "森系",
+      "description": "压黄绿饱和、冷却白平衡、柔化高光，避免全画面发青。",
+      "applicability": {
+        "scenes": [
+          "阴天",
+          "森林",
+          "公园"
+        ],
+        "subjects": [
+          "人像",
+          "绿植"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.08,
+        "highlights": -30,
+        "shadows": 18,
+        "whites": -3,
+        "blacks": -5,
+        "contrast": 4,
+        "temperature_intent": -10,
+        "tint_intent": -4,
+        "saturation": -15,
+        "vibrance": 3,
+        "clarity": 1,
+        "texture": 4,
+        "dehaze": 2,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 5,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [
+          {
+            "band": "yellow",
+            "hue": 18,
+            "saturation": -20,
+            "luminance": 2
+          },
+          {
+            "band": "green",
+            "hue": 15,
+            "saturation": -22,
+            "luminance": -4
+          },
+          {
+            "band": "cyan",
+            "hue": -8,
+            "saturation": -8,
+            "luminance": 0
+          }
+        ],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B04",
+          "B03"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M027",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "雨后森林",
+      "aliases": [],
+      "family": "森系",
+      "description": "湿润高光、深绿但不荧光，局部去朦胧增强空气层次。",
+      "applicability": {
+        "scenes": [
+          "雨后",
+          "森林",
+          "溪流"
+        ],
+        "subjects": [
+          "人像",
+          "绿植",
+          "风景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.02,
+        "highlights": -35,
+        "shadows": 12,
+        "whites": -2,
+        "blacks": -10,
+        "contrast": 9,
+        "temperature_intent": -8,
+        "tint_intent": -6,
+        "saturation": -12,
+        "vibrance": 5,
+        "clarity": 3,
+        "texture": 6,
+        "dehaze": 6,
+        "sharpening": 6,
+        "noise_reduction": 0,
+        "grain": 5,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B04",
+          "B03",
+          "A04"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M028",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "日系森林",
+      "aliases": [],
+      "family": "森系",
+      "description": "明亮阴影、低饱和绿、轻冷和柔雾，人物肤色保持温和。",
+      "applicability": {
+        "scenes": [
+          "阴天森林",
+          "公园",
+          "雨后"
+        ],
+        "subjects": [
+          "人像",
+          "绿植"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.18,
+        "highlights": -34,
+        "shadows": 30,
+        "whites": 3,
+        "blacks": 8,
+        "contrast": -8,
+        "temperature_intent": -8,
+        "tint_intent": -3,
+        "saturation": -18,
+        "vibrance": 6,
+        "clarity": -4,
+        "texture": 1,
+        "dehaze": -2,
+        "sharpening": 5,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 6
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "B04"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M029",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "秋日红棕",
+      "aliases": [],
+      "family": "季节",
+      "description": "暖色温、压绿提橙红、深黑位和轻颗粒，避免肤色与树叶同色。",
+      "applicability": {
+        "scenes": [
+          "秋日",
+          "落叶",
+          "街景"
+        ],
+        "subjects": [
+          "人像",
+          "树叶",
+          "建筑"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.12,
+        "highlights": -30,
+        "shadows": 5,
+        "whites": 0,
+        "blacks": -12,
+        "contrast": 12,
+        "temperature_intent": 14,
+        "tint_intent": 5,
+        "saturation": -3,
+        "vibrance": 10,
+        "clarity": 4,
+        "texture": 5,
+        "dehaze": 0,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 10,
+        "vignette": 5,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [
+          {
+            "band": "red",
+            "hue": -5,
+            "saturation": 8,
+            "luminance": -4
+          },
+          {
+            "band": "orange",
+            "hue": -8,
+            "saturation": 12,
+            "luminance": 4
+          },
+          {
+            "band": "yellow",
+            "hue": -20,
+            "saturation": -5,
+            "luminance": -6
+          },
+          {
+            "band": "green",
+            "hue": 25,
+            "saturation": -35,
+            "luminance": -8
+          }
+        ],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "C06",
+          "C02",
+          "C03"
+        ],
+        "legacy_inspiration_record_count": 4,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M030",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "盛夏高彩",
+      "aliases": [],
+      "family": "夏日",
+      "description": "提升蓝绿与阳光感，保持肤色不过橙，防止高饱和色块断层。",
+      "applicability": {
+        "scenes": [
+          "晴天",
+          "户外",
+          "乐园"
+        ],
+        "subjects": [
+          "人像",
+          "风景"
+        ],
+        "exclusions": [
+          "JPEG 已高饱和"
+        ]
+      },
+      "intent_vector": {
+        "exposure_ev": 0.18,
+        "highlights": -24,
+        "shadows": 20,
+        "whites": 9,
+        "blacks": -5,
+        "contrast": 12,
+        "temperature_intent": 2,
+        "tint_intent": 0,
+        "saturation": 8,
+        "vibrance": 20,
+        "clarity": 5,
+        "texture": 3,
+        "dehaze": 3,
+        "sharpening": 8,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B04",
+          "C08"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M031",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "夏日海边清透",
+      "aliases": [],
+      "family": "海边",
+      "description": "提升海水蓝和亮度，压高光、抬人物阴影，避免皮肤与海水同时冷化。",
+      "applicability": {
+        "scenes": [
+          "海边",
+          "晴天"
+        ],
+        "subjects": [
+          "人像",
+          "海水",
+          "天空"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.2,
+        "highlights": -32,
+        "shadows": 27,
+        "whites": 8,
+        "blacks": -4,
+        "contrast": 9,
+        "temperature_intent": -5,
+        "tint_intent": -1,
+        "saturation": 1,
+        "vibrance": 12,
+        "clarity": 5,
+        "texture": 3,
+        "dehaze": 4,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [
+          {
+            "band": "blue",
+            "hue": -8,
+            "saturation": 14,
+            "luminance": -6
+          },
+          {
+            "band": "cyan",
+            "hue": -6,
+            "saturation": 10,
+            "luminance": 2
+          },
+          {
+            "band": "orange",
+            "hue": 0,
+            "saturation": -3,
+            "luminance": 5
+          }
+        ],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B04",
+          "B05",
+          "B01"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M032",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "冷灰海水",
+      "aliases": [],
+      "family": "海边",
+      "description": "灰蓝、低彩、轻暗、带距离感，保持海面层次与人物肤色分离。",
+      "applicability": {
+        "scenes": [
+          "阴天海边",
+          "城市水岸"
+        ],
+        "subjects": [
+          "人像",
+          "海水"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.12,
+        "highlights": -25,
+        "shadows": 12,
+        "whites": -6,
+        "blacks": -7,
+        "contrast": 5,
+        "temperature_intent": -14,
+        "tint_intent": -3,
+        "saturation": -20,
+        "vibrance": -4,
+        "clarity": 3,
+        "texture": 0,
+        "dehaze": 3,
+        "sharpening": 0,
+        "noise_reduction": 0,
+        "grain": 5,
+        "vignette": 0,
+        "fade": 4
+      },
+      "advanced_intent": {
+        "hsl": [
+          {
+            "band": "blue",
+            "hue": -6,
+            "saturation": -18,
+            "luminance": -3
+          },
+          {
+            "band": "cyan",
+            "hue": 0,
+            "saturation": -12,
+            "luminance": 1
+          },
+          {
+            "band": "yellow",
+            "hue": 0,
+            "saturation": -20,
+            "luminance": 0
+          }
+        ],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B01",
+          "B05"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M033",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "薄荷蓝天空",
+      "aliases": [],
+      "family": "天空",
+      "description": "天空偏青蓝、明亮清爽，云层保持中性，人物区域减少冷色影响。",
+      "applicability": {
+        "scenes": [
+          "晴天",
+          "海边",
+          "城市天空"
+        ],
+        "subjects": [
+          "天空",
+          "风景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.12,
+        "highlights": -30,
+        "shadows": 18,
+        "whites": 7,
+        "blacks": -4,
+        "contrast": 10,
+        "temperature_intent": -10,
+        "tint_intent": -5,
+        "saturation": 0,
+        "vibrance": 15,
+        "clarity": 5,
+        "texture": 0,
+        "dehaze": 6,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [
+          {
+            "band": "cyan",
+            "hue": -12,
+            "saturation": 12,
+            "luminance": 5
+          },
+          {
+            "band": "blue",
+            "hue": -10,
+            "saturation": 18,
+            "luminance": -5
+          }
+        ],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B05",
+          "B04"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M034",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "戏剧云层",
+      "aliases": [],
+      "family": "天空",
+      "description": "压天空高光、增强云层微对比与去朦胧，禁止对人物全局加同等结构。",
+      "applicability": {
+        "scenes": [
+          "多云",
+          "暴雨前",
+          "日落云层"
+        ],
+        "subjects": [
+          "天空",
+          "建筑"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.05,
+        "highlights": -48,
+        "shadows": 16,
+        "whites": -8,
+        "blacks": -7,
+        "contrast": 18,
+        "temperature_intent": -3,
+        "tint_intent": 0,
+        "saturation": 2,
+        "vibrance": 14,
+        "clarity": 10,
+        "texture": 8,
+        "dehaze": 12,
+        "sharpening": 6,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "sky_banding_review",
+        "subject_detail_review",
+        "ground_tonality_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B04",
+          "A04",
+          "A05"
+        ],
+        "legacy_inspiration_record_count": 1,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M035",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "黄金日落",
+      "aliases": [],
+      "family": "日落",
+      "description": "压住太阳与云层高光，提暖黄橙，暗部维持轮廓。",
+      "applicability": {
+        "scenes": [
+          "日落",
+          "黄金时刻"
+        ],
+        "subjects": [
+          "天空",
+          "人像",
+          "风景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.1,
+        "highlights": -55,
+        "shadows": 18,
+        "whites": -7,
+        "blacks": -9,
+        "contrast": 12,
+        "temperature_intent": 18,
+        "tint_intent": 4,
+        "saturation": 4,
+        "vibrance": 16,
+        "clarity": 4,
+        "texture": 0,
+        "dehaze": 5,
+        "sharpening": 5,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [
+          {
+            "band": "orange",
+            "hue": -4,
+            "saturation": 12,
+            "luminance": 2
+          },
+          {
+            "band": "yellow",
+            "hue": -12,
+            "saturation": 8,
+            "luminance": -3
+          },
+          {
+            "band": "blue",
+            "hue": 0,
+            "saturation": -8,
+            "luminance": -4
+          }
+        ],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "B04",
+          "B05"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M036",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "粉紫日落",
+      "aliases": [],
+      "family": "日落",
+      "description": "在黄金日落基础上加入克制洋红与紫色高光，避免天空脏紫。",
+      "applicability": {
+        "scenes": [
+          "晚霞",
+          "海边日落"
+        ],
+        "subjects": [
+          "天空",
+          "人像"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.08,
+        "highlights": -52,
+        "shadows": 20,
+        "whites": -5,
+        "blacks": -7,
+        "contrast": 8,
+        "temperature_intent": 12,
+        "tint_intent": 14,
+        "saturation": 2,
+        "vibrance": 14,
+        "clarity": 2,
+        "texture": 0,
+        "dehaze": 4,
+        "sharpening": 4,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": {
+          "shadows": {
+            "hue_degrees": 225,
+            "saturation": 5
+          },
+          "midtones": {
+            "hue_degrees": 35,
+            "saturation": 7
+          },
+          "highlights": {
+            "hue_degrees": 320,
+            "saturation": 10
+          },
+          "balance": 15
+        }
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "B05",
+          "B03"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M037",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "蓝调时刻",
+      "aliases": [],
+      "family": "天空",
+      "description": "低曝光、蓝色环境、暖灯点缀，保留暗部和建筑灯光细节。",
+      "applicability": {
+        "scenes": [
+          "日落后",
+          "城市夜景",
+          "海边"
+        ],
+        "subjects": [
+          "城市",
+          "人像",
+          "风景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.28,
+        "highlights": -38,
+        "shadows": 14,
+        "whites": -4,
+        "blacks": -14,
+        "contrast": 14,
+        "temperature_intent": -16,
+        "tint_intent": 4,
+        "saturation": -8,
+        "vibrance": 11,
+        "clarity": 5,
+        "texture": 0,
+        "dehaze": 5,
+        "sharpening": 5,
+        "noise_reduction": 14,
+        "grain": 0,
+        "vignette": 5,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B01",
+          "A04",
+          "B05"
+        ],
+        "legacy_inspiration_record_count": 1,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M038",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "暖香美食",
+      "aliases": [],
+      "family": "美食",
+      "description": "暖白平衡、压高光、提高橙黄自然饱和度和局部纹理，让食物显得新鲜但不油腻。",
+      "applicability": {
+        "scenes": [
+          "餐厅",
+          "室内暖光",
+          "自然光"
+        ],
+        "subjects": [
+          "美食",
+          "饮品"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.16,
+        "highlights": -34,
+        "shadows": 24,
+        "whites": 7,
+        "blacks": -4,
+        "contrast": -8,
+        "temperature_intent": 12,
+        "tint_intent": 5,
+        "saturation": 2,
+        "vibrance": 16,
+        "clarity": 5,
+        "texture": 8,
+        "dehaze": 0,
+        "sharpening": 8,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [
+          {
+            "band": "red",
+            "hue": -2,
+            "saturation": 5,
+            "luminance": 2
+          },
+          {
+            "band": "orange",
+            "hue": -4,
+            "saturation": 10,
+            "luminance": 5
+          },
+          {
+            "band": "yellow",
+            "hue": -8,
+            "saturation": 4,
+            "luminance": 2
+          },
+          {
+            "band": "green",
+            "hue": 3,
+            "saturation": -8,
+            "luminance": 0
+          }
+        ],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "C07",
+          "A03"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M039",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "清透美食",
+      "aliases": [],
+      "family": "美食",
+      "description": "中性偏亮、白色干净、纹理清楚，适合日料、轻食、白色餐具。",
+      "applicability": {
+        "scenes": [
+          "自然光餐厅",
+          "白色桌面"
+        ],
+        "subjects": [
+          "美食",
+          "餐具"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.25,
+        "highlights": -30,
+        "shadows": 22,
+        "whites": 11,
+        "blacks": -3,
+        "contrast": 3,
+        "temperature_intent": 3,
+        "tint_intent": 2,
+        "saturation": -2,
+        "vibrance": 12,
+        "clarity": 6,
+        "texture": 10,
+        "dehaze": 0,
+        "sharpening": 9,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "B03"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M040",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "下午茶奶油",
+      "aliases": [],
+      "family": "美食",
+      "description": "奶油高明度、柔对比、暖白色，甜品颜色轻提，桌面不过曝。",
+      "applicability": {
+        "scenes": [
+          "下午茶",
+          "咖啡馆"
+        ],
+        "subjects": [
+          "甜品",
+          "饮品",
+          "桌面"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.3,
+        "highlights": -32,
+        "shadows": 28,
+        "whites": 8,
+        "blacks": 7,
+        "contrast": -16,
+        "temperature_intent": 7,
+        "tint_intent": 4,
+        "saturation": -5,
+        "vibrance": 10,
+        "clarity": -1,
+        "texture": 5,
+        "dehaze": 0,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B02",
+          "C15"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M041",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "咖啡暖棕",
+      "aliases": [],
+      "family": "美食",
+      "description": "深棕、暖光、轻颗粒和稳定黑位，适合咖啡、木质空间和烘焙。",
+      "applicability": {
+        "scenes": [
+          "咖啡馆",
+          "木质室内"
+        ],
+        "subjects": [
+          "咖啡",
+          "烘焙",
+          "静物"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.08,
+        "highlights": -25,
+        "shadows": 15,
+        "whites": 0,
+        "blacks": -10,
+        "contrast": 8,
+        "temperature_intent": 14,
+        "tint_intent": 3,
+        "saturation": -10,
+        "vibrance": 6,
+        "clarity": 3,
+        "texture": 8,
+        "dehaze": 0,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 9,
+        "vignette": 5,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "C16",
+          "C02"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M042",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "白底商品",
+      "aliases": [],
+      "family": "产品",
+      "description": "保持背景中性白、主体边缘清楚、材质真实，色差优先于氛围。",
+      "applicability": {
+        "scenes": [
+          "棚拍",
+          "电商白底"
+        ],
+        "subjects": [
+          "产品"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.2,
+        "highlights": -22,
+        "shadows": 18,
+        "whites": 18,
+        "blacks": -8,
+        "contrast": 8,
+        "temperature_intent": 0,
+        "tint_intent": 0,
+        "saturation": -2,
+        "vibrance": 5,
+        "clarity": 6,
+        "texture": 10,
+        "dehaze": 2,
+        "sharpening": 10,
+        "noise_reduction": 6,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "neutral_white_background_review",
+        "material_texture_review",
+        "brand_color_delta_e_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A02",
+          "A03",
+          "A05",
+          "B03"
+        ],
+        "legacy_inspiration_record_count": 1,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M043",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "暗金商品",
+      "aliases": [],
+      "family": "产品",
+      "description": "深背景、暖金高光、局部质感与高对比，适合香水、珠宝、酒具等。",
+      "applicability": {
+        "scenes": [
+          "黑底棚拍",
+          "低光产品"
+        ],
+        "subjects": [
+          "香水",
+          "珠宝",
+          "金属",
+          "玻璃"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.3,
+        "highlights": -20,
+        "shadows": -5,
+        "whites": 6,
+        "blacks": -22,
+        "contrast": 22,
+        "temperature_intent": 10,
+        "tint_intent": 3,
+        "saturation": -6,
+        "vibrance": 8,
+        "clarity": 8,
+        "texture": 12,
+        "dehaze": 5,
+        "sharpening": 10,
+        "noise_reduction": 8,
+        "grain": 0,
+        "vignette": 12,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A02",
+          "A04",
+          "A05",
+          "B05"
+        ],
+        "legacy_inspiration_record_count": 1,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M044",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "金属冷调商品",
+      "aliases": [],
+      "family": "产品",
+      "description": "冷中性、高局部对比、干净高光和准确灰阶，避免金属变蓝。",
+      "applicability": {
+        "scenes": [
+          "棚拍",
+          "科技产品"
+        ],
+        "subjects": [
+          "金属",
+          "数码产品",
+          "腕表"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.0,
+        "highlights": -35,
+        "shadows": 12,
+        "whites": 5,
+        "blacks": -14,
+        "contrast": 17,
+        "temperature_intent": -7,
+        "tint_intent": 0,
+        "saturation": -14,
+        "vibrance": 2,
+        "clarity": 10,
+        "texture": 14,
+        "dehaze": 4,
+        "sharpening": 12,
+        "noise_reduction": 5,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A02",
+          "A04",
+          "A05",
+          "A08"
+        ],
+        "legacy_inspiration_record_count": 0,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M045",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "香水柔光",
+      "aliases": [],
+      "family": "产品",
+      "description": "柔高光、轻暖、低对比与玻璃边缘高质感，背景色作为情绪而不污染瓶身。",
+      "applicability": {
+        "scenes": [
+          "柔光棚拍",
+          "窗边"
+        ],
+        "subjects": [
+          "香水",
+          "玻璃",
+          "护肤品"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.15,
+        "highlights": -38,
+        "shadows": 22,
+        "whites": 8,
+        "blacks": 3,
+        "contrast": -8,
+        "temperature_intent": 5,
+        "tint_intent": 3,
+        "saturation": -4,
+        "vibrance": 7,
+        "clarity": 2,
+        "texture": 7,
+        "dehaze": 1,
+        "sharpening": 8,
+        "noise_reduction": 6,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A04",
+          "A05",
+          "B02"
+        ],
+        "legacy_inspiration_record_count": 1,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M046",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "高饱和马卡龙",
+      "aliases": [],
+      "family": "梦幻",
+      "description": "高亮、高彩、粉青分离，重点检测肤色荧光和色带。",
+      "applicability": {
+        "scenes": [
+          "乐园",
+          "彩色建筑",
+          "甜品"
+        ],
+        "subjects": [
+          "人像",
+          "静物"
+        ],
+        "exclusions": [
+          "皮肤占画面大且无法局部蒙版"
+        ]
+      },
+      "intent_vector": {
+        "exposure_ev": 0.15,
+        "highlights": -32,
+        "shadows": 32,
+        "whites": 10,
+        "blacks": 6,
+        "contrast": 5,
+        "temperature_intent": -4,
+        "tint_intent": 12,
+        "saturation": 10,
+        "vibrance": 22,
+        "clarity": -2,
+        "texture": -2,
+        "dehaze": 0,
+        "sharpening": 6,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "B05",
+          "C15"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M047",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "梦幻粉彩",
+      "aliases": [],
+      "family": "梦幻",
+      "description": "抬黑位、柔对比、降低清晰度，用粉紫高光和青蓝阴影制造轻梦感。",
+      "applicability": {
+        "scenes": [
+          "花园",
+          "乐园",
+          "室内柔光"
+        ],
+        "subjects": [
+          "人像",
+          "花草",
+          "静物"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.25,
+        "highlights": -18,
+        "shadows": 35,
+        "whites": 8,
+        "blacks": 14,
+        "contrast": -22,
+        "temperature_intent": 2,
+        "tint_intent": 12,
+        "saturation": -5,
+        "vibrance": 12,
+        "clarity": -10,
+        "texture": -8,
+        "dehaze": -5,
+        "sharpening": 4,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 12
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": {
+          "shadows": {
+            "hue_degrees": 205,
+            "saturation": 6
+          },
+          "midtones": {
+            "hue_degrees": 315,
+            "saturation": 4
+          },
+          "highlights": {
+            "hue_degrees": 330,
+            "saturation": 10
+          },
+          "balance": 12
+        }
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "B03",
+          "B05",
+          "C15"
+        ],
+        "legacy_inspiration_record_count": 3,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M048",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "逆光修复",
+      "aliases": [],
+      "family": "救片",
+      "description": "先恢复主体，再压高光和光晕；不把逆光照片修成无方向的平光。",
+      "applicability": {
+        "scenes": [
+          "逆光",
+          "窗边",
+          "日落人像"
+        ],
+        "subjects": [
+          "人像",
+          "静物"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.18,
+        "highlights": -48,
+        "shadows": 38,
+        "whites": -5,
+        "blacks": -3,
+        "contrast": -6,
+        "temperature_intent": 3,
+        "tint_intent": 0,
+        "saturation": 0,
+        "vibrance": 5,
+        "clarity": 1,
+        "texture": 0,
+        "dehaze": 3,
+        "sharpening": 5,
+        "noise_reduction": 6,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "subject_exposure_review",
+        "light_source_clipping_review",
+        "haze_region_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A01",
+          "A05",
+          "C17"
+        ],
+        "legacy_inspiration_record_count": 1,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M049",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "树荫人像救片",
+      "aliases": [],
+      "family": "救片",
+      "description": "修正斑驳绿光、提面部中间调、压背景亮斑，保持环境自然。",
+      "applicability": {
+        "scenes": [
+          "树荫",
+          "林下人像"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.12,
+        "highlights": -40,
+        "shadows": 30,
+        "whites": -4,
+        "blacks": -4,
+        "contrast": -4,
+        "temperature_intent": 4,
+        "tint_intent": 7,
+        "saturation": -6,
+        "vibrance": 4,
+        "clarity": -3,
+        "texture": -4,
+        "dehaze": 0,
+        "sharpening": 4,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "face_color_cast_review",
+        "background_hotspot_review",
+        "foliage_naturalness_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A05",
+          "B04"
+        ],
+        "legacy_inspiration_record_count": 2,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M050",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "高反差阳光",
+      "aliases": [],
+      "family": "硬光",
+      "description": "保留硬光方向感，压高光、抬少量阴影、强化轮廓，不做过度 HDR。",
+      "applicability": {
+        "scenes": [
+          "正午阳光",
+          "建筑光影"
+        ],
+        "subjects": [
+          "人像",
+          "建筑",
+          "街景"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": -0.08,
+        "highlights": -42,
+        "shadows": 12,
+        "whites": 5,
+        "blacks": -14,
+        "contrast": 18,
+        "temperature_intent": 4,
+        "tint_intent": 0,
+        "saturation": -3,
+        "vibrance": 8,
+        "clarity": 6,
+        "texture": 5,
+        "dehaze": 3,
+        "sharpening": 7,
+        "noise_reduction": 0,
+        "grain": 0,
+        "vignette": 0,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A01",
+          "A02",
+          "B01"
+        ],
+        "legacy_inspiration_record_count": 0,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M051",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "黑白纪实",
+      "aliases": [],
+      "family": "黑白",
+      "description": "真实灰阶、深黑位、中高局部对比与颗粒，强调事件和结构。",
+      "applicability": {
+        "scenes": [
+          "纪实",
+          "街头",
+          "人物"
+        ],
+        "subjects": [
+          "人像",
+          "建筑"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.0,
+        "highlights": -24,
+        "shadows": 12,
+        "whites": 5,
+        "blacks": -18,
+        "contrast": 20,
+        "temperature_intent": 0,
+        "tint_intent": 0,
+        "saturation": -100,
+        "vibrance": 0,
+        "clarity": 8,
+        "texture": 8,
+        "dehaze": 4,
+        "sharpening": 9,
+        "noise_reduction": 0,
+        "grain": 18,
+        "vignette": 5,
+        "fade": 0
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A02",
+          "A04",
+          "A11"
+        ],
+        "legacy_inspiration_record_count": 0,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    },
+    {
+      "id": "M052",
+      "record_type": "research_candidate",
+      "status": "unverified",
+      "executable": false,
+      "name": "黑白柔雾",
+      "aliases": [],
+      "family": "黑白",
+      "description": "抬黑位、柔对比、低清晰度和细颗粒，适合情绪人像。",
+      "applicability": {
+        "scenes": [
+          "柔光人像",
+          "室内"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "exclusions": []
+      },
+      "intent_vector": {
+        "exposure_ev": 0.12,
+        "highlights": -18,
+        "shadows": 25,
+        "whites": 5,
+        "blacks": 12,
+        "contrast": -12,
+        "temperature_intent": 0,
+        "tint_intent": 0,
+        "saturation": -100,
+        "vibrance": 0,
+        "clarity": -10,
+        "texture": -6,
+        "dehaze": -4,
+        "sharpening": 4,
+        "noise_reduction": 0,
+        "grain": 12,
+        "vignette": 4,
+        "fade": 12
+      },
+      "advanced_intent": {
+        "hsl": [],
+        "color_grading": null
+      },
+      "manual_review_guards": [
+        "skin_tone_review",
+        "highlight_clipping_review",
+        "shadow_noise_review"
+      ],
+      "adaptation_requirements": [
+        "correct_exposure_and_white_balance_before_style",
+        "reduce_detail_effects_for_compressed_or_low_resolution_media",
+        "review_highlights_shadows_and_skin_after_adjustment"
+      ],
+      "strength_policy": {
+        "conservative": 0.65,
+        "standard": 1.0,
+        "bold": 1.25,
+        "clamp_to_platform_range": true
+      },
+      "evidence": {
+        "source_ids": [
+          "A02",
+          "A04",
+          "A11"
+        ],
+        "legacy_inspiration_record_count": 0,
+        "claim_level": "design_synthesis_only",
+        "confidence": "unverified",
+        "visual_validation": "not_performed",
+        "popularity_claim": "not_made",
+        "numeric_origin": "original_research_synthesis_v1_1"
+      },
+      "execution_boundary": "Research intent only; not accepted by the local renderer and not an App-equivalent preset.",
+      "media_types": [
+        "photo",
+        "video"
+      ]
+    }
+  ]
+}

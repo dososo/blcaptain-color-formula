@@ -1,0 +1,8 @@
+# 核心链路不需要任何 Python 第三方包。
+#
+# 需要的是系统工具：
+#   - Python 3.9 或更高
+#   - ffmpeg 与 ffprobe（brew install ffmpeg）
+#
+# 可选能力（语义局部）的依赖见 requirements-optional.txt；
+# 不装也能用，只是不做语义蒙版。

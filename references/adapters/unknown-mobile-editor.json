@@ -1,0 +1,20 @@
+{
+  "schema_version": "1.1.0",
+  "platform": "unknown",
+  "platform_version": null,
+  "source": "用户提供的八套移动端滑杆公式",
+  "mapping_verified": false,
+  "executable": false,
+  "rights": "仅保存用户输入的参数事实，不包含第三方图片、滤镜或 LUT",
+  "notice": "App、版本、量程和原片条件均未知。这里的数字只用于人工录入或研究，不得直接换算成 FFmpeg。",
+  "recipes": [
+    {"name":"万能通透","target_recipe":"natural-clean","mapping_verified":false,"raw_sliders":{"亮度":8,"对比度":18,"饱和度":10,"光感":-8,"锐化":25,"高光":-15,"阴影":12,"色温":0,"去雾":8}},
+    {"name":"冷白皮人像","target_recipe":"korean-cool","mapping_verified":false,"raw_sliders":{"亮度":5,"对比度":15,"饱和度":8,"锐化":25,"色温":-10,"高光":-10,"阴影":10},"raw_hsl":{"橙色":{"饱和度":-12,"亮度":15},"红色":{"饱和度":5,"亮度":3}}},
+    {"name":"日系清新","target_recipe":"japanese-airy","mapping_verified":false,"raw_sliders":{"亮度":6,"对比度":10,"饱和度":5,"锐化":20,"色温":-5,"色调":5,"褪色":10,"颗粒":6,"暗角":5}},
+    {"name":"青橙电影感","target_recipe":"teal-orange","mapping_verified":false,"raw_sliders":{"亮度":5,"对比度":20,"饱和度":10,"锐化":25,"色温":-5,"色调":10,"高光":-15,"阴影":10,"暗角":10},"warning":"原始数值没有真正的暗部青/亮部橙分离参数。"},
+    {"name":"复古胶片","target_recipe":"film-soft","mapping_verified":false,"raw_sliders":{"亮度":3,"对比度":-8,"饱和度":-12,"锐化":15,"色温":10,"褪色":20,"颗粒":15,"暗角":12}},
+    {"name":"风景高清","target_recipe":"landscape-crisp","mapping_verified":false,"raw_sliders":{"亮度":-5,"对比度":20,"饱和度":15,"锐化":30,"色温":-12,"高光":-20,"阴影":10,"去雾":10},"raw_hsl":{"蓝色":{"饱和度":30,"亮度":-20},"绿色":{"饱和度":25,"亮度":5}}},
+    {"name":"夜景高级","target_recipe":"night-cool-neon","mapping_verified":false,"raw_sliders":{"亮度":-6,"对比度":22,"饱和度":12,"锐化":25,"色温":-10,"高光":-25,"阴影":15,"去雾":5}},
+    {"name":"暖调治愈","target_recipe":"warm-cozy","mapping_verified":false,"raw_sliders":{"亮度":7,"对比度":12,"饱和度":10,"锐化":20,"色温":8,"高光":-10,"阴影":10,"褪色":5}}
+  ]
+}

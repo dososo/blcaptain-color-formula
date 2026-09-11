@@ -1,0 +1,1611 @@
+{
+  "schema_version": "1.2.0",
+  "records": [
+    {
+      "rule_id": "RULE-M001",
+      "candidate_id": "M001",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "同一组写真",
+          "套图",
+          "批量"
+        ],
+        "subjects": [],
+        "problems": [
+          "曝光不一致",
+          "白平衡不一致",
+          "曝光与白平衡不一致",
+          "需要校正",
+          "偏色",
+          "欠曝",
+          "过曝",
+          "偏黄",
+          "偏蓝",
+          "偏绿",
+          "偏洋红",
+          "高iso噪点",
+          "暗部噪点",
+          "高光接近剪切",
+          "压缩噪点"
+        ],
+        "preferences": [
+          "中性",
+          "自然",
+          "基础校正",
+          "不加风格"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M002",
+      "candidate_id": "M002",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "阴天",
+          "日常",
+          "旅行",
+          "社媒截图",
+          "截图"
+        ],
+        "subjects": [],
+        "problems": [
+          "发灰",
+          "灰蒙",
+          "雾蒙",
+          "低清",
+          "压缩",
+          "不通透",
+          "需要清透"
+        ],
+        "preferences": [
+          "清透",
+          "通透",
+          "去灰",
+          "干净"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M003",
+      "candidate_id": "M003",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "室内柔光",
+          "窗边",
+          "阴天",
+          "家居"
+        ],
+        "subjects": [],
+        "problems": [
+          "暗淡",
+          "沉闷",
+          "不够亮"
+        ],
+        "preferences": [
+          "空气感",
+          "明亮",
+          "轻盈",
+          "柔和"
+        ],
+        "exclusions": [
+          "暗调"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M004",
+      "candidate_id": "M004",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "咖啡馆",
+          "室内",
+          "日常"
+        ],
+        "subjects": [
+          "甜品",
+          "静物"
+        ],
+        "problems": [
+          "反差偏大",
+          "暖灯偏黄",
+          "暗淡"
+        ],
+        "preferences": [
+          "奶油",
+          "奶油感",
+          "低反差",
+          "柔和",
+          "干净肤色"
+        ],
+        "exclusions": [
+          "硬朗"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M005",
+      "candidate_id": "M005",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "韩系人像",
+          "室内",
+          "阴天"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "problems": [
+          "偏黄",
+          "肤色黄"
+        ],
+        "preferences": [
+          "韩系",
+          "冷奶油",
+          "冷白",
+          "清冷奶油"
+        ],
+        "exclusions": [
+          "暖调"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M006",
+      "candidate_id": "M006",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "旅行",
+          "街景",
+          "室内"
+        ],
+        "subjects": [
+          "人像",
+          "静物"
+        ],
+        "problems": [
+          "反差太硬"
+        ],
+        "preferences": [
+          "日系",
+          "日系奶油",
+          "柔奶油",
+          "温柔"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M007",
+      "candidate_id": "M007",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "自拍",
+          "室内人像",
+          "柔光"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "problems": [
+          "毛孔明显",
+          "皮肤纹理明显",
+          "肤色暗沉"
+        ],
+        "preferences": [
+          "粉白",
+          "粉嫩",
+          "自然柔肤",
+          "清甜"
+        ],
+        "exclusions": [
+          "纪实硬朗"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M008",
+      "candidate_id": "M008",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "阴天人像",
+          "室内人像",
+          "户外人像"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "problems": [
+          "肤色偏黄",
+          "偏黄",
+          "蜡黄",
+          "脸黄"
+        ],
+        "preferences": [
+          "冷白皮",
+          "自然白",
+          "白而不假",
+          "干净肤色"
+        ],
+        "exclusions": [
+          "暖肤"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M009",
+      "candidate_id": "M009",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "时尚人像",
+          "城市",
+          "阴天"
+        ],
+        "subjects": [
+          "穿搭",
+          "人像"
+        ],
+        "problems": [
+          "画面不高级",
+          "色彩杂乱"
+        ],
+        "preferences": [
+          "清冷",
+          "高级白",
+          "时装",
+          "克制"
+        ],
+        "exclusions": [
+          "甜美"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M010",
+      "candidate_id": "M010",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "自然光人像",
+          "婚礼",
+          "旅行",
+          "自然光"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "problems": [
+          "肤色较深",
+          "肤色灰",
+          "需要自然肤色",
+          "毛孔明显"
+        ],
+        "preferences": [
+          "portra",
+          "暖肤",
+          "自然肤色",
+          "胶片人像"
+        ],
+        "exclusions": [
+          "冷白皮"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M011",
+      "candidate_id": "M011",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "咖啡馆",
+          "室内",
+          "秋日"
+        ],
+        "subjects": [
+          "穿搭",
+          "静物"
+        ],
+        "problems": [
+          "色彩零散"
+        ],
+        "preferences": [
+          "法式",
+          "暖棕",
+          "复古棕",
+          "优雅"
+        ],
+        "exclusions": [
+          "冷调"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M012",
+      "candidate_id": "M012",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "下午茶",
+          "咖啡馆",
+          "室内"
+        ],
+        "subjects": [
+          "饮品",
+          "甜品"
+        ],
+        "problems": [
+          "环境偏冷"
+        ],
+        "preferences": [
+          "奶茶",
+          "奶茶暖棕",
+          "温暖",
+          "松弛"
+        ],
+        "exclusions": [
+          "冷调"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M013",
+      "candidate_id": "M013",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "城市",
+          "纪实",
+          "室内",
+          "街头"
+        ],
+        "subjects": [
+          "建筑",
+          "产品",
+          "人像"
+        ],
+        "problems": [
+          "色彩太艳",
+          "缺少纪实感"
+        ],
+        "preferences": [
+          "classic chrome",
+          "经典正片",
+          "富士纪实",
+          "纪实"
+        ],
+        "exclusions": [
+          "梦幻"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M014",
+      "candidate_id": "M014",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "街景",
+          "旅行",
+          "生活记录"
+        ],
+        "subjects": [
+          "建筑",
+          "风景",
+          "人像"
+        ],
+        "problems": [
+          "画面太数码",
+          "缺少胶片味"
+        ],
+        "preferences": [
+          "classic negative",
+          "经典负片",
+          "消费负片",
+          "富士负片"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M015",
+      "candidate_id": "M015",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "叙事人像",
+          "阴天",
+          "视频帧"
+        ],
+        "subjects": [
+          "人像",
+          "风景"
+        ],
+        "problems": [
+          "反差太大",
+          "色彩太跳"
+        ],
+        "preferences": [
+          "eterna",
+          "柔和电影",
+          "电影柔和",
+          "低反差电影"
+        ],
+        "exclusions": [
+          "高彩"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M016",
+      "candidate_id": "M016",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "晴天风景",
+          "建筑",
+          "棚拍"
+        ],
+        "subjects": [
+          "风景",
+          "产品",
+          "建筑"
+        ],
+        "problems": [
+          "色彩寡淡"
+        ],
+        "preferences": [
+          "ektar",
+          "高彩胶片",
+          "浓郁风景"
+        ],
+        "exclusions": [
+          "低饱和"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M017",
+      "candidate_id": "M017",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "日常",
+          "咖啡馆",
+          "旅行"
+        ],
+        "subjects": [
+          "人像",
+          "静物",
+          "街景"
+        ],
+        "problems": [
+          "画面太数码"
+        ],
+        "preferences": [
+          "轻复古",
+          "日常胶片",
+          "温和颗粒"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M018",
+      "candidate_id": "M018",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "街景",
+          "夜晚",
+          "室内"
+        ],
+        "subjects": [
+          "人像",
+          "建筑",
+          "静物"
+        ],
+        "problems": [
+          "画面太干净",
+          "缺少年代感"
+        ],
+        "preferences": [
+          "美式复古",
+          "美式颗粒",
+          "粗颗粒",
+          "复古美式"
+        ],
+        "exclusions": [
+          "干净无颗粒"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M019",
+      "candidate_id": "M019",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "旧街",
+          "夜晚",
+          "室内暖灯",
+          "香港街头"
+        ],
+        "subjects": [
+          "人像",
+          "街景"
+        ],
+        "problems": [
+          "缺少怀旧氛围"
+        ],
+        "preferences": [
+          "港风",
+          "怀旧电影",
+          "香港电影",
+          "暖绿电影"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M020",
+      "candidate_id": "M020",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "城市",
+          "旅行",
+          "叙事人像"
+        ],
+        "subjects": [
+          "人像",
+          "建筑"
+        ],
+        "problems": [
+          "主体不突出",
+          "冷暖不分"
+        ],
+        "preferences": [
+          "青橙",
+          "青橙电影",
+          "商业电影"
+        ],
+        "exclusions": [
+          "自然纪实"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M021",
+      "candidate_id": "M021",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "阴天",
+          "海边",
+          "城市"
+        ],
+        "subjects": [
+          "人像",
+          "风景"
+        ],
+        "problems": [
+          "色彩太杂",
+          "饱和度太高"
+        ],
+        "preferences": [
+          "低饱和",
+          "冷电影",
+          "高级灰",
+          "克制电影"
+        ],
+        "exclusions": [
+          "高彩"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M022",
+      "candidate_id": "M022",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "低光",
+          "夜晚",
+          "室内",
+          "黑底"
+        ],
+        "subjects": [
+          "产品",
+          "静物",
+          "人像"
+        ],
+        "problems": [
+          "高光杂乱",
+          "缺少黑位"
+        ],
+        "preferences": [
+          "暗调",
+          "暗调高级",
+          "高级暗黑",
+          "黑金"
+        ],
+        "exclusions": [
+          "明亮空气感"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M023",
+      "candidate_id": "M023",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "室内直闪",
+          "直闪",
+          "夜店",
+          "聚会"
+        ],
+        "subjects": [
+          "人像",
+          "静物"
+        ],
+        "problems": [
+          "额头反光",
+          "背景过黑",
+          "闪光生硬"
+        ],
+        "preferences": [
+          "闪光ccd",
+          "ccd",
+          "直闪复古",
+          "闪光感"
+        ],
+        "exclusions": [
+          "自然柔光"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M024",
+      "candidate_id": "M024",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "霓虹街道",
+          "夜景人像",
+          "霓虹"
+        ],
+        "subjects": [
+          "人像",
+          "城市"
+        ],
+        "problems": [
+          "肤色被霓虹污染",
+          "霓虹溢色",
+          "高iso噪点"
+        ],
+        "preferences": [
+          "夜景霓虹",
+          "霓虹电影",
+          "赛博夜景"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M025",
+      "candidate_id": "M025",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "雨夜",
+          "湿地反光",
+          "城市雨夜"
+        ],
+        "subjects": [
+          "人像",
+          "街景"
+        ],
+        "problems": [
+          "雨夜层次弱",
+          "路面反光杂乱"
+        ],
+        "preferences": [
+          "雨夜蓝绿",
+          "蓝绿夜景",
+          "湿冷电影"
+        ],
+        "exclusions": [
+          "暖日落"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M026",
+      "candidate_id": "M026",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "阴天森林",
+          "森林",
+          "公园"
+        ],
+        "subjects": [
+          "绿植",
+          "人像"
+        ],
+        "problems": [
+          "绿色过饱和",
+          "荧光绿",
+          "绿植偏黄",
+          "肤色泛绿"
+        ],
+        "preferences": [
+          "阴天森系",
+          "森系",
+          "低饱和绿色"
+        ],
+        "exclusions": [
+          "高彩绿色"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M027",
+      "candidate_id": "M027",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "雨后森林",
+          "雨后",
+          "溪流"
+        ],
+        "subjects": [
+          "绿植",
+          "风景",
+          "人像"
+        ],
+        "problems": [
+          "空气层次弱",
+          "绿植偏黄",
+          "雨后不通透"
+        ],
+        "preferences": [
+          "雨后森林",
+          "湿润森系",
+          "清冷森林"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M028",
+      "candidate_id": "M028",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "阴天森林",
+          "公园",
+          "林间"
+        ],
+        "subjects": [
+          "绿植",
+          "人像"
+        ],
+        "problems": [
+          "绿色太艳",
+          "画面太硬"
+        ],
+        "preferences": [
+          "日系森林",
+          "日系森系",
+          "柔和绿色"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M029",
+      "candidate_id": "M029",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "秋日",
+          "落叶",
+          "街景"
+        ],
+        "subjects": [
+          "树叶",
+          "建筑",
+          "人像"
+        ],
+        "problems": [
+          "秋色寡淡"
+        ],
+        "preferences": [
+          "秋日红棕",
+          "红棕",
+          "枫叶",
+          "秋天"
+        ],
+        "exclusions": [
+          "盛夏"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M030",
+      "candidate_id": "M030",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "晴天",
+          "户外",
+          "乐园",
+          "盛夏"
+        ],
+        "subjects": [
+          "人像",
+          "风景"
+        ],
+        "problems": [
+          "夏日颜色淡"
+        ],
+        "preferences": [
+          "盛夏",
+          "高彩",
+          "夏日高彩",
+          "活力"
+        ],
+        "exclusions": [
+          "低饱和"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M031",
+      "candidate_id": "M031",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "晴天海边",
+          "海边",
+          "沙滩"
+        ],
+        "subjects": [
+          "海水",
+          "天空",
+          "人像"
+        ],
+        "problems": [
+          "天空高光强",
+          "人物阴影深",
+          "海水不清透"
+        ],
+        "preferences": [
+          "海边清透",
+          "夏日海边",
+          "蓝白清透",
+          "度假感"
+        ],
+        "exclusions": [
+          "阴天冷灰"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M032",
+      "candidate_id": "M032",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "阴天海边",
+          "城市水岸",
+          "海边阴天"
+        ],
+        "subjects": [
+          "海水",
+          "人像"
+        ],
+        "problems": [
+          "海水偏黄",
+          "画面无距离感",
+          "海水发灰"
+        ],
+        "preferences": [
+          "冷灰海水",
+          "冷灰",
+          "克制海边",
+          "高级灰海边"
+        ],
+        "exclusions": [
+          "暖黄海水"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M033",
+      "candidate_id": "M033",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "晴天",
+          "海边",
+          "城市天空"
+        ],
+        "subjects": [
+          "天空",
+          "风景"
+        ],
+        "problems": [
+          "天空偏灰",
+          "蓝色不干净"
+        ],
+        "preferences": [
+          "薄荷蓝",
+          "薄荷天空",
+          "清新蓝天"
+        ],
+        "exclusions": [
+          "戏剧云层"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M034",
+      "candidate_id": "M034",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "多云",
+          "暴雨前",
+          "日落云层"
+        ],
+        "subjects": [
+          "天空",
+          "建筑"
+        ],
+        "problems": [
+          "云层平",
+          "云层没层次",
+          "建筑偏暗"
+        ],
+        "preferences": [
+          "戏剧云层",
+          "风暴感",
+          "高反差云层"
+        ],
+        "exclusions": [
+          "柔和无云"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M035",
+      "candidate_id": "M035",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "日落",
+          "黄金时刻",
+          "夕阳"
+        ],
+        "subjects": [
+          "天空",
+          "人像",
+          "风景"
+        ],
+        "problems": [
+          "夕阳不够暖",
+          "金色太淡"
+        ],
+        "preferences": [
+          "黄金日落",
+          "金色日落",
+          "暖日落"
+        ],
+        "exclusions": [
+          "粉紫晚霞"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M036",
+      "candidate_id": "M036",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "海边晚霞",
+          "晚霞",
+          "海边日落"
+        ],
+        "subjects": [
+          "天空",
+          "人像"
+        ],
+        "problems": [
+          "晚霞颜色淡",
+          "粉紫不明显"
+        ],
+        "preferences": [
+          "粉紫日落",
+          "粉紫晚霞",
+          "梦幻晚霞"
+        ],
+        "exclusions": [
+          "纯金日落"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M037",
+      "candidate_id": "M037",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "蓝调时刻",
+          "日落后",
+          "城市夜景"
+        ],
+        "subjects": [
+          "城市",
+          "建筑",
+          "人像",
+          "风景"
+        ],
+        "problems": [
+          "灯光过曝",
+          "暗部噪点",
+          "天空蓝调弱"
+        ],
+        "preferences": [
+          "蓝调时刻",
+          "暮蓝",
+          "蓝调城市"
+        ],
+        "exclusions": [
+          "正午"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M038",
+      "candidate_id": "M038",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "餐厅暖光",
+          "室内暖光",
+          "自然光美食"
+        ],
+        "subjects": [
+          "美食",
+          "饮品"
+        ],
+        "problems": [
+          "偏黄",
+          "油光强",
+          "食物不诱人"
+        ],
+        "preferences": [
+          "暖香美食",
+          "食欲感",
+          "暖调美食"
+        ],
+        "exclusions": [
+          "冷灰食物"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M039",
+      "candidate_id": "M039",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "自然光餐厅",
+          "白色桌面",
+          "日料"
+        ],
+        "subjects": [
+          "美食",
+          "餐具"
+        ],
+        "problems": [
+          "白盘偏灰",
+          "食材颜色淡",
+          "桌面不白"
+        ],
+        "preferences": [
+          "清透美食",
+          "日料清透",
+          "干净美食"
+        ],
+        "exclusions": [
+          "暗调"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M040",
+      "candidate_id": "M040",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "下午茶",
+          "咖啡馆"
+        ],
+        "subjects": [
+          "甜品",
+          "饮品",
+          "桌面"
+        ],
+        "problems": [
+          "原图暗淡",
+          "甜品不柔和"
+        ],
+        "preferences": [
+          "下午茶奶油",
+          "奶油甜品",
+          "甜美奶油"
+        ],
+        "exclusions": [
+          "硬朗"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M041",
+      "candidate_id": "M041",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "咖啡馆",
+          "木质室内"
+        ],
+        "subjects": [
+          "咖啡",
+          "烘焙",
+          "静物"
+        ],
+        "problems": [
+          "木色发灰",
+          "咖啡不浓郁"
+        ],
+        "preferences": [
+          "咖啡暖棕",
+          "烘焙暖棕",
+          "木质暖调"
+        ],
+        "exclusions": [
+          "冷白"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M042",
+      "candidate_id": "M042",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "白底棚拍",
+          "电商白底",
+          "白底"
+        ],
+        "subjects": [
+          "产品",
+          "商品"
+        ],
+        "problems": [
+          "背景不够白",
+          "产品边缘灰",
+          "白底偏色"
+        ],
+        "preferences": [
+          "白底商品",
+          "电商干净",
+          "中性白底"
+        ],
+        "exclusions": [
+          "暗金"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M043",
+      "candidate_id": "M043",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "黑底棚拍",
+          "低光产品",
+          "黑底"
+        ],
+        "subjects": [
+          "香水",
+          "珠宝",
+          "金属",
+          "玻璃"
+        ],
+        "problems": [
+          "金属高光杂乱",
+          "玻璃不通透",
+          "缺少质感"
+        ],
+        "preferences": [
+          "暗金商品",
+          "黑金",
+          "奢华暗调"
+        ],
+        "exclusions": [
+          "白底电商"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M044",
+      "candidate_id": "M044",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "棚拍",
+          "科技产品"
+        ],
+        "subjects": [
+          "金属产品",
+          "金属",
+          "数码产品",
+          "腕表"
+        ],
+        "problems": [
+          "金属偏黄",
+          "细节弱",
+          "金属不干净"
+        ],
+        "preferences": [
+          "金属冷调",
+          "科技冷调",
+          "银灰"
+        ],
+        "exclusions": [
+          "暖金"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M045",
+      "candidate_id": "M045",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "柔光棚拍",
+          "窗边"
+        ],
+        "subjects": [
+          "香水",
+          "玻璃",
+          "护肤品"
+        ],
+        "problems": [
+          "玻璃不通透",
+          "反光太硬",
+          "透明度弱"
+        ],
+        "preferences": [
+          "香水柔光",
+          "玻璃柔光",
+          "高级护肤"
+        ],
+        "exclusions": [
+          "硬暗金"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M046",
+      "candidate_id": "M046",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "乐园",
+          "彩色建筑",
+          "甜品"
+        ],
+        "subjects": [
+          "人像",
+          "静物"
+        ],
+        "problems": [
+          "颜色不够活泼"
+        ],
+        "preferences": [
+          "马卡龙",
+          "高饱和马卡龙",
+          "彩色乐园"
+        ],
+        "exclusions": [
+          "低饱和"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M047",
+      "candidate_id": "M047",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "花园",
+          "乐园",
+          "室内柔光"
+        ],
+        "subjects": [
+          "人像",
+          "花草",
+          "静物"
+        ],
+        "problems": [
+          "画面不梦幻",
+          "颜色太硬"
+        ],
+        "preferences": [
+          "梦幻粉彩",
+          "粉彩",
+          "柔雾梦幻"
+        ],
+        "exclusions": [
+          "纪实硬朗"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M048",
+      "candidate_id": "M048",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "逆光",
+          "窗边",
+          "日落人像"
+        ],
+        "subjects": [
+          "人像",
+          "静物"
+        ],
+        "problems": [
+          "主体偏暗",
+          "窗外高光接近剪切",
+          "逆光脸黑",
+          "人物偏暗"
+        ],
+        "preferences": [
+          "逆光修复",
+          "自然逆光"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M049",
+      "candidate_id": "M049",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "树荫",
+          "林下人像",
+          "林下"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "problems": [
+          "面部偏绿",
+          "背景亮斑",
+          "树荫绿脸"
+        ],
+        "preferences": [
+          "树荫救片",
+          "自然肤色"
+        ],
+        "exclusions": []
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M050",
+      "candidate_id": "M050",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "正午阳光",
+          "建筑光影",
+          "硬光"
+        ],
+        "subjects": [
+          "人像",
+          "建筑",
+          "街景"
+        ],
+        "problems": [
+          "反差极大",
+          "阴影很硬"
+        ],
+        "preferences": [
+          "高反差阳光",
+          "硬光图形",
+          "阳光电影"
+        ],
+        "exclusions": [
+          "柔雾"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M051",
+      "candidate_id": "M051",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "纪实",
+          "街头",
+          "人物"
+        ],
+        "subjects": [
+          "人像",
+          "建筑"
+        ],
+        "problems": [
+          "颜色干扰",
+          "需要强调情绪"
+        ],
+        "preferences": [
+          "黑白纪实",
+          "街头黑白",
+          "硬朗黑白"
+        ],
+        "exclusions": [
+          "彩色"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    },
+    {
+      "rule_id": "RULE-M052",
+      "candidate_id": "M052",
+      "status": "research_only",
+      "keywords": {
+        "scenes": [
+          "柔光人像",
+          "室内",
+          "柔光"
+        ],
+        "subjects": [
+          "人像"
+        ],
+        "problems": [
+          "颜色杂乱",
+          "画面太硬"
+        ],
+        "preferences": [
+          "黑白柔雾",
+          "柔和黑白",
+          "人像黑白"
+        ],
+        "exclusions": [
+          "高彩"
+        ]
+      },
+      "effect": "rank_candidate_only",
+      "requires_user_confirmation": true
+    }
+  ]
+}

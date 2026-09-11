@@ -1,0 +1,2991 @@
+{
+  "schema_version": "4.8.0",
+  "dataset_status": "research_candidate_layer_only",
+  "collected_at": "2026-08-24",
+  "platform": "小红书",
+  "boundary": "登录态只读公开搜索卡片观察；不含作者身份、UID、访问令牌、第三方媒体或完整原文。搜索切换存在结果滞后，queries_observed 仅记录提交过的查询，不证明每条卡片与查询精准归因。所有卡片仅为候选线索，未经详情精读、许可评估、公式解释、真实渲染和人工审美门，不得晋级正式配方，也不得据此宣称全站热门。",
+  "acquisition": {
+    "mode": "用户 Chrome 登录态只读",
+    "actions_forbidden_and_not_performed": [
+      "点赞",
+      "收藏",
+      "评论",
+      "关注",
+      "发布",
+      "上传用户素材",
+      "下载受限内容",
+      "绕过验证"
+    ],
+    "termination_reason": "平台出现滑块安全验证后立即停止，未操作验证码",
+    "raw_cards_observed": 264,
+    "unique_notes": 225,
+    "search_queries_submitted": 22,
+    "query_attribution_status": "transition_unverified"
+  },
+  "notes": [
+    {
+      "engagement_visible": "392",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "6a6bfcd50000000005031205",
+      "published_visible": "07-31",
+      "title": "最全调色公式建议收藏",
+      "url": "https://www.xiaohongshu.com/explore/6a6bfcd50000000005031205",
+      "queries_observed": [
+        "调色公式"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "6339",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "6805e1df000000001d024197",
+      "published_visible": "2025-04-21",
+      "title": "零基础色彩基础+万能调色公式",
+      "url": "https://www.xiaohongshu.com/explore/6805e1df000000001d024197",
+      "queries_observed": [
+        "调色公式"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "427",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "6a16a752000000000803dfa6",
+      "published_visible": "05-27",
+      "title": "💥基础色调色大揭秘！🎨",
+      "url": "https://www.xiaohongshu.com/explore/6a16a752000000000803dfa6",
+      "queries_observed": [
+        "调色公式"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "681",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "69c92bbd000000001e00f501",
+      "published_visible": "03-29",
+      "title": "调色教程｜美术生必备！调色公式大揭秘🎨",
+      "url": "https://www.xiaohongshu.com/explore/69c92bbd000000001e00f501",
+      "queries_observed": [
+        "调色公式"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "354",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "6a3e4643000000000f0323e4",
+      "published_visible": "06-26",
+      "title": "基础调色理论",
+      "url": "https://www.xiaohongshu.com/explore/6a3e4643000000000f0323e4",
+      "queries_observed": [
+        "调色公式"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "392",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "6a54fcce00000000060303a5",
+      "published_visible": "07-13",
+      "title": "修图师必学丨色彩调色原理干货🎨",
+      "url": "https://www.xiaohongshu.com/explore/6a54fcce00000000060303a5",
+      "queries_observed": [
+        "调色公式"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2086",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "69e86ef00000000022028739",
+      "published_visible": "04-28",
+      "title": "别再怕曲线调色‼️零基础一遍吃透✨",
+      "url": "https://www.xiaohongshu.com/explore/69e86ef00000000022028739",
+      "queries_observed": [
+        "调色公式",
+        "肤色调色",
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1007",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "6a20197400000000060354a1",
+      "published_visible": "07-01",
+      "title": "曲线调色｜3️⃣条黄金法则，新手也能看懂🎨",
+      "url": "https://www.xiaohongshu.com/explore/6a20197400000000060354a1",
+      "queries_observed": [
+        "调色公式"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "321",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "69184f520000000004015cdc",
+      "published_visible": "2025-11-15",
+      "title": "只要拍照喜欢调色的就不得不学的三原理。",
+      "url": "https://www.xiaohongshu.com/explore/69184f520000000004015cdc",
+      "queries_observed": [
+        "调色公式",
+        "HSL调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "25",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "6a432c10000000001c027935",
+      "published_visible": "06-30",
+      "title": "AI渐变色公式，3个词调出高级配色",
+      "url": "https://www.xiaohongshu.com/explore/6a432c10000000001c027935",
+      "queries_observed": [
+        "调色公式",
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "8.7万",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "6a4cae80000000000701150c",
+      "published_visible": "07-07",
+      "title": "为什么你调色越来越脏？",
+      "url": "https://www.xiaohongshu.com/explore/6a4cae80000000000701150c",
+      "queries_observed": [
+        "调色公式",
+        "肤色调色",
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "192",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色公式",
+      "note_id": "68b32173000000001d01ddb3",
+      "published_visible": "2025-08-31",
+      "title": "🌟调色秘籍：从“调”到“色”一招搞定！",
+      "url": "https://www.xiaohongshu.com/explore/68b32173000000001d01ddb3",
+      "queries_observed": [
+        "调色公式",
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "381",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "6a33c03a000000001c0243ce",
+      "published_visible": "06-18",
+      "title": "调色口诀合集｜新手入门｜调色干货",
+      "url": "https://www.xiaohongshu.com/explore/6a33c03a000000001c0243ce",
+      "queries_observed": [
+        "调色原理",
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "13.4万",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "69b75a2b000000002301c9f2",
+      "published_visible": "03-16",
+      "title": "这些调色公式超绝！废片秒变高级大片✅",
+      "url": "https://www.xiaohongshu.com/explore/69b75a2b000000002301c9f2",
+      "queries_observed": [
+        "调色原理"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2221",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "67ea5aa6000000001c00e80a",
+      "published_visible": "2025-04-01",
+      "title": "太绝了！8个让iPhone照片变好看的设置！",
+      "url": "https://www.xiaohongshu.com/explore/67ea5aa6000000001c00e80a",
+      "queries_observed": [
+        "调色原理"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3308",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "6a7edca2000000003400d7a2",
+      "published_visible": "08-14",
+      "title": "啊我终于会调这种滤镜了",
+      "url": "https://www.xiaohongshu.com/explore/6a7edca2000000003400d7a2",
+      "queries_observed": [
+        "调色原理",
+        "肤色调色",
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "364",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "698bf6d0000000001b014920",
+      "published_visible": "02-11",
+      "title": "视频调色基础篇讲解，存下吧，很难找全了",
+      "url": "https://www.xiaohongshu.com/explore/698bf6d0000000001b014920",
+      "queries_observed": [
+        "调色原理",
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "4167",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "67d02258000000000302b5f8",
+      "published_visible": "2025-03-11",
+      "title": "Lr调色口诀丨新手必存❗商业修图师私藏🔥",
+      "url": "https://www.xiaohongshu.com/explore/67d02258000000000302b5f8",
+      "queries_observed": [
+        "调色原理",
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2670",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "69e89e8b000000001f001e1b",
+      "published_visible": "04-22",
+      "title": "用小米的存下吧❗️专属调色公式很难找全了",
+      "url": "https://www.xiaohongshu.com/explore/69e89e8b000000001f001e1b",
+      "queries_observed": [
+        "调色原理"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "243",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "6a150663000000000702100b",
+      "published_visible": "05-26",
+      "title": "howto|华为手机拍照公式‼️告别废片随手拍",
+      "url": "https://www.xiaohongshu.com/explore/6a150663000000000702100b",
+      "queries_observed": [
+        "调色原理"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2869",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "689c8232000000001c036e77",
+      "published_visible": "2025-08-13",
+      "title": "HSL+曲线｜秒懂调色密码，告别废片困扰！",
+      "url": "https://www.xiaohongshu.com/explore/689c8232000000001c036e77",
+      "queries_observed": [
+        "调色原理"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "178",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "6a7aeade00000000220176b6",
+      "published_visible": "08-11",
+      "title": "色卡｜最全调色公式 拯救调色！",
+      "url": "https://www.xiaohongshu.com/explore/6a7aeade00000000220176b6",
+      "queries_observed": [
+        "调色原理"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2.4万",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "67af5e1900000000180082b1",
+      "published_visible": "2025-02-14",
+      "title": "醒图万能调色公式",
+      "url": "https://www.xiaohongshu.com/explore/67af5e1900000000180082b1",
+      "queries_observed": [
+        "调色原理",
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "58",
+      "evidence_status": "search_card_verified",
+      "keyword": "调色原理",
+      "note_id": "69fe966a0000000035029dbe",
+      "published_visible": "05-09",
+      "title": "AI生图没质感？6个调色维度拯救你的画面！",
+      "url": "https://www.xiaohongshu.com/explore/69fe966a0000000035029dbe",
+      "queries_observed": [
+        "调色原理"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2114",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "6a58a4a20000000011016dd6",
+      "published_visible": "07-16",
+      "title": "搞明白这三点，从此你的照片没有不通透的！",
+      "url": "https://www.xiaohongshu.com/explore/6a58a4a20000000011016dd6",
+      "queries_observed": [
+        "HSL调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "46",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "68b041d4000000001d02bc1b",
+      "published_visible": "2025-08-28",
+      "title": "🌟一看就会曲线基础！0基础也能秒变大神",
+      "url": "https://www.xiaohongshu.com/explore/68b041d4000000001d02bc1b",
+      "queries_observed": [
+        "HSL调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "375",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "6a465209000000002200b381",
+      "published_visible": "07-02",
+      "title": "从拍摄到调色：LR/达芬奇",
+      "url": "https://www.xiaohongshu.com/explore/6a465209000000002200b381",
+      "queries_observed": [
+        "HSL调色",
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "429",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "696b45af000000002203800e",
+      "published_visible": "01-17",
+      "title": "别再只拉曝光了！越拉越灰",
+      "url": "https://www.xiaohongshu.com/explore/696b45af000000002203800e",
+      "queries_observed": [
+        "HSL调色",
+        "去灰调色",
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2932",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "68ee4f30000000000303837b",
+      "published_visible": "2025-10-14",
+      "title": "调色口诀21条/后期入门/实用干货",
+      "url": "https://www.xiaohongshu.com/explore/68ee4f30000000000303837b",
+      "queries_observed": [
+        "HSL调色",
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "730",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "696f6147000000000b009695",
+      "published_visible": "01-20",
+      "title": "📸 无差异曲线调色大揭秘！后期修图超简",
+      "url": "https://www.xiaohongshu.com/explore/696f6147000000000b009695",
+      "queries_observed": [
+        "HSL调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1118",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "69409789000000001e0389ce",
+      "published_visible": "2025-12-16",
+      "title": "终于有人把曲线调色原理讲清楚了😭",
+      "url": "https://www.xiaohongshu.com/explore/69409789000000001e0389ce",
+      "queries_observed": [
+        "HSL调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "217",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "68b06ba2000000001d028c0a",
+      "published_visible": "2025-08-28",
+      "title": "🎨 一分钟掌握PS曲线调色｜废片秒变高级",
+      "url": "https://www.xiaohongshu.com/explore/68b06ba2000000001d028c0a",
+      "queries_observed": [
+        "HSL调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "9525",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "6829cb0d0000000022007c24",
+      "published_visible": "2025-05-18",
+      "title": "曲线HSL让污水变蓝海",
+      "url": "https://www.xiaohongshu.com/explore/6829cb0d0000000022007c24",
+      "queries_observed": [
+        "HSL调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1332",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "68b2d0e3000000001d02147d",
+      "published_visible": "2025-08-30",
+      "title": "📚 学会PS基本色彩原理！调色不再靠瞎蒙",
+      "url": "https://www.xiaohongshu.com/explore/68b2d0e3000000001d02147d",
+      "queries_observed": [
+        "HSL调色",
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "11",
+      "evidence_status": "search_card_verified",
+      "keyword": "HSL调色",
+      "note_id": "67e8b61e000000000f03ad9a",
+      "published_visible": "2025-03-30",
+      "title": "一次掌握曲线调色原理，赶快收藏吧",
+      "url": "https://www.xiaohongshu.com/explore/67e8b61e000000000f03ad9a",
+      "queries_observed": [
+        "HSL调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "420",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "69bbf15b000000001b003b21",
+      "published_visible": "03-19",
+      "title": "1分钟学会修图调色🎨修图教程 蒙版教程✅",
+      "url": "https://www.xiaohongshu.com/explore/69bbf15b000000001b003b21",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "117",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "6a26a9c50000000035030c43",
+      "published_visible": "06-08",
+      "title": "1分钟速学“蒙版”调色！新手看完直接用！",
+      "url": "https://www.xiaohongshu.com/explore/6a26a9c50000000035030c43",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "295",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "692158d9000000001e022f47",
+      "published_visible": "2025-11-22",
+      "title": "🎭 PS蒙版全攻略",
+      "url": "https://www.xiaohongshu.com/explore/692158d9000000001e022f47",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "401",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "6a02f8030000000036030b58",
+      "published_visible": "05-12",
+      "title": "调色里局部颜色和控光工具-蒙版",
+      "url": "https://www.xiaohongshu.com/explore/6a02f8030000000036030b58",
+      "queries_observed": [
+        "蒙版调色",
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "553",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "69788590000000001a025272",
+      "published_visible": "01-27",
+      "title": "5s讲透蒙版用法 一张风光照全讲透",
+      "url": "https://www.xiaohongshu.com/explore/69788590000000001a025272",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "820",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "68fc63430000000003022550",
+      "published_visible": "2025-10-28",
+      "title": "📷拍风光别忘了这件事，色彩管理一篇讲清❗",
+      "url": "https://www.xiaohongshu.com/explore/68fc63430000000003022550",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "13",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "69f1ca4a000000001b023313",
+      "published_visible": "04-29",
+      "title": "📸 修图篇-蒙版的使用，学会如何局部修图",
+      "url": "https://www.xiaohongshu.com/explore/69f1ca4a000000001b023313",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1234",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "69dc92fe000000001d01c71b",
+      "published_visible": "04-13",
+      "title": "手机修图调色📱Lr风光修图教程🍃蒙版技巧🔥",
+      "url": "https://www.xiaohongshu.com/explore/69dc92fe000000001d01c71b",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "830",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "6a1d21910000000008002e4b",
+      "published_visible": "06-01",
+      "title": "调色焚决：皮肤偏色问题，一招解决！",
+      "url": "https://www.xiaohongshu.com/explore/6a1d21910000000008002e4b",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "137",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "697e0425000000002103d4cb",
+      "published_visible": "01-31",
+      "title": "新版snapseed里的“局部蒙版”在哪里？",
+      "url": "https://www.xiaohongshu.com/explore/697e0425000000002103d4cb",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "195",
+      "evidence_status": "search_card_verified",
+      "keyword": "蒙版调色",
+      "note_id": "6a71aadf00000000220325a0",
+      "published_visible": "08-04",
+      "title": "深度蒙版轻度使用效果就不错！后续重度尝试",
+      "url": "https://www.xiaohongshu.com/explore/6a71aadf00000000220325a0",
+      "queries_observed": [
+        "蒙版调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2.2万",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "690f0c720000000003010ad8",
+      "published_visible": "2025-11-08",
+      "title": "信息密度巨高！如何利用色彩加减来染色？",
+      "url": "https://www.xiaohongshu.com/explore/690f0c720000000003010ad8",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "45",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "6a70c0c1000000002800be63",
+      "published_visible": "08-12",
+      "title": "TK9亮度蒙版深度思考：基于对象的光影塑造",
+      "url": "https://www.xiaohongshu.com/explore/6a70c0c1000000002800be63",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3452",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "67d1a3e50000000029037b0d",
+      "published_visible": "2025-03-12",
+      "title": "拯救相机里的废片",
+      "url": "https://www.xiaohongshu.com/explore/67d1a3e50000000029037b0d",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "16",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "69cdf1b7000000001b000cd0",
+      "published_visible": "04-08",
+      "title": "人像调色 | 5个蒙版就够啦！",
+      "url": "https://www.xiaohongshu.com/explore/69cdf1b7000000001b000cd0",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1.4万",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "67e76205000000001d02fb76",
+      "published_visible": "2025-03-29",
+      "title": "终于知道这种逆光黑脸照怎么调出通透感了‼️",
+      "url": "https://www.xiaohongshu.com/explore/67e76205000000001d02fb76",
+      "queries_observed": [
+        "LUT调色",
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "52",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "6a70ca87000000003301214c",
+      "published_visible": "08-15",
+      "title": "TK9亮度蒙版实用技法：颜色分级快速仿色",
+      "url": "https://www.xiaohongshu.com/explore/6a70ca87000000003301214c",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "25",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "6a23f13d000000002201acbc",
+      "published_visible": "06-12",
+      "title": "建议收藏📸教你分区调色思路！",
+      "url": "https://www.xiaohongshu.com/explore/6a23f13d000000002201acbc",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "366",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "68020d9b000000001d00b174",
+      "published_visible": "2025-04-18",
+      "title": "亮度蒙版创建方法1",
+      "url": "https://www.xiaohongshu.com/explore/68020d9b000000001d00b174",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "436",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "6a213b2f000000002202d3d3",
+      "published_visible": "06-04",
+      "title": "Snapseed4.0修图第九课-蒙版与图层",
+      "url": "https://www.xiaohongshu.com/explore/6a213b2f000000002202d3d3",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "59",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "6a70bccc000000002701ceb3",
+      "published_visible": "08-09",
+      "title": "TK9深度蒙版：从二维调色到三维空间控制",
+      "url": "https://www.xiaohongshu.com/explore/6a70bccc000000002701ceb3",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "59",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "6838729d000000000f03a148",
+      "published_visible": "2025-05-29",
+      "title": "一学就会的蒙版调色教程！",
+      "url": "https://www.xiaohongshu.com/explore/6838729d000000000f03a148",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "46",
+      "evidence_status": "search_card_verified",
+      "keyword": "LUT调色",
+      "note_id": "6a70c94d000000003301d4e7",
+      "published_visible": "08-14",
+      "title": "TK9亮度蒙版逻辑进阶：手术级精准局部调整",
+      "url": "https://www.xiaohongshu.com/explore/6a70c94d000000003301d4e7",
+      "queries_observed": [
+        "LUT调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "5108",
+      "evidence_status": "search_card_verified",
+      "keyword": "肤色调色",
+      "note_id": "686d2aac000000001c035d8f",
+      "published_visible": "2025-07-08",
+      "title": "华为手机专属调色配方！真的嘎嘎出片",
+      "url": "https://www.xiaohongshu.com/explore/686d2aac000000001c035d8f",
+      "queries_observed": [
+        "肤色调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3601",
+      "evidence_status": "search_card_verified",
+      "keyword": "肤色调色",
+      "note_id": "6a18171b0000000006032646",
+      "published_visible": "05-28",
+      "title": "Plog｜新人博主靠这个滤镜，📈粉600➕",
+      "url": "https://www.xiaohongshu.com/explore/6a18171b0000000006032646",
+      "queries_observed": [
+        "肤色调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2.7万",
+      "evidence_status": "search_card_verified",
+      "keyword": "肤色调色",
+      "note_id": "6a1a759e00000000370352bd",
+      "published_visible": "05-30",
+      "title": "学会这个色调一定能出片",
+      "url": "https://www.xiaohongshu.com/explore/6a1a759e00000000370352bd",
+      "queries_observed": [
+        "肤色调色",
+        "电影感调色",
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2164",
+      "evidence_status": "search_card_verified",
+      "keyword": "肤色调色",
+      "note_id": "681a0552000000000303b109",
+      "published_visible": "2025-08-06",
+      "title": "感谢这个调色滤镜，让我涨粉10000+❗️",
+      "url": "https://www.xiaohongshu.com/explore/681a0552000000000303b109",
+      "queries_observed": [
+        "肤色调色",
+        "胶片调色",
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "322",
+      "evidence_status": "search_card_verified",
+      "keyword": "肤色调色",
+      "note_id": "6a69d8a2000000000e034d55",
+      "published_visible": "07-31",
+      "title": "华为专属调色｜一键复刻5种经典相机色调",
+      "url": "https://www.xiaohongshu.com/explore/6a69d8a2000000000e034d55",
+      "queries_observed": [
+        "肤色调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "377",
+      "evidence_status": "search_card_verified",
+      "keyword": "肤色调色",
+      "note_id": "6a1560d500000000060314bd",
+      "published_visible": "05-26",
+      "title": "iphone调色｜高级电影质感调色🎬",
+      "url": "https://www.xiaohongshu.com/explore/6a1560d500000000060314bd",
+      "queries_observed": [
+        "肤色调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "7万",
+      "evidence_status": "search_card_verified",
+      "keyword": "肤色调色",
+      "note_id": "6a892847000000001402b11a",
+      "published_visible": "昨天 22:11",
+      "title": "普通人也能get的滤镜合集来了～",
+      "url": "https://www.xiaohongshu.com/explore/6a892847000000001402b11a",
+      "queries_observed": [
+        "肤色调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "604",
+      "evidence_status": "search_card_verified",
+      "keyword": "肤色调色",
+      "note_id": "6a715f9e000000002c000b67",
+      "published_visible": "08-04",
+      "title": "提示词|AI修图打光调色的经典方法",
+      "url": "https://www.xiaohongshu.com/explore/6a715f9e000000002c000b67",
+      "queries_observed": [
+        "肤色调色",
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3642",
+      "evidence_status": "search_card_verified",
+      "keyword": "肤色调色",
+      "note_id": "6a589349000000001303fb29",
+      "published_visible": "07-16",
+      "title": "iPhone手机调色｜日常INS风干净高级感色调",
+      "url": "https://www.xiaohongshu.com/explore/6a589349000000001303fb29",
+      "queries_observed": [
+        "肤色调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "541",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "6a20c75a0000000022022b97",
+      "published_visible": "06-04",
+      "title": "拯救废片㊙️去灰去雾变通透底层逻辑",
+      "url": "https://www.xiaohongshu.com/explore/6a20c75a0000000022022b97",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "5221",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "68d61418000000001202fda2",
+      "published_visible": "2025-09-27",
+      "title": "理解图片灰的底层逻辑，才能有效去灰！",
+      "url": "https://www.xiaohongshu.com/explore/68d61418000000001202fda2",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "459",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "687792ef00000000230051c6",
+      "published_visible": "2025-07-16",
+      "title": "一点简单的照片去灰方法",
+      "url": "https://www.xiaohongshu.com/explore/687792ef00000000230051c6",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2234",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "6a0ad1ef0000000037036d4e",
+      "published_visible": "05-18",
+      "title": "照片通透是由什么决定的呢？通透只需两点",
+      "url": "https://www.xiaohongshu.com/explore/6a0ad1ef0000000037036d4e",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1373",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "6a7c783000000000250072e8",
+      "published_visible": "08-12",
+      "title": "曲线调色口诀｜新手一看就会❗❗",
+      "url": "https://www.xiaohongshu.com/explore/6a7c783000000000250072e8",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "5812",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "691ebd16000000001e011f7d",
+      "published_visible": "2025-11-20",
+      "title": "PS教程教你给照片去灰",
+      "url": "https://www.xiaohongshu.com/explore/691ebd16000000001e011f7d",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1277",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "69428f4a0000000019026a39",
+      "published_visible": "2025-12-17",
+      "title": "ps照片去除灰度",
+      "url": "https://www.xiaohongshu.com/explore/69428f4a0000000019026a39",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "4027",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "66a1b554000000000a0245c9",
+      "published_visible": "2024-07-25",
+      "title": "PS教程丨PS技巧丨PS图片去灰的5种实用方法",
+      "url": "https://www.xiaohongshu.com/explore/66a1b554000000000a0245c9",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "16",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "69dcf02700000000230062e2",
+      "published_visible": "04-13",
+      "title": "【出片急救包02】风景照灰？调色3招救",
+      "url": "https://www.xiaohongshu.com/explore/69dcf02700000000230062e2",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2339",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "68bea90d000000001d0013b5",
+      "published_visible": "2025-09-08",
+      "title": "华为专属调色公式‼️出行拍照再不怕发灰啦",
+      "url": "https://www.xiaohongshu.com/explore/68bea90d000000001d0013b5",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "6.5万",
+      "evidence_status": "search_card_verified",
+      "keyword": "去灰调色",
+      "note_id": "6a6f4c46000000002500f220",
+      "published_visible": "08-02",
+      "title": "邪修去雾教程",
+      "url": "https://www.xiaohongshu.com/explore/6a6f4c46000000002500f220",
+      "queries_observed": [
+        "去灰调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "190",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "66fd479f000000002a033e25",
+      "published_visible": "2024-10-02",
+      "title": "Ps曲线调色原理——去灰小技巧Get✅",
+      "url": "https://www.xiaohongshu.com/explore/66fd479f000000002a033e25",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "7425",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "69e747de000000002301e9f9",
+      "published_visible": "05-09",
+      "title": "别再怕曲线调色‼️零基础一遍吃透✨",
+      "url": "https://www.xiaohongshu.com/explore/69e747de000000002301e9f9",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "238",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "6867e2af0000000012023e71",
+      "published_visible": "2025-07-04",
+      "title": "醒图去灰平替？？",
+      "url": "https://www.xiaohongshu.com/explore/6867e2af0000000012023e71",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2.6万",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "69c0f1ce0000000021011635",
+      "published_visible": "04-01",
+      "title": "不要放过这个海边调色滤镜！！！",
+      "url": "https://www.xiaohongshu.com/explore/69c0f1ce0000000021011635",
+      "queries_observed": [
+        "通透调色",
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "5203",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "68748b5c0000000017031967",
+      "published_visible": "2025-07-16",
+      "title": "通透感调色分享",
+      "url": "https://www.xiaohongshu.com/explore/68748b5c0000000017031967",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "360",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "69250f84000000001f009eba",
+      "published_visible": "2025-11-25",
+      "title": "PS修图",
+      "url": "https://www.xiaohongshu.com/explore/69250f84000000001f009eba",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "104",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "689c6068000000001d039833",
+      "published_visible": "2025-08-23",
+      "title": "拍出来的照片灰蒙蒙怎么调",
+      "url": "https://www.xiaohongshu.com/explore/689c6068000000001d039833",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "30",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "696cce2a000000000a03ce60",
+      "published_visible": "01-18",
+      "title": "Ps教程·图片快速去灰",
+      "url": "https://www.xiaohongshu.com/explore/696cce2a000000000a03ce60",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2818",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "68da6353000000000e03315a",
+      "published_visible": "2025-09-29",
+      "title": "阴天废片别急着删！设计师教你调色底层逻辑",
+      "url": "https://www.xiaohongshu.com/explore/68da6353000000000e03315a",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "131",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "6a032c560000000008025908",
+      "published_visible": "05-12",
+      "title": "原图“发灰没层次”30秒调出胶片电影感！",
+      "url": "https://www.xiaohongshu.com/explore/6a032c560000000008025908",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "532",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "68ec95640000000005013c43",
+      "published_visible": "2025-10-15",
+      "title": "LR调色｜3步拯救废片✨阴天秒变通透奶油肌！",
+      "url": "https://www.xiaohongshu.com/explore/68ec95640000000005013c43",
+      "queries_observed": [
+        "通透调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "678",
+      "evidence_status": "search_card_verified",
+      "keyword": "通透调色",
+      "note_id": "69fd85510000000038023b13",
+      "published_visible": "05-08",
+      "title": "3招教会你万能调色焚决！",
+      "url": "https://www.xiaohongshu.com/explore/69fd85510000000038023b13",
+      "queries_observed": [
+        "通透调色",
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "113",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "68beaf72000000001d005707",
+      "published_visible": "2025-09-08",
+      "title": "收藏‼️如何调出电影感色调？",
+      "url": "https://www.xiaohongshu.com/explore/68beaf72000000001d005707",
+      "queries_observed": [
+        "电影感调色",
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2089",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "68078ac2000000001202fc6f",
+      "published_visible": "2025-04-22",
+      "title": "如何把短视频调出电影感？剪映3步轻松做到",
+      "url": "https://www.xiaohongshu.com/explore/68078ac2000000001202fc6f",
+      "queries_observed": [
+        "电影感调色",
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3746",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "69a6b3c9000000001a0315b7",
+      "published_visible": "03-04",
+      "title": "🎥电影感曲线调色思路 | 照片秒变电影感",
+      "url": "https://www.xiaohongshu.com/explore/69a6b3c9000000001a0315b7",
+      "queries_observed": [
+        "电影感调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "4729",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "6869c4100000000010012166",
+      "published_visible": "2025-09-04",
+      "title": "创作灵感设计大赛📷电影感邪修版调色教程",
+      "url": "https://www.xiaohongshu.com/explore/6869c4100000000010012166",
+      "queries_observed": [
+        "电影感调色",
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1万",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "6a5df2bd000000001d00e993",
+      "published_visible": "07-20",
+      "title": "“电影感”",
+      "url": "https://www.xiaohongshu.com/explore/6a5df2bd000000001d00e993",
+      "queries_observed": [
+        "电影感调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2986",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "690c40c800000000040144e6",
+      "published_visible": "2025-11-06",
+      "title": "终于知道怎么调这种仿电影胶片感调色啦❗️",
+      "url": "https://www.xiaohongshu.com/explore/690c40c800000000040144e6",
+      "queries_observed": [
+        "电影感调色",
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "4408",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "69e445b6000000002102c231",
+      "published_visible": "04-19",
+      "title": "🤹🏻‍♂️朋友说我的调色像魔法",
+      "url": "https://www.xiaohongshu.com/explore/69e445b6000000002102c231",
+      "queries_observed": [
+        "电影感调色",
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "559",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "694c95c8000000001e01575e",
+      "published_visible": "2025-12-25",
+      "title": "你们要的电影感街拍调色分享来啦",
+      "url": "https://www.xiaohongshu.com/explore/694c95c8000000001e01575e",
+      "queries_observed": [
+        "电影感调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "37",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "6a61df7f0000000001003e1a",
+      "published_visible": "07-23",
+      "title": "8套剪映氛围感调色配方🎬手机秒出大片",
+      "url": "https://www.xiaohongshu.com/explore/6a61df7f0000000001003e1a",
+      "queries_observed": [
+        "电影感调色",
+        "森林调色",
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "426",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "6a50c86b0000000008033fa6",
+      "published_visible": "07-11",
+      "title": "iPhone胶片感调色|把生活调成旧电影🎞",
+      "url": "https://www.xiaohongshu.com/explore/6a50c86b0000000008033fa6",
+      "queries_observed": [
+        "电影感调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2.2万",
+      "evidence_status": "search_card_verified",
+      "keyword": "电影感调色",
+      "note_id": "6a65e822000000000e036886",
+      "published_visible": "07-26",
+      "title": "电影感调色参数来啦！",
+      "url": "https://www.xiaohongshu.com/explore/6a65e822000000000e036886",
+      "queries_observed": [
+        "电影感调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1277",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "6a28b2d7000000000702fbae",
+      "published_visible": "06-10",
+      "title": "把抚仙湖调成阿莱电影里的热带海岸| 电影感",
+      "url": "https://www.xiaohongshu.com/explore/6a28b2d7000000000702fbae",
+      "queries_observed": [
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "165",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "6a135a2f0000000008030139",
+      "published_visible": "05-25",
+      "title": "电影影像“调色盘”",
+      "url": "https://www.xiaohongshu.com/explore/6a135a2f0000000008030139",
+      "queries_observed": [
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "694",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "6a4b1c7a000000001603f034",
+      "published_visible": "07-13",
+      "title": "终于不用手搓Lut了！",
+      "url": "https://www.xiaohongshu.com/explore/6a4b1c7a000000001603f034",
+      "queries_observed": [
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3365",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "69e0d382000000001b023f5c",
+      "published_visible": "07-13",
+      "title": "一篇帖子教会你，如何调出「暗调电影感」🎨",
+      "url": "https://www.xiaohongshu.com/explore/69e0d382000000001b023f5c",
+      "queries_observed": [
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "734",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "681a0a7c000000002301dc28",
+      "published_visible": "2025-05-06",
+      "title": "PS调色教程｜阴郁冷暖对比的电影感魔力",
+      "url": "https://www.xiaohongshu.com/explore/681a0a7c000000002301dc28",
+      "queries_observed": [
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "8649",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "68457683000000000f0391ec",
+      "published_visible": "2025-06-08",
+      "title": "电影质感调色教学",
+      "url": "https://www.xiaohongshu.com/explore/68457683000000000f0391ec",
+      "queries_observed": [
+        "清冷调色",
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "288",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "687a5e7e000000000b01fc50",
+      "published_visible": "2025-07-18",
+      "title": "📸滤镜调色课堂｜电影质感调色｜LIGHTROOM",
+      "url": "https://www.xiaohongshu.com/explore/687a5e7e000000000b01fc50",
+      "queries_observed": [
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3917",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "67bdbbf1000000000e006723",
+      "published_visible": "2025-02-25",
+      "title": "两步搞定电影感调色！",
+      "url": "https://www.xiaohongshu.com/explore/67bdbbf1000000000e006723",
+      "queries_observed": [
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "7521",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "6a5b0a5600000000100257ff",
+      "published_visible": "07-22",
+      "title": "为什么他的 INS，看起来像一本电影杂志？",
+      "url": "https://www.xiaohongshu.com/explore/6a5b0a5600000000100257ff",
+      "queries_observed": [
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2559",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "68cfb519000000001203e3a2",
+      "published_visible": "2025-09-21",
+      "title": "把生活拍成电影 🏖️9⃣️个万能胶片滤镜合集",
+      "url": "https://www.xiaohongshu.com/explore/68cfb519000000001203e3a2",
+      "queries_observed": [
+        "清冷调色",
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "129",
+      "evidence_status": "search_card_verified",
+      "keyword": "清冷调色",
+      "note_id": "68ea0f7800000000070021f1",
+      "published_visible": "2025-10-11",
+      "title": "iPhone调色|电影感暗调调色教程",
+      "url": "https://www.xiaohongshu.com/explore/68ea0f7800000000070021f1",
+      "queries_observed": [
+        "清冷调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3.8万",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "67e6215b000000000b01619a",
+      "published_visible": "2025-03-28",
+      "title": "再发一遍春和景明调色教程",
+      "url": "https://www.xiaohongshu.com/explore/67e6215b000000000b01619a",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "309",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "69c7a219000000002103b020",
+      "published_visible": "03-28",
+      "title": "手机醒图版绿色生命力调色教程来了",
+      "url": "https://www.xiaohongshu.com/explore/69c7a219000000002103b020",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "962",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "682f21ec000000002202c97b",
+      "published_visible": "2025-05-22",
+      "title": "期待夏天🎏夏日清新奶油滤镜让照片秒变动漫",
+      "url": "https://www.xiaohongshu.com/explore/682f21ec000000002202c97b",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "259",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "69d08f7c000000002301051a",
+      "published_visible": "04-04",
+      "title": "暖色系动漫风调色教程",
+      "url": "https://www.xiaohongshu.com/explore/69d08f7c000000002301051a",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "4489",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "69e76040000000001e00e1c0",
+      "published_visible": "04-26",
+      "title": "🌊打翻夏日调色盘｜《夏日幻梦》调色分享",
+      "url": "https://www.xiaohongshu.com/explore/69e76040000000001e00e1c0",
+      "queries_observed": [
+        "治愈调色",
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3176",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "6a75754e0000000029033b80",
+      "published_visible": "08-07",
+      "title": "爆火神仙滤镜合集（9）",
+      "url": "https://www.xiaohongshu.com/explore/6a75754e0000000029033b80",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "331",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "6a4a1fd1000000000f016f74",
+      "published_visible": "07-05",
+      "title": "终于知道这种绿调治愈通透感怎么调了！！！",
+      "url": "https://www.xiaohongshu.com/explore/6a4a1fd1000000000f016f74",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "108",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "6a647859000000001c00c498",
+      "published_visible": "07-25",
+      "title": "清透夏日特调 | 光落在绿意里🍃",
+      "url": "https://www.xiaohongshu.com/explore/6a647859000000001c00c498",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "508",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "6a157c3e000000003501c65a",
+      "published_visible": "06-01",
+      "title": "Fujifilm｜夏天从我身体里穿过",
+      "url": "https://www.xiaohongshu.com/explore/6a157c3e000000003501c65a",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "63",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "6a7c31370000000033008552",
+      "published_visible": "08-12",
+      "title": "一学就会｜森林自然绿万能调色救废片🌲",
+      "url": "https://www.xiaohongshu.com/explore/6a7c31370000000033008552",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "472",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "6a0fbf13000000003700dae0",
+      "published_visible": "05-22",
+      "title": "治愈系清新调色教程来啦❗️（超详细版）",
+      "url": "https://www.xiaohongshu.com/explore/6a0fbf13000000003700dae0",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "486",
+      "evidence_status": "search_card_verified",
+      "keyword": "治愈调色",
+      "note_id": "68677e800000000017031c61",
+      "published_visible": "2025-07-04",
+      "title": "🎨|单篇👀2w➕，有手就会的调色技巧来啦",
+      "url": "https://www.xiaohongshu.com/explore/68677e800000000017031c61",
+      "queries_observed": [
+        "治愈调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1400",
+      "evidence_status": "search_card_verified",
+      "keyword": "胶片调色",
+      "note_id": "6a000022000000003600192f",
+      "published_visible": "05-10",
+      "title": "配色参考｜高级治愈莫兰迪色系",
+      "url": "https://www.xiaohongshu.com/explore/6a000022000000003600192f",
+      "queries_observed": [
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2198",
+      "evidence_status": "search_card_verified",
+      "keyword": "胶片调色",
+      "note_id": "68b8ddc4000000001b020bdd",
+      "published_visible": "2025-09-10",
+      "title": "LR调色分享 | 田园纪实电影质感色调",
+      "url": "https://www.xiaohongshu.com/explore/68b8ddc4000000001b020bdd",
+      "queries_observed": [
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "338",
+      "evidence_status": "search_card_verified",
+      "keyword": "胶片调色",
+      "note_id": "6908ad7c000000000301961e",
+      "published_visible": "2025-11-04",
+      "title": "你们要的扫街调色分享来啦🎨（附参数）",
+      "url": "https://www.xiaohongshu.com/explore/6908ad7c000000000301961e",
+      "queries_observed": [
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "375",
+      "evidence_status": "search_card_verified",
+      "keyword": "胶片调色",
+      "note_id": "68221513000000002100acf8",
+      "published_visible": "2025-05-12",
+      "title": "减压美学｜9组配色|让你的设计充满治愈系🎨",
+      "url": "https://www.xiaohongshu.com/explore/68221513000000002100acf8",
+      "queries_observed": [
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1457",
+      "evidence_status": "search_card_verified",
+      "keyword": "胶片调色",
+      "note_id": "69f9d8f3000000001f003e6e",
+      "published_visible": "05-05",
+      "title": "夏日清透感｜调色分享",
+      "url": "https://www.xiaohongshu.com/explore/69f9d8f3000000001f003e6e",
+      "queries_observed": [
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "8058",
+      "evidence_status": "search_card_verified",
+      "keyword": "胶片调色",
+      "note_id": "688884920000000004003e68",
+      "published_visible": "2025-08-27",
+      "title": "创作灵感设计大赛｜绿色生命力调色",
+      "url": "https://www.xiaohongshu.com/explore/688884920000000004003e68",
+      "queries_observed": [
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "927",
+      "evidence_status": "search_card_verified",
+      "keyword": "胶片调色",
+      "note_id": "684c226a000000002300d35b",
+      "published_visible": "2025-06-13",
+      "title": "涨米粉📈1k+ | 被问爆的调色秘籍㊙️来啦",
+      "url": "https://www.xiaohongshu.com/explore/684c226a000000002300d35b",
+      "queries_observed": [
+        "胶片调色",
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "127",
+      "evidence_status": "search_card_verified",
+      "keyword": "胶片调色",
+      "note_id": "69d6f7da0000000023004883",
+      "published_visible": "04-09",
+      "title": "春日配色｜把春天藏进色卡里",
+      "url": "https://www.xiaohongshu.com/explore/69d6f7da0000000023004883",
+      "queries_observed": [
+        "胶片调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "172",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "69abf8d1000000001d012803",
+      "published_visible": "05-28",
+      "title": "🌃摄影后期｜如何修好蓝调城市风？",
+      "url": "https://www.xiaohongshu.com/explore/69abf8d1000000001d012803",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "417",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "684ac118000000002100d8cb",
+      "published_visible": "2025-08-27",
+      "title": "创作灵感设计大赛 |还原眼里的透亮夜景！🌃",
+      "url": "https://www.xiaohongshu.com/explore/684ac118000000002100d8cb",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "117",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "6a744e54000000002500c3da",
+      "published_visible": "08-06",
+      "title": "iPhone 夜景调色✨|高级感拿捏❗",
+      "url": "https://www.xiaohongshu.com/explore/6a744e54000000002500c3da",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1743",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "68528cf1000000001002474b",
+      "published_visible": "2025-06-18",
+      "title": "iPhone拍大片|蓝调夜景调色配方",
+      "url": "https://www.xiaohongshu.com/explore/68528cf1000000001002474b",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "211",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "6a02981c000000003700fc32",
+      "published_visible": "05-12",
+      "title": "夜景不知道怎么修❓一分钟教会你蓝金色调",
+      "url": "https://www.xiaohongshu.com/explore/6a02981c000000003700fc32",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "40",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "6a8af3f1000000002603a54d",
+      "published_visible": "昨天 21:21",
+      "title": "Pocket4P夜景调色分享高光不溢出人像冷白皮",
+      "url": "https://www.xiaohongshu.com/explore/6a8af3f1000000002603a54d",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "74",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "69957d4f000000002801d66b",
+      "published_visible": "02-18",
+      "title": "3分钟调出黑金色调｜杂乱灯光秒变百万夜景🎨",
+      "url": "https://www.xiaohongshu.com/explore/69957d4f000000002801d66b",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "87",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "6a70385100000000320204b9",
+      "published_visible": "08-03",
+      "title": "5分钟速修城市蓝调教程",
+      "url": "https://www.xiaohongshu.com/explore/6a70385100000000320204b9",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "787",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "6923250e000000001b020706",
+      "published_visible": "2025-11-24",
+      "title": "万能夜景后期｜5分钟速成高级蓝金色调",
+      "url": "https://www.xiaohongshu.com/explore/6923250e000000001b020706",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "19",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "6a51f9020000000007022627",
+      "published_visible": "07-11",
+      "title": "青橙幽静感调色教程（醒图）",
+      "url": "https://www.xiaohongshu.com/explore/6a51f9020000000007022627",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "27",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "6a8acac7000000003a02c30f",
+      "published_visible": "昨天 18:26",
+      "title": "夜景调光｜手机调光教程",
+      "url": "https://www.xiaohongshu.com/explore/6a8acac7000000003a02c30f",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "31",
+      "evidence_status": "search_card_verified",
+      "keyword": "夜景调色",
+      "note_id": "69070ca00000000007034f11",
+      "published_visible": "2025-11-02",
+      "title": "Lr调色指南🎨|城市夜景黑金色调调色",
+      "url": "https://www.xiaohongshu.com/explore/69070ca00000000007034f11",
+      "queries_observed": [
+        "夜景调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "73",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "6a24de020000000021009b45",
+      "published_visible": "07-13",
+      "title": "如何调出「夜景电影感」色调？一篇帖子教会你",
+      "url": "https://www.xiaohongshu.com/explore/6a24de020000000021009b45",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "236",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "67d1803f000000000d01559a",
+      "published_visible": "2025-03-12",
+      "title": "青橙调电影感夜景调色分享",
+      "url": "https://www.xiaohongshu.com/explore/67d1803f000000000d01559a",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1048",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "6859429b0000000012033136",
+      "published_visible": "2025-06-23",
+      "title": "🎨后期技巧｜15秒精修出高质感城市蓝调夜景❗",
+      "url": "https://www.xiaohongshu.com/explore/6859429b0000000012033136",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "38",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "6843f39a00000000120023ba",
+      "published_visible": "2025-06-07",
+      "title": "夜景扫街🎬 电影质感调色预设分享",
+      "url": "https://www.xiaohongshu.com/explore/6843f39a00000000120023ba",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "570",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "68b9a5b1000000001b03d8cf",
+      "published_visible": "07-13",
+      "title": "我最常用的夜景调色🎨参数无保留分享❗️",
+      "url": "https://www.xiaohongshu.com/explore/68b9a5b1000000001b03d8cf",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "609",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "67c7de8c0000000029010476",
+      "published_visible": "2025-03-05",
+      "title": "如何拍出国内顶级CBD夜景内透（机位+调色）",
+      "url": "https://www.xiaohongshu.com/explore/67c7de8c0000000029010476",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1410",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "6927eed1000000000d035e0f",
+      "published_visible": "2025-11-27",
+      "title": "iPhone原相机调色⭕新手照抄直出",
+      "url": "https://www.xiaohongshu.com/explore/6927eed1000000000d035e0f",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3808",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "67ee7945000000000b0177be",
+      "published_visible": "2025-08-04",
+      "title": "【后期技巧】城市夜景3种色调5分钟速成攻略",
+      "url": "https://www.xiaohongshu.com/explore/67ee7945000000000b0177be",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "713",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "68acf90d000000001d02eca5",
+      "published_visible": "2025-08-26",
+      "title": "拯救废片‼️10w人看过的蓝调调色教程来啦",
+      "url": "https://www.xiaohongshu.com/explore/68acf90d000000001d02eca5",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "49",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "6a85b06a0000000027022d40",
+      "published_visible": null,
+      "title": "iPhone🌃｜原来城市去雾调色是这样调的！",
+      "url": "https://www.xiaohongshu.com/explore/6a85b06a0000000027022d40",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "4",
+      "evidence_status": "search_card_verified",
+      "keyword": "森林调色",
+      "note_id": "6a7c3318000000003300e344",
+      "published_visible": "08-12",
+      "title": "iPhone调色🎨｜黑金高级感夜景调色参数",
+      "url": "https://www.xiaohongshu.com/explore/6a7c3318000000003300e344",
+      "queries_observed": [
+        "森林调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1256",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "6a7c345f00000000330091fc",
+      "published_visible": "08-12",
+      "title": "再教一遍！！万能海边通透调色公式！！",
+      "url": "https://www.xiaohongshu.com/explore/6a7c345f00000000330091fc",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "883",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "69f338a60000000023006682",
+      "published_visible": "04-30",
+      "title": "终于知道这种马尔代夫蓝调滤镜怎么调了‼️",
+      "url": "https://www.xiaohongshu.com/explore/69f338a60000000023006682",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2210",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "6a030bc30000000038036b1d",
+      "published_visible": "05-13",
+      "title": "再教一遍！！iPhone真的可以很富士！📷",
+      "url": "https://www.xiaohongshu.com/explore/6a030bc30000000038036b1d",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "85",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "6a7ea69f000000002500c86f",
+      "published_visible": "08-14",
+      "title": "如何让海水变蓝去除杂色原理",
+      "url": "https://www.xiaohongshu.com/explore/6a7ea69f000000002500c86f",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "16",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "6a19745b000000003601c6ac",
+      "published_visible": "05-29",
+      "title": "超级简单🌊！｜把蓝色还给大海",
+      "url": "https://www.xiaohongshu.com/explore/6a19745b000000003601c6ac",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "186",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "69d602f000000000230253f1",
+      "published_visible": "04-08",
+      "title": "终于知道海边清新通透感怎么调了❗️附教程",
+      "url": "https://www.xiaohongshu.com/explore/69d602f000000000230253f1",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "123",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "68fc861c0000000005033a06",
+      "published_visible": "2025-10-25",
+      "title": "我也是学会了怎么调通透蓝色玻璃海|附教程",
+      "url": "https://www.xiaohongshu.com/explore/68fc861c0000000005033a06",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3687",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "68a3ea00000000001d01d1ef",
+      "published_visible": "2025-08-28",
+      "title": "终于知道海边高清又通透的照片怎么P了‼️",
+      "url": "https://www.xiaohongshu.com/explore/68a3ea00000000001d01d1ef",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2622",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "69ae9f760000000026032cc7",
+      "published_visible": "03-09",
+      "title": "🌊地中海胶片感|iPhone原相机调色教程",
+      "url": "https://www.xiaohongshu.com/explore/69ae9f760000000026032cc7",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1811",
+      "evidence_status": "search_card_verified",
+      "keyword": "海边调色",
+      "note_id": "690cbdaf000000000503953a",
+      "published_visible": "2025-11-13",
+      "title": "🎞️调色分享｜万人看过的海滩仿胶片教程来啦",
+      "url": "https://www.xiaohongshu.com/explore/690cbdaf000000000503953a",
+      "queries_observed": [
+        "海边调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "830",
+      "evidence_status": "search_card_verified",
+      "keyword": "日落调色",
+      "note_id": "6a0a9d76000000003501ed27",
+      "published_visible": "05-18",
+      "title": "拯救废片！脏海水变蓝详细调色教程 🎞️",
+      "url": "https://www.xiaohongshu.com/explore/6a0a9d76000000003501ed27",
+      "queries_observed": [
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "914",
+      "evidence_status": "search_card_verified",
+      "keyword": "日落调色",
+      "note_id": "69ab94710000000022023452",
+      "published_visible": "03-07",
+      "title": "索尼a7c2 | 把影子留给海风",
+      "url": "https://www.xiaohongshu.com/explore/69ab94710000000022023452",
+      "queries_observed": [
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2223",
+      "evidence_status": "search_card_verified",
+      "keyword": "日落调色",
+      "note_id": "69c5d2b5000000002800b8f9",
+      "published_visible": "03-27",
+      "title": "LR调色分享 | 小镇扫街清透蓝电影感色调🎞️",
+      "url": "https://www.xiaohongshu.com/explore/69c5d2b5000000002800b8f9",
+      "queries_observed": [
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "193",
+      "evidence_status": "search_card_verified",
+      "keyword": "日落调色",
+      "note_id": "69b93434000000002200fb7f",
+      "published_visible": "03-18",
+      "title": "你也喜欢蓝色玻璃海吧🔵💙",
+      "url": "https://www.xiaohongshu.com/explore/69b93434000000002200fb7f",
+      "queries_observed": [
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "25",
+      "evidence_status": "search_card_verified",
+      "keyword": "日落调色",
+      "note_id": "6a589765000000000a038cf8",
+      "published_visible": "07-28",
+      "title": "在小红书上跟风最成功的一次！！！",
+      "url": "https://www.xiaohongshu.com/explore/6a589765000000000a038cf8",
+      "queries_observed": [
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "86",
+      "evidence_status": "search_card_verified",
+      "keyword": "日落调色",
+      "note_id": "6a41af42000000002201b600",
+      "published_visible": "06-29",
+      "title": "摄影后期㊙️海水变蓝调色思路解析！",
+      "url": "https://www.xiaohongshu.com/explore/6a41af42000000002201b600",
+      "queries_observed": [
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "6",
+      "evidence_status": "search_card_verified",
+      "keyword": "日落调色",
+      "note_id": "6a880228000000003301c7c7",
+      "published_visible": null,
+      "title": "不要放过这个海边调色滤镜！！！",
+      "url": "https://www.xiaohongshu.com/explore/6a880228000000003301c7c7",
+      "queries_observed": [
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "33",
+      "evidence_status": "search_card_verified",
+      "keyword": "日落调色",
+      "note_id": "6a7ae01c0000000025009590",
+      "published_visible": null,
+      "title": "iPhone 调色分享|冰蓝清透的海浪🌊",
+      "url": "https://www.xiaohongshu.com/explore/6a7ae01c0000000025009590",
+      "queries_observed": [
+        "日落调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "265",
+      "evidence_status": "search_card_verified",
+      "keyword": "人像调色",
+      "note_id": "6a4dc333000000000802442f",
+      "published_visible": "07-08",
+      "title": "人像肤色变透亮的完整流程",
+      "url": "https://www.xiaohongshu.com/explore/6a4dc333000000000802442f",
+      "queries_observed": [
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3646",
+      "evidence_status": "search_card_verified",
+      "keyword": "人像调色",
+      "note_id": "69b67439000000002301e4dc",
+      "published_visible": "03-15",
+      "title": "分享我的人像调色修图思路",
+      "url": "https://www.xiaohongshu.com/explore/69b67439000000002301e4dc",
+      "queries_observed": [
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "751",
+      "evidence_status": "search_card_verified",
+      "keyword": "人像调色",
+      "note_id": "69d59aea000000001d01d921",
+      "published_visible": "06-16",
+      "title": "大师仿色第三期：Sam Alive｜油润胶片感",
+      "url": "https://www.xiaohongshu.com/explore/69d59aea000000001d01d921",
+      "queries_observed": [
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1063",
+      "evidence_status": "search_card_verified",
+      "keyword": "人像调色",
+      "note_id": "68b2b01f000000001d036d1e",
+      "published_visible": "2025-08-30",
+      "title": "📸 相机参数秘籍｜一招get网红照片风格✨",
+      "url": "https://www.xiaohongshu.com/explore/68b2b01f000000001d036d1e",
+      "queries_observed": [
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1.4万",
+      "evidence_status": "search_card_verified",
+      "keyword": "人像调色",
+      "note_id": "681228f7000000002301443d",
+      "published_visible": "2025-05-01",
+      "title": "【调色教程】通透日系风怎么调｜附参数思路",
+      "url": "https://www.xiaohongshu.com/explore/681228f7000000002301443d",
+      "queries_observed": [
+        "人像调色",
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "747",
+      "evidence_status": "search_card_verified",
+      "keyword": "人像调色",
+      "note_id": "6a6796180000000001001b88",
+      "published_visible": "07-28",
+      "title": "人像调色起手式！原来调色这么简单！",
+      "url": "https://www.xiaohongshu.com/explore/6a6796180000000001001b88",
+      "queries_observed": [
+        "人像调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "849",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "69874b52000000001a030606",
+      "published_visible": "02-07",
+      "title": "是你想要了解的奶油肌调色教程吗？ 今天给大",
+      "url": "https://www.xiaohongshu.com/explore/69874b52000000001a030606",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1085",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "689345bd000000002303a867",
+      "published_visible": "2025-08-06",
+      "title": "“PS 冷白皮公式大公开！",
+      "url": "https://www.xiaohongshu.com/explore/689345bd000000002303a867",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "357",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "684d1b19000000002100aed5",
+      "published_visible": "2025-06-16",
+      "title": "终于知道这种大黑脸 怎么修出通透感了❗❗",
+      "url": "https://www.xiaohongshu.com/explore/684d1b19000000002100aed5",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "192",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "6a8964a4000000003300b724",
+      "published_visible": null,
+      "title": "Ai修图提示词 |让光影把故事写进照片!",
+      "url": "https://www.xiaohongshu.com/explore/6a8964a4000000003300b724",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1754",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "6a22d0750000000006036323",
+      "published_visible": "06-05",
+      "title": "吹爆这个复古胶片滤镜！真的太绝啦❗️",
+      "url": "https://www.xiaohongshu.com/explore/6a22d0750000000006036323",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1.1万",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "68529f2a000000002400cf36",
+      "published_visible": "2025-06-23",
+      "title": "拯救废片！朋友圈问爆的参数👀",
+      "url": "https://www.xiaohongshu.com/explore/68529f2a000000002400cf36",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "345",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "6a72d5e20000000026036331",
+      "published_visible": "08-09",
+      "title": "不瞒你说，我的照片90%都靠这个预设～",
+      "url": "https://www.xiaohongshu.com/explore/6a72d5e20000000026036331",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "559",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "6a1439e7000000003600170e",
+      "published_visible": "05-26",
+      "title": "🎞️终于知道这种胶片感写真怎么调色了❗️🔥",
+      "url": "https://www.xiaohongshu.com/explore/6a1439e7000000003600170e",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "806",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "688312bd00000000110020e2",
+      "published_visible": "2025-07-25",
+      "title": "实不相瞒，我的照片90%都是靠这个预设！",
+      "url": "https://www.xiaohongshu.com/explore/688312bd00000000110020e2",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1496",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "67e7ad70000000000e0042db",
+      "published_visible": "2025-03-29",
+      "title": "美图秀秀宝藏调色公式，拍照爱好快学起啦！",
+      "url": "https://www.xiaohongshu.com/explore/67e7ad70000000000e0042db",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "190",
+      "evidence_status": "search_card_verified",
+      "keyword": "产品调色",
+      "note_id": "68934eec00000000220217ad",
+      "published_visible": "2025-08-07",
+      "title": "ps日系胶片调色丨多种风格可选",
+      "url": "https://www.xiaohongshu.com/explore/68934eec00000000220217ad",
+      "queries_observed": [
+        "产品调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2309",
+      "evidence_status": "search_card_verified",
+      "keyword": "剪映调色",
+      "note_id": "697b440e000000000b0129d9",
+      "published_visible": "01-29",
+      "title": "新手剪辑师的剪映调色技巧，简单易上手！",
+      "url": "https://www.xiaohongshu.com/explore/697b440e000000000b0129d9",
+      "queries_observed": [
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "325",
+      "evidence_status": "search_card_verified",
+      "keyword": "剪映调色",
+      "note_id": "6a5f0b21000000000101e3ab",
+      "published_visible": "07-21",
+      "title": "剪映调色能行吗？看疗效",
+      "url": "https://www.xiaohongshu.com/explore/6a5f0b21000000000101e3ab",
+      "queries_observed": [
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2698",
+      "evidence_status": "search_card_verified",
+      "keyword": "剪映调色",
+      "note_id": "69b366e80000000004001528",
+      "published_visible": "03-13",
+      "title": "剪映万能调色公式✨废片直接封神📸",
+      "url": "https://www.xiaohongshu.com/explore/69b366e80000000004001528",
+      "queries_observed": [
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "69",
+      "evidence_status": "search_card_verified",
+      "keyword": "剪映调色",
+      "note_id": "6a609d2c000000000301c837",
+      "published_visible": "07-22",
+      "title": "剪映调色公式存下吧很难找全了",
+      "url": "https://www.xiaohongshu.com/explore/6a609d2c000000000301c837",
+      "queries_observed": [
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3612",
+      "evidence_status": "search_card_verified",
+      "keyword": "剪映调色",
+      "note_id": "6a618c980000000006012883",
+      "published_visible": "07-23",
+      "title": "剪映调出高清通透感视频的技巧",
+      "url": "https://www.xiaohongshu.com/explore/6a618c980000000006012883",
+      "queries_observed": [
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "5921",
+      "evidence_status": "search_card_verified",
+      "keyword": "剪映调色",
+      "note_id": "6a61e535000000000f030d76",
+      "published_visible": "07-23",
+      "title": "【夏日胶片电影感调色】阿卷教你学调色",
+      "url": "https://www.xiaohongshu.com/explore/6a61e535000000000f030d76",
+      "queries_observed": [
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2.1万",
+      "evidence_status": "search_card_verified",
+      "keyword": "剪映调色",
+      "note_id": "69131fcb000000000700bf0c",
+      "published_visible": "2025-11-27",
+      "title": "一个视频教会你所有曲线｜调色🪄",
+      "url": "https://www.xiaohongshu.com/explore/69131fcb000000000700bf0c",
+      "queries_observed": [
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "393",
+      "evidence_status": "search_card_verified",
+      "keyword": "剪映调色",
+      "note_id": "69ae2aa7000000002203a32b",
+      "published_visible": "03-09",
+      "title": "简单又出效果的调色教程",
+      "url": "https://www.xiaohongshu.com/explore/69ae2aa7000000002203a32b",
+      "queries_observed": [
+        "剪映调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "6873",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "68e88754000000000301860d",
+      "published_visible": "2025-10-10",
+      "title": "《新手7天学会剪辑》第七期 怎么电影感调色",
+      "url": "https://www.xiaohongshu.com/explore/68e88754000000000301860d",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "5.8万",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "69230855000000001f004425",
+      "published_visible": "2025-12-09",
+      "title": "🔥博主同款奶油风滤镜教程来啦！Get手白教学",
+      "url": "https://www.xiaohongshu.com/explore/69230855000000001f004425",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "6.1万",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "6864fd2c000000001202e385",
+      "published_visible": "2025-07-15",
+      "title": "“当我给视频施了点魔法🪄”",
+      "url": "https://www.xiaohongshu.com/explore/6864fd2c000000001202e385",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "103",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "6a5f5997000000001f01fbef",
+      "published_visible": "07-21",
+      "title": "剪映调色公式存下吧、很难找全了",
+      "url": "https://www.xiaohongshu.com/explore/6a5f5997000000001f01fbef",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "425",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "695d032d0000000022038a66",
+      "published_visible": "01-06",
+      "title": "剪映调色工具到底怎么用？零基础入门教程！",
+      "url": "https://www.xiaohongshu.com/explore/695d032d0000000022038a66",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "84",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "69f5e7f50000000035023329",
+      "published_visible": "05-02",
+      "title": "剪辑常用滤镜，剪辑入门必看！",
+      "url": "https://www.xiaohongshu.com/explore/69f5e7f50000000035023329",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1968",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "6864ab42000000001203dfed",
+      "published_visible": "2025-07-04",
+      "title": "终于找到博主都在用的神仙调色公式了！",
+      "url": "https://www.xiaohongshu.com/explore/6864ab42000000001203dfed",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "225",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "698317e8000000000a02dad7",
+      "published_visible": "02-04",
+      "title": "剪映调色，邪修调色大法",
+      "url": "https://www.xiaohongshu.com/explore/698317e8000000000a02dad7",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "5096",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "68555156000000001d00e5c4",
+      "published_visible": "2025-06-20",
+      "title": "vlog调色 | 新手必备的万能调色参数✅超简单",
+      "url": "https://www.xiaohongshu.com/explore/68555156000000001d00e5c4",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "710",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "689fee74000000001d00c982",
+      "published_visible": "2025-08-16",
+      "title": "剪映调色教程丨30秒学会美食调色🎨",
+      "url": "https://www.xiaohongshu.com/explore/689fee74000000001d00c982",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "98",
+      "evidence_status": "search_card_verified",
+      "keyword": "醒图调色",
+      "note_id": "69771320000000000e03dc07",
+      "published_visible": "01-26",
+      "title": "剪映调色公式存下吧，很难找全了😭",
+      "url": "https://www.xiaohongshu.com/explore/69771320000000000e03dc07",
+      "queries_observed": [
+        "醒图调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "361",
+      "evidence_status": "search_card_verified",
+      "keyword": "Lightroom调色",
+      "note_id": "6a07b3ac00000000380366f4",
+      "published_visible": "05-16",
+      "title": "五步打造Lr调色工作流",
+      "url": "https://www.xiaohongshu.com/explore/6a07b3ac00000000380366f4",
+      "queries_observed": [
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2383",
+      "evidence_status": "search_card_verified",
+      "keyword": "Lightroom调色",
+      "note_id": "6a320eb8000000000803ceee",
+      "published_visible": "06-17",
+      "title": "比沙漠还干的调色教程",
+      "url": "https://www.xiaohongshu.com/explore/6a320eb8000000000803ceee",
+      "queries_observed": [
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "4689",
+      "evidence_status": "search_card_verified",
+      "keyword": "Lightroom调色",
+      "note_id": "6a8ad95e0000000033022072",
+      "published_visible": "昨天 19:28",
+      "title": "学会这个色调质感瞬间拉满",
+      "url": "https://www.xiaohongshu.com/explore/6a8ad95e0000000033022072",
+      "queries_observed": [
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "3117",
+      "evidence_status": "search_card_verified",
+      "keyword": "Lightroom调色",
+      "note_id": "69bf72680000000023012974",
+      "published_visible": "03-22",
+      "title": "Lr修图分享｜电影感后期修图超详细！",
+      "url": "https://www.xiaohongshu.com/explore/69bf72680000000023012974",
+      "queries_observed": [
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "4472",
+      "evidence_status": "search_card_verified",
+      "keyword": "Lightroom调色",
+      "note_id": "6a6b46cd0000000025016422",
+      "published_visible": "08-08",
+      "title": "6w人看过的罗马调色来了",
+      "url": "https://www.xiaohongshu.com/explore/6a6b46cd0000000025016422",
+      "queries_observed": [
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "4.5万",
+      "evidence_status": "search_card_verified",
+      "keyword": "Lightroom调色",
+      "note_id": "6a37cbeb0000000016025874",
+      "published_visible": "06-21",
+      "title": "学会这个色调就是情绪大师",
+      "url": "https://www.xiaohongshu.com/explore/6a37cbeb0000000016025874",
+      "queries_observed": [
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "60",
+      "evidence_status": "search_card_verified",
+      "keyword": "Lightroom调色",
+      "note_id": "6a4712750000000008025fb4",
+      "published_visible": "07-03",
+      "title": "LR调整影调工具全解析",
+      "url": "https://www.xiaohongshu.com/explore/6a4712750000000008025fb4",
+      "queries_observed": [
+        "Lightroom调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1208",
+      "evidence_status": "search_card_verified",
+      "keyword": "视频调色",
+      "note_id": "6a19aae0000000003803654d",
+      "published_visible": "05-29",
+      "title": "🎨｜春日清透感蔷薇调色教程来了！！！",
+      "url": "https://www.xiaohongshu.com/explore/6a19aae0000000003803654d",
+      "queries_observed": [
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "244",
+      "evidence_status": "search_card_verified",
+      "keyword": "视频调色",
+      "note_id": "69fbfe22000000003802374d",
+      "published_visible": "05-07",
+      "title": "在lr照片调色中我使用最多的就是-颜色校准",
+      "url": "https://www.xiaohongshu.com/explore/69fbfe22000000003802374d",
+      "queries_observed": [
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "419",
+      "evidence_status": "search_card_verified",
+      "keyword": "视频调色",
+      "note_id": "67d8bf530000000006039e2a",
+      "published_visible": "2025-03-18",
+      "title": "LR调色分享 | ins风高级感低饱和绿色调",
+      "url": "https://www.xiaohongshu.com/explore/67d8bf530000000006039e2a",
+      "queries_observed": [
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "948",
+      "evidence_status": "search_card_verified",
+      "keyword": "视频调色",
+      "note_id": "68ea556b0000000003020932",
+      "published_visible": "2025-10-11",
+      "title": "朋友说我的调色像魔法😂附教程‼️",
+      "url": "https://www.xiaohongshu.com/explore/68ea556b0000000003020932",
+      "queries_observed": [
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "120",
+      "evidence_status": "search_card_verified",
+      "keyword": "视频调色",
+      "note_id": "69f74639000000003502adf6",
+      "published_visible": "05-03",
+      "title": "Lr调色指南🎨｜动漫感调色参数分享✨",
+      "url": "https://www.xiaohongshu.com/explore/69f74639000000003502adf6",
+      "queries_observed": [
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1670",
+      "evidence_status": "search_card_verified",
+      "keyword": "视频调色",
+      "note_id": "688f0b7b00000000050082e8",
+      "published_visible": "2025-08-03",
+      "title": "手机版IR调色入门指南，超级简单！",
+      "url": "https://www.xiaohongshu.com/explore/688f0b7b00000000050082e8",
+      "queries_observed": [
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "525",
+      "evidence_status": "search_card_verified",
+      "keyword": "视频调色",
+      "note_id": "691d73990000000019024bd0",
+      "published_visible": "2025-11-19",
+      "title": "LR调色教程 | 日系晴天仿胶色调☀️",
+      "url": "https://www.xiaohongshu.com/explore/691d73990000000019024bd0",
+      "queries_observed": [
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "2.9万",
+      "evidence_status": "search_card_verified",
+      "keyword": "视频调色",
+      "note_id": "6a89883e000000003302b707",
+      "published_visible": null,
+      "title": "如何让你的照片看起来像EVA风格",
+      "url": "https://www.xiaohongshu.com/explore/6a89883e000000003302b707",
+      "queries_observed": [
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    },
+    {
+      "engagement_visible": "1061",
+      "evidence_status": "search_card_verified",
+      "keyword": "视频调色",
+      "note_id": "685cc917000000001d00d011",
+      "published_visible": "2025-12-02",
+      "title": "创作灵感设计大赛 | 扫街电影感调色滤镜",
+      "url": "https://www.xiaohongshu.com/explore/685cc917000000001d00d011",
+      "queries_observed": [
+        "视频调色"
+      ],
+      "query_attribution_status": "transition_unverified"
+    }
+  ]
+}

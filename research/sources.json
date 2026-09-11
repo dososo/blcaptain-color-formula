@@ -1,0 +1,852 @@
+{
+  "schema_version": "1.3.0",
+  "records": [
+    {
+      "id": "A01",
+      "declared_tier": "A",
+      "category": "官方技术文档",
+      "publisher": "Apple 支持",
+      "title": "在 Mac 上的“照片”中调整照片或视频的光线、曝光和颜色",
+      "platform": "Apple 照片",
+      "published_or_updated": "持续更新",
+      "url": "https://support.apple.com/en-is/guide/photos/pht806aea6a6/mac",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A02",
+      "declared_tier": "A",
+      "category": "官方技术文档",
+      "publisher": "Adobe",
+      "title": "Lightroom Classic 图像色调与颜色调整",
+      "platform": "Lightroom / Camera Raw",
+      "published_or_updated": "持续更新",
+      "url": "https://helpx.adobe.com/lightroom-classic/desktop/process-and-develop-photos/image-tone-color.html",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "用户 Chrome 经 CDP proxy 在自建后台 tab 内只读访问，确认可达并取到页面标题与正文长度",
+        "observed_title": "How to adjust image tone and color, and work in grayscale in Lightroom Classic |",
+        "observed_text_length": 32205,
+        "boundary": "只确认 URL 当前可达且标题与本条记录一致；不代表页面内容与本条记录的主张一致，内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A03",
+      "declared_tier": "A",
+      "category": "官方技术文档",
+      "publisher": "Adobe",
+      "title": "Lightroom 移动端颜色调整",
+      "platform": "Lightroom 移动端",
+      "published_or_updated": "持续更新",
+      "url": "https://helpx.adobe.com/lightroom/mobile/adjust-light-and-color/adjust-colors.html",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "用户 Chrome 经 CDP proxy 在自建后台 tab 内只读访问，确认可达并取到页面标题与正文长度",
+        "observed_title": "Adjust colors in Lightroom on mobile | Lightroom",
+        "observed_text_length": 5503,
+        "boundary": "只确认 URL 当前可达且标题与本条记录一致；不代表页面内容与本条记录的主张一致，内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A04",
+      "declared_tier": "A",
+      "category": "官方技术文档",
+      "publisher": "Adobe",
+      "title": "Lightroom 移动端编辑、预设与局部调整",
+      "platform": "Lightroom 移动端",
+      "published_or_updated": "持续更新",
+      "url": "https://helpx.adobe.com/au/lightroom-cc/using/edit-photos-mobile-ios.html",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "用户 Chrome 经 CDP proxy 在自建后台 tab 内只读访问，确认可达并取到页面标题与正文长度",
+        "observed_title": "Learn how to edit photos with custom presets, filters, and local adjustments in ",
+        "observed_text_length": 22877,
+        "boundary": "只确认 URL 当前可达且标题与本条记录一致；不代表页面内容与本条记录的主张一致，内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A05",
+      "declared_tier": "A",
+      "category": "官方技术文档",
+      "publisher": "Adobe",
+      "title": "Lightroom Classic 蒙版工具",
+      "platform": "Lightroom Classic",
+      "published_or_updated": "持续更新",
+      "url": "https://helpx.adobe.com/lightroom-classic/desktop/process-and-develop-photos/masking.html",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "用户 Chrome 经 CDP proxy 在自建后台 tab 内只读访问，确认可达并取到页面标题与正文长度",
+        "observed_title": "Lightroom Classic Masking tool | Lightroom Classic",
+        "observed_text_length": 17584,
+        "boundary": "只确认 URL 当前可达且标题与本条记录一致；不代表页面内容与本条记录的主张一致，内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A06",
+      "declared_tier": "A",
+      "category": "色彩标准",
+      "publisher": "W3C",
+      "title": "CSS Color Module Level 4",
+      "platform": "色彩计算",
+      "published_or_updated": "持续更新",
+      "url": "https://www.w3.org/TR/css-color-4/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A07",
+      "declared_tier": "A",
+      "category": "官方风格资料",
+      "publisher": "Fujifilm",
+      "title": "CLASSIC Neg. 电影模拟",
+      "platform": "富士胶片模拟",
+      "published_or_updated": "持续更新",
+      "url": "https://www.fujifilm-x.com/en-us/products/film-simulation/classic-neg/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A08",
+      "declared_tier": "A",
+      "category": "官方风格资料",
+      "publisher": "Fujifilm",
+      "title": "CLASSIC CHROME 电影模拟",
+      "platform": "富士胶片模拟",
+      "published_or_updated": "持续更新",
+      "url": "https://www.fujifilm-x.com/uk-ua/products/film-simulation/classic-chrome/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A09",
+      "declared_tier": "A",
+      "category": "官方风格资料",
+      "publisher": "Kodak Alaris",
+      "title": "Kodak Professional 彩色胶片",
+      "platform": "胶片",
+      "published_or_updated": "持续更新",
+      "url": "https://kodakprofessional.com/photographers/film/color",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A10",
+      "declared_tier": "A",
+      "category": "官方技术文档",
+      "publisher": "VSCO",
+      "title": "VSCO 预设指南",
+      "platform": "VSCO",
+      "published_or_updated": "2026-02-20",
+      "url": "https://support.vsco.co/en/articles/12698471-preset-guide",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "用户 Chrome 经 CDP proxy 在自建后台 tab 内只读访问，确认可达并取到页面标题与正文长度",
+        "observed_title": "Preset Guide | VSCO Support Center",
+        "observed_text_length": 17123,
+        "boundary": "只确认 URL 当前可达且标题与本条记录一致；不代表页面内容与本条记录的主张一致，内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A11",
+      "declared_tier": "A",
+      "category": "官方技术文档",
+      "publisher": "VSCO",
+      "title": "VSCO Tone 工具说明",
+      "platform": "VSCO",
+      "published_or_updated": "2025-12-30",
+      "url": "https://support.vsco.co/en/articles/12698579-using-the-tone-tool",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "B01",
+      "declared_tier": "B",
+      "category": "平台趋势观察",
+      "publisher": "DT财经 / CBNData",
+      "title": "在小红书学了一礼拜 P 图，我总结了 3 条精髓",
+      "platform": "小红书内容观察",
+      "published_or_updated": "2021-10-25",
+      "url": "https://www.cbndata.com/information/211579",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "B02",
+      "declared_tier": "B",
+      "category": "公开参数合集",
+      "publisher": "GirlStyle MY",
+      "title": "6 个 iPhone 超实用原相机调色教程",
+      "platform": "iPhone 照片",
+      "published_or_updated": "2024-10-09",
+      "url": "https://girlstyle.com/my/article/219387/iphone-%E5%8E%9F%E7%9B%B8%E6%9C%BA-%E8%B0%83%E8%89%B2-%E6%95%99%E7%A8%8B",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "B03",
+      "declared_tier": "B",
+      "category": "公开参数合集",
+      "publisher": "Cosmopolitan HK",
+      "title": "iPhone 原相机 10 种调色技巧",
+      "platform": "iPhone 照片",
+      "published_or_updated": "网页持续可访问",
+      "url": "https://www.cosmopolitan.com.hk/lifestyle/how-to-tone-photos",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "B04",
+      "declared_tier": "C",
+      "category": "转载参数合集",
+      "publisher": "日升软件",
+      "title": "醒图 APP 不同滤镜参数调色教程分享",
+      "platform": "醒图",
+      "published_or_updated": "网页持续可访问",
+      "url": "https://m.51nacs.com/article/750.html",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "B05",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "新浪聚合 / 微博公开内容",
+      "title": "滤镜调色：复古美式、梦幻糖果、暗调、薄荷蓝、奶油橘、日韩清新",
+      "platform": "醒图",
+      "published_or_updated": "2026-07-21",
+      "url": "https://www.sina.cn/news/detail/5323127244723017.html",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C01",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "Dealmoon 用户内容",
+      "title": "iPhone 原相机冷白皮参数分享",
+      "platform": "iPhone 照片",
+      "published_or_updated": "2022-08-13",
+      "url": "https://www.dealmoon.com/post/1807033",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "用户 Chrome 经 CDP proxy 在自建后台 tab 内只读访问，确认可达并取到页面标题与正文长度",
+        "observed_title": "iPhone原相机自带的调色-冷白皮参数分享 | 社区数码精选",
+        "observed_text_length": 2890,
+        "boundary": "只确认 URL 当前可达且标题与本条记录一致；不代表页面内容与本条记录的主张一致，内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C02",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "知乎专栏",
+      "title": "醒图街景调色合集",
+      "platform": "醒图",
+      "published_or_updated": "2020-11-19",
+      "url": "https://zhuanlan.zhihu.com/p/297838950",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "用户 Chrome 经 CDP proxy 在自建后台 tab 内只读访问，确认可达并取到页面标题与正文长度",
+        "observed_title": "醒图调色合集｜9套街景调色参数私藏大分享 - 知乎",
+        "observed_text_length": 2520,
+        "boundary": "只确认 URL 当前可达且标题与本条记录一致；不代表页面内容与本条记录的主张一致，内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C03",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "知乎专栏",
+      "title": "醒图万能 P 图公式（3）",
+      "platform": "醒图",
+      "published_or_updated": "2023-05-27",
+      "url": "https://zhuanlan.zhihu.com/p/632663076",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "用户 Chrome 经 CDP proxy 在自建后台 tab 内只读访问，确认可达并取到页面标题与正文长度",
+        "observed_title": "醒图万能 P 图公式（3） - 知乎",
+        "observed_text_length": 1760,
+        "boundary": "只确认 URL 当前可达且标题与本条记录一致；不代表页面内容与本条记录的主张一致，内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C04",
+      "declared_tier": "C",
+      "category": "公开参数合集",
+      "publisher": "豆瓣日记",
+      "title": "VSCO 使用率较高的滤镜参数",
+      "platform": "VSCO",
+      "published_or_updated": "2023-06-24",
+      "url": "https://m.douban.com/note/850632711/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "用户 Chrome 经 CDP proxy 在自建后台 tab 内只读访问，确认可达并取到页面标题与正文长度",
+        "observed_title": "VSCO | 使用率最高的4个滤镜，好看哭",
+        "observed_text_length": 1243,
+        "boundary": "只确认 URL 当前可达且标题与本条记录一致；不代表页面内容与本条记录的主张一致，内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C05",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "Facebook 公开帖",
+      "title": "VSCO 四款实用滤镜",
+      "platform": "VSCO",
+      "published_or_updated": "公开索引",
+      "url": "https://www.facebook.com/woahmalaysia/posts/1275690705967920/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C06",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "新浪聚合",
+      "title": "秋日 iPhone 与醒图山本参数",
+      "platform": "iPhone / 醒图",
+      "published_or_updated": "2023-10-15",
+      "url": "https://www.sina.cn/news/detail/4957098317710736.html",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C07",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "新浪聚合 / Facebook 公开帖",
+      "title": "iPhone 美食照片调色公式",
+      "platform": "iPhone 照片",
+      "published_or_updated": "2024-08-02",
+      "url": "https://www.sina.cn/news/detail/5062995820939836.html",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C08",
+      "declared_tier": "C",
+      "category": "公开参数合集",
+      "publisher": "GirlStyle MY",
+      "title": "7 个日常 iPhone 内建调色技巧",
+      "platform": "iPhone 照片",
+      "published_or_updated": "2024-10-17",
+      "url": "https://girlstyle.com/my/article/220212/iphone-%E5%86%85%E5%BB%BA-%E8%B0%83%E8%89%B2%E6%8A%80%E5%B7%A7-%E6%8B%AF%E6%95%91-%E5%BA%9F%E7%89%87",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C09",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "Instagram 公开索引",
+      "title": "醒图美式复古暗调",
+      "platform": "醒图",
+      "published_or_updated": "公开索引",
+      "url": "https://www.instagram.com/p/CThamlOpy4G/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C10",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "Facebook 公开帖",
+      "title": "醒图双滤镜美式复古",
+      "platform": "醒图",
+      "published_or_updated": "公开索引",
+      "url": "https://www.facebook.com/100087554092354/posts/594466683481796/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C11",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "Facebook 公开帖",
+      "title": "醒图 FJ2 参数",
+      "platform": "醒图",
+      "published_or_updated": "公开索引",
+      "url": "https://www.facebook.com/100087554092354/posts/597242483204216/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C12",
+      "declared_tier": "C",
+      "category": "公开参数视频",
+      "publisher": "Instagram 公开视频",
+      "title": "韩系清透奶油色调",
+      "platform": "iPhone 照片",
+      "published_or_updated": "公开索引",
+      "url": "https://www.instagram.com/reel/DVfSerwjC3d/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C13",
+      "declared_tier": "C",
+      "category": "公开参数帖",
+      "publisher": "Facebook 公开帖",
+      "title": "粉嫩冷白皮 iPhone 调色",
+      "platform": "iPhone 照片",
+      "published_or_updated": "公开索引",
+      "url": "https://www.facebook.com/100095539931772/posts/400739136454081/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C14",
+      "declared_tier": "C",
+      "category": "公开参数视频",
+      "publisher": "Facebook 公开视频",
+      "title": "iPhone 原相机通用质感调色",
+      "platform": "iPhone 照片",
+      "published_or_updated": "公开索引",
+      "url": "https://www.facebook.com/GRRIFFi/videos/1653035132134967/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C15",
+      "declared_tier": "C",
+      "category": "公开参数合集",
+      "publisher": "GirlStyle TW",
+      "title": "5 款 iPhone 甜奶油色调",
+      "platform": "iPhone 照片",
+      "published_or_updated": "2021-04-16",
+      "url": "https://girlstyle.com/tw/article/228501/iphone-%E8%AA%BF%E8%89%B2-%E5%A5%B6%E6%B2%B9-%E8%89%B2%E8%AA%BF-%E9%9F%93%E7%B3%BB-%E4%BB%99%E5%A5%B3-ig%E6%8E%92%E7%89%88",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C16",
+      "declared_tier": "C",
+      "category": "公开参数合集",
+      "publisher": "PressLogic / GirlStyle",
+      "title": "5 款 iPhone 奶油色系",
+      "platform": "iPhone 照片",
+      "published_or_updated": "2020-11-09",
+      "url": "https://pretty.presslogic.com/article/457790/iphone%E8%AA%BF%E8%89%B2-%E5%A5%B6%E6%B2%B9%E8%89%B2-%E8%BC%95%E9%AC%86%E8%AA%BF%E5%87%BA%E6%BF%BE%E9%8F%A1%E8%88%AC%E6%9F%94%E5%92%8C%E8%89%B2%E8%AA%BF",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "C17",
+      "declared_tier": "C",
+      "category": "公开短视频参数",
+      "publisher": "Instagram 公开视频",
+      "title": "醒图“万物发光”局部提亮公式",
+      "platform": "醒图",
+      "published_or_updated": "公开索引",
+      "url": "https://www.instagram.com/reel/CwzieyMPgsQ/",
+      "verification": {
+        "status": "verified_2026_08_22",
+        "checked_at": "2026-08-22",
+        "url_access_confirmed": true,
+        "method": "HTTP GET（跟随跳转）确认可达并取到页面标题",
+        "boundary": "只确认 URL 当前可达，不代表页面内容与本条记录的主张一致；内容层面的复核见 evidence-ledger。"
+      },
+      "usage": {
+        "role": "style_inspiration_only",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "仅保留事实型来源元数据；具体主张仍需重新核验。"
+      }
+    },
+    {
+      "id": "A12",
+      "declared_tier": "A",
+      "category": "官方视频调色文档",
+      "publisher": "CapCut",
+      "title": "Master Color Grading in CapCut",
+      "platform": "CapCut／剪映同源产品能力参考",
+      "published_or_updated": "持续更新",
+      "url": "https://www.capcut.com/resource/capcut-color-grading",
+      "verification": {
+        "status": "verified_2026_08_20",
+        "checked_at": "2026-08-20",
+        "url_access_confirmed": true
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "只支持基础调节、HSL、曲线、色轮、导出设置等能力语义，不支持本项目精确数值。"
+      }
+    },
+    {
+      "id": "A13",
+      "declared_tier": "A",
+      "category": "官方视频调色文档",
+      "publisher": "Adobe",
+      "title": "Basic color correction options in Premiere",
+      "platform": "Adobe Premiere",
+      "published_or_updated": "2026-01-21",
+      "url": "https://helpx.adobe.com/mena_en/premiere/desktop/correct-color/color-correction-fundamentals/basic-color-correction-options.html",
+      "verification": {
+        "status": "verified_2026_08_20",
+        "checked_at": "2026-08-20",
+        "url_access_confirmed": true
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "只支持Premiere基础校正控件和处理语义，不支持照片滑杆与Lumetri精确换算。"
+      }
+    },
+    {
+      "id": "A14",
+      "declared_tier": "A",
+      "category": "官方视频调色文档",
+      "publisher": "Blackmagic Design",
+      "title": "DaVinci Resolve Color",
+      "platform": "DaVinci Resolve",
+      "published_or_updated": "持续更新",
+      "url": "https://www.blackmagicdesign.com/ca/products/davinciresolve/color",
+      "verification": {
+        "status": "verified_2026_08_20",
+        "checked_at": "2026-08-20",
+        "url_access_confirmed": true
+      },
+      "usage": {
+        "role": "technical_reference",
+        "may_copy_original_parameters": false,
+        "may_bundle_source_media": false,
+        "note": "只支持Primary Wheels、曲线、Qualifier、Power Window和跟踪能力语义，不支持照片滑杆直接映射。"
+      }
+    }
+  ],
+  "verification_summary": {
+    "checked_at": "2026-08-22",
+    "confirmed": 24,
+    "blocked": 9,
+    "already_verified": 3,
+    "note": "URL 可达性复核。可达不等于内容支持记录里的主张——那是另一层核实。被拦的条目需要真实浏览器访问，如实标为 blocked_needs_browser，不猜、不放行。"
+  }
+}

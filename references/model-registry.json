@@ -1,0 +1,211 @@
+{
+  "schema_version": "4.0.0",
+  "purpose": "声明 v4 语义后端的模型、版本、许可证、设备与逐类覆盖。未在此登记的模型不得参与语义蒙版。",
+  "license_gate": {
+    "allowed": [
+      "MIT",
+      "Apache-2.0",
+      "BSD-3-Clause",
+      "OS-Bundled-Apple"
+    ],
+    "denied_by_default": [
+      "Meta-SAM-License",
+      "CC-BY-NC",
+      "Research-Only",
+      "Unknown"
+    ],
+    "rule": "许可证不在 allowed 列表的模型一律不能进入正式渲染链路；只能在显式标注 experimental 的研究路径中评测，且结论不得写入正式配方。"
+  },
+  "semantic_classes": [
+    {
+      "id": "person",
+      "label": "人物",
+      "promotion_iou_target": 0.88
+    },
+    {
+      "id": "face",
+      "label": "人脸",
+      "promotion_iou_target": 0.88
+    },
+    {
+      "id": "skin",
+      "label": "肤色",
+      "promotion_iou_target": 0.82
+    },
+    {
+      "id": "sky",
+      "label": "天空",
+      "promotion_iou_target": 0.88,
+      "backend": "ade20k-upernet-convnext-tiny"
+    },
+    {
+      "id": "vegetation",
+      "label": "植被",
+      "promotion_iou_target": 0.82,
+      "backend": "ade20k-upernet-convnext-tiny"
+    },
+    {
+      "id": "building",
+      "label": "建筑",
+      "promotion_iou_target": 0.82,
+      "backend": "ade20k-upernet-convnext-tiny"
+    },
+    {
+      "id": "product",
+      "label": "商品",
+      "promotion_iou_target": 0.82,
+      "backend": "ade20k-upernet-convnext-tiny"
+    },
+    {
+      "id": "salient_foreground",
+      "label": "显著前景",
+      "promotion_iou_target": 0.82
+    },
+    {
+      "id": "person_instances",
+      "label": "人物实例（多人）",
+      "promotion_iou_target": 0.85
+    }
+  ],
+  "high_risk_labels": [
+    {
+      "id": "hair",
+      "label": "头发",
+      "reason": "细丝结构，蒙版边界不可靠"
+    },
+    {
+      "id": "glass",
+      "label": "玻璃",
+      "reason": "透明与反射同时存在，前后景归属歧义"
+    },
+    {
+      "id": "translucent",
+      "label": "半透明材质",
+      "reason": "alpha 混合导致颜色不属于单一区域"
+    },
+    {
+      "id": "smoke",
+      "label": "烟雾",
+      "reason": "无硬边界"
+    },
+    {
+      "id": "reflection",
+      "label": "反射",
+      "reason": "镜面里的内容属于被反射物而非镜面"
+    }
+  ],
+  "backends": [
+    {
+      "id": "apple-vision",
+      "name": "Apple Vision",
+      "kind": "os-bundled",
+      "vendor": "Apple",
+      "license": "OS-Bundled-Apple",
+      "license_note": "随 macOS 提供，不分发权重，不打包进 Skill ZIP。",
+      "requires": [
+        "pyobjc-framework-Vision",
+        "pyobjc-framework-Quartz"
+      ],
+      "install_size_mb": 6.8,
+      "weights_hash": "os-internal",
+      "weights_hash_note": "权重由操作系统内部管理，无法提供文件哈希；改用 os_build 作为版本锚点。",
+      "device": "apple-neural-engine-or-gpu",
+      "offline": true,
+      "privacy": "全本地推理，不上传素材",
+      "status": "available",
+      "class_support": {
+        "person": "supported",
+        "face": "supported",
+        "salient_foreground": "supported",
+        "skin": "derived",
+        "sky": "unsupported",
+        "vegetation": "unsupported",
+        "building": "unsupported",
+        "product": "unsupported",
+        "person_instances": "supported-single-person-only"
+      },
+      "derived_notes": {
+        "skin": "由人脸框与人物蒙版的交集，加上受限的肤色似然像素筛选得到；不是独立训练的肤色分割模型，必须标注 derived 并进入人工验收。",
+        "person_instances": "单人路径已在真实素材上验证；多人路径接口可用但无真实多人素材验证，检测到多人时降级为人工确认，不自动逐人处理。"
+      },
+      "extra_capabilities": [
+        "horizon_angle",
+        "scene_classification",
+        "person_instances"
+      ]
+    },
+    {
+      "id": "ade20k-semantic",
+      "name": "ADE20K 语义分割（候选）",
+      "kind": "downloaded-weights",
+      "vendor": "待定",
+      "license": "待核验",
+      "license_note": "下载前必须核对官方模型卡的许可证，并写回本条目；未核验不得启用。",
+      "requires": [
+        "torch",
+        "transformers"
+      ],
+      "install_size_mb": null,
+      "weights_hash": null,
+      "device": "mps",
+      "offline": false,
+      "status": "not-installed",
+      "class_support": {
+        "sky": "candidate",
+        "vegetation": "candidate",
+        "building": "candidate",
+        "person": "candidate",
+        "product": "unsupported",
+        "face": "unsupported",
+        "skin": "unsupported",
+        "salient_foreground": "unsupported"
+      },
+      "blocking_reason": "权重未下载、许可证未核验、独立测试集未建立；当前不得用于正式渲染。"
+    },
+    {
+      "id": "sam-3-cuda",
+      "name": "SAM 3.1（CUDA 高质量候选）",
+      "kind": "downloaded-weights",
+      "vendor": "Meta",
+      "license": "Meta-SAM-License",
+      "license_note": "非标准开源许可证，落在 denied_by_default；需单独法务确认。",
+      "requires": [
+        "cuda",
+        "torch"
+      ],
+      "device": "cuda",
+      "status": "unsupported-on-this-host",
+      "blocking_reason": "本机 torch.cuda.is_available()=False；且许可证未通过默认门。",
+      "class_support": {}
+    },
+    {
+      "id": "ade20k-upernet-convnext-tiny",
+      "name": "UperNet + ConvNeXt-tiny (ADE20K)",
+      "model_id": "openmmlab/upernet-convnext-tiny",
+      "version": "transformers UperNetForSemanticSegmentation",
+      "license": "MIT",
+      "license_note": "曾评估 SegFormer-B0-ADE（15MB），但 NVIDIA Source Code License 限定 non-commercial，与本项目 MIT 冲突，未采用。",
+      "weights_hash": "cd55b1d36c6602d34f8cd300d7f788ea0fa5c3ed928e9ac98f353ecb31c7fa1d",
+      "weights_size_mb": 241.1,
+      "download_source": "https://huggingface.co/openmmlab/upernet-convnext-tiny",
+      "status": "available",
+      "device": "cpu（MPS 上 UperNet 的金字塔池化会踩 PyTorch issue 96056，自动回退并记录）",
+      "bundled_in_release": false,
+      "class_support": {
+        "sky": "supported",
+        "vegetation": "supported",
+        "building": "supported",
+        "product": "supported"
+      },
+      "validation": "42 张已知类别自然照片上命中 20/21；蓝天/阴天置信度 1.0，森林 0.98~0.99，低调暗场景正确不产出"
+    }
+  ],
+  "degradation_policy": [
+    "任一类别没有 supported 后端时，该类别返回 unavailable 并说明原因，绝不用固定 HSL 宽色带冒充语义蒙版。",
+    "置信度低于阈值、检测到遮挡或多主体重叠时降级为人工确认。",
+    "后端加载失败时整条语义路径关闭，回退到 L0 全局链路，并在回执中显式记录降级原因。"
+  ],
+  "allowed_licenses": [
+    "MIT"
+  ]
+}

@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  public-contract:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install FFmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: Verify public contracts
+        run: >-
+          python -m unittest
+          tests.test_v490_public_release
+          tests.test_skill_package
+          tests.test_public_beta_docs
+          tests.test_portable_startup
+      - name: Audit public package
+        run: python scripts/build_skill_package.py audit --root . --public-assets

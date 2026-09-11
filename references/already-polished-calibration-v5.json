@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "sample_count": 43,
+  "manifest": "evidence/codex-iter-5/review-set-manifest.json",
+  "manifest_sha256": "afdc84ad3985b5977547992eb911bdeb3733b4cf0d56955e5bea0339da64239a",
+  "media": {"photos": 40, "videos": 3},
+  "distribution": {
+    "p01": {"p25": 0.002, "p50": 0.006735, "p75": 0.014361, "p90": 0.019984},
+    "p50": {"p10": 0.007468, "p25": 0.02525, "p50": 0.090739, "p75": 0.273689, "p90": 0.551756},
+    "tone_span": {"p10": 0.254476, "p25": 0.371421, "p50": 0.557062, "p75": 0.696535, "p90": 0.823321},
+    "colorfulness": {"p10": 0.01472, "p25": 0.09892, "p50": 0.136676, "p75": 0.171203, "p90": 0.207983},
+    "chromatic_ratio": {"p10": 0.01302, "p25": 0.3113, "p50": 0.4915, "p75": 0.67035, "p90": 0.8814},
+    "cast_magnitude": {"p10": 0.001218, "p25": 0.009064, "p50": 0.015057, "p75": 0.022416, "p90": 0.029175},
+    "local_contrast_modeling": {"p10": 0.013369, "p25": 0.025345, "p50": 0.038541, "p75": 0.051387, "p90": 0.078917},
+    "noise_estimate": {"p10": 0.001105, "p25": 0.003014, "p50": 0.005805, "p75": 0.009122, "p90": 0.017544}
+  },
+  "decision_boundary": "43 个许可素材没有人工完成度标签，因此只能标定量纲与分位，不能训练或宣称审美真值。阈值还用灰片5正例、灰片4反例作预注册锚点；命中只产生候选出口。",
+  "runtime_thresholds": {
+    "p01_max": 0.04,
+    "p50_range": [0.08, 0.62],
+    "tone_span_range": [0.35, 0.75],
+    "colorfulness_min": 0.16,
+    "chromatic_ratio_min": 0.65,
+    "local_contrast_range": [0.025, 0.06],
+    "noise_max": 0.0045,
+    "cast_max": 0.03,
+    "coherent_color_override": {"chromatic_ratio_min": 0.85, "colorfulness_min": 0.16},
+    "luma_clip_max": 0.01
+  }
+}

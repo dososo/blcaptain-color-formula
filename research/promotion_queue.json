@@ -1,0 +1,944 @@
+{
+  "schema_version": "1.0.0",
+  "generated_by": "Claude Code v5 manual-tier audit iter-1（Batch B4）",
+  "boundary": "本队列只定义 28 套研究配方的逐套重建顺序与晋级门槛，不改变任何配方当前状态；晋级只能按队列逐套推进，由真实素材证据＋队长明确签字触发，禁止再次整体放开或整体禁用。manual-executable 仍不等于 active：前者只允许用户明确点名执行。",
+  "priority_rationale": "优先覆盖 3 套 active（通用修复／森林／银灰晨雾）与 1 套 manual（室内人像鲜花）尚未覆盖的高频题材：美食、人像肤色、日落、风光、居家；低彩与强不可逆风格靠后；Signature 因盲测与世界观门槛更重排在最后，按题材价值内部排序。",
+  "queue": [
+    {
+      "recipe_id": "food-vivid",
+      "name": "美食鲜亮",
+      "priority": 1,
+      "topic_value": "高：美食／探店是当前 3 套 active 完全未覆盖的高频题材",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "暖色食物过饱和",
+        "白盘与桌面偏色",
+        "视频题材证据不足时不得借颜色统计进入推荐"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "cream-soft",
+      "name": "奶油柔光",
+      "priority": 2,
+      "topic_value": "高：奶油皮人像高频；肤色语法最需要先建门",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "肤色漂白或过粉",
+        "低饱和被用户判为「没变化」",
+        "室内混合光偏色"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "sunset-warm",
+      "name": "日落暖金",
+      "priority": 3,
+      "topic_value": "高：日落／逆光高频题材",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "天空渐变断层",
+        "肤色被推橙",
+        "暖调方向与用户「反感黄红」口味约束冲突史"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "landscape-crisp",
+      "name": "风景清透",
+      "priority": 4,
+      "topic_value": "高：蓝天绿植旅行风光；与青瓷森语分工（风光 vs 森林）",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "天空青移",
+        "绿色荧光",
+        "与 celadon-forest 的题材边界须写清"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "warm-cozy",
+      "name": "暖调治愈",
+      "priority": 5,
+      "topic_value": "高：居家日常高频",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "大面积黄污染（队长历史明确反感黄红偏色）",
+        "白位染黄",
+        "美食与肤色同框时的取舍"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "film-soft",
+      "name": "柔和胶片",
+      "priority": 6,
+      "topic_value": "中高：胶片纪实／生活方式",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "低饱和低反差易被判「等于啥都没做」（灰片教训）",
+        "颗粒观感须按分辨率人工检查"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "korean-cool",
+      "name": "韩系清冷",
+      "priority": 7,
+      "topic_value": "中高：韩系冷白人像（照片与视频）",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频研究链已有单素材接受，尚未绑定正式 CLI，不代表视频能力晋级",
+      "primary_risks": [
+        "肤色偏青",
+        "白衣染青",
+        "与花信晴蓝的机制分界（按空间分区 vs 按明度）必须保持互斥"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频完整连续播放后记录反馈，不沿用单素材结论",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段独立真实视频；同时满足 Foundation-first 视频合同的更严格素材、镜头、反例与人工门，不以此最低数量代替该合同",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "teal-orange",
+      "name": "青橙电影",
+      "priority": 8,
+      "topic_value": "中高：城市剧情青橙经典语法",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "肤色被推橙",
+        "阴影青漫入",
+        "与夜景族配方的边界"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "cinematic-muted",
+      "name": "电影低饱和",
+      "priority": 9,
+      "topic_value": "中：剧情低彩",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "colorfulness=decrease 与「更多色彩」反馈直接冲突，必须显式提示",
+        "低彩被判「没变化」"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "night-cool-neon",
+      "name": "冷调霓虹夜景",
+      "priority": 10,
+      "topic_value": "中：城市夜景街拍",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "暗部噪点放大",
+        "霓虹高光剪切",
+        "视频无 L3 跟踪，夜景人像风险高"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "blue-hour",
+      "name": "蓝调时刻",
+      "priority": 11,
+      "topic_value": "中：蓝调时刻／日落后",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "白位染青",
+        "黑位发蓝",
+        "与 night-cool-neon 的边界"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "night-black-gold",
+      "name": "夜景黑金",
+      "priority": 12,
+      "topic_value": "中：夜景车流（video 专用）",
+      "capability_readiness": "照片 L0 全局链可达；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "逐镜头暗部噪声",
+        "金色高光剪切",
+        "video-only：人工连续回放门更重"
+      ],
+      "min_real_photos": 0,
+      "min_real_videos": 3,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "视频专用配方不设照片门",
+        "不少于 3 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "french-warm",
+      "name": "法式暖调",
+      "priority": 13,
+      "topic_value": "中：下午茶暖人像（photo 专用）",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）",
+      "primary_risks": [
+        "黄红污染",
+        "肤色过暖",
+        "与 warm-cozy 的题材重叠须写清"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 0,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "照片专用配方不设视频门",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "rainy-blue-green",
+      "name": "雨夜蓝绿",
+      "priority": 14,
+      "topic_value": "中：雨夜湿地反光",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "题材较窄",
+        "绿色漂移",
+        "暗部染色"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "cool-gray-sea",
+      "name": "冷灰海水",
+      "priority": 15,
+      "topic_value": "中：阴天海边／城市水岸",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "低饱和被判「没变化」",
+        "海面肤色同框发灰"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "forest-cyan",
+      "name": "森林青绿",
+      "priority": 16,
+      "topic_value": "中：森林露营（与青瓷森语高度重叠）",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "历史上存在声明与参数矛盾（声称劈色相而 hsl 为空），晋级前必须完成声明-执行对齐",
+        "绿色荧光"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "documentary-low-color",
+      "name": "克制低彩纪实",
+      "priority": 17,
+      "topic_value": "低：纪实低彩",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "colorfulness=decrease 反馈冲突",
+        "接近黑白的表达须用户明确意图"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "flash-ccd",
+      "name": "闪光CCD",
+      "priority": 18,
+      "topic_value": "低：直闪 CCD 派对感",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "强不可逆风格，必须保持 explicit-intent 门",
+        "曾出现在用户反感偏色的错误推荐历史中"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "bw-documentary",
+      "name": "黑白纪实",
+      "priority": 19,
+      "topic_value": "低：黑白纪实",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "monochrome 不可逆，必须用户明确选择",
+        "晋级须盲测可辨识"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "amber-afterglow",
+      "name": "琥珀余烬",
+      "priority": 20,
+      "topic_value": "低（Signature）：黄昏室内人像",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "saturation 1.61 历史坏例：橙黄高调、肤色发白（83% 暖面积误配史）",
+        "肤色门必须最严格"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "obsidian-gold-realm",
+      "name": "黑曜金界",
+      "priority": 21,
+      "topic_value": "低（Signature）：夜景建筑与产品",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "金色高光剪切",
+        "暗部死黑"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "rain-ink-neon",
+      "name": "雨墨霓虹",
+      "priority": 22,
+      "topic_value": "低（Signature）：雨夜城市街头",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "暗部染青",
+        "高 ISO 噪点被颗粒放大"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "captain-deep-sea",
+      "name": "深海航线",
+      "priority": 23,
+      "topic_value": "低（Signature）：深海蓝城市建筑",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "低饱和深蓝把肤色带灰",
+        "题材与情绪窄"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "plateau-sacred-light",
+      "name": "高原寂光",
+      "priority": 24,
+      "topic_value": "低（Signature）：高原草原山川",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "曾被误推荐给含天空的人像照（场景族词表教训），必须场景硬门",
+        "天空记忆色偏移"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "gilded-autumn-city",
+      "name": "鎏金城纪",
+      "priority": 25,
+      "topic_value": "低（Signature）：秋日金色城市",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "saturation 1.57 大面积黄橙与用户黄红反感史冲突",
+        "高光金色剪切"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "vermilion-snow-dream",
+      "name": "绛雪梦境",
+      "priority": 26,
+      "topic_value": "低（Signature）：时尚雪景",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "题材窄",
+        "雪面白位染色风险"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "desert-silent-rose",
+      "name": "沙海静玫",
+      "priority": 27,
+      "topic_value": "低（Signature）：沙漠时尚",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "题材最窄",
+        "temperature 0.16 强暖偏移，肤色风险"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    },
+    {
+      "recipe_id": "paper-moon-bw",
+      "name": "纸月黑白",
+      "priority": 28,
+      "topic_value": "低（Signature）：黑白情绪人像",
+      "capability_readiness": "照片 L0 全局链可达；L2 语义局部候选可用（需 --detect-local + --confirm-local）；视频走逐镜头一级校正＋共享 Look，L3 跨帧语义跟踪不可用",
+      "primary_risks": [
+        "与 bw-documentary 双黑白重复，须先证明可分性",
+        "monochrome 不可逆门"
+      ],
+      "min_real_photos": 12,
+      "min_real_videos": 2,
+      "memory_color_gates": [
+        "肤色走廊不越界（源外相对保护，无可靠蒙版时降级人工检查）",
+        "白位保持中性不染色",
+        "记忆色（天空／植被／食物）方向不反转",
+        "黑位不抬灰"
+      ],
+      "human_signoff": "队长逐素材三态结论＋原话写入反馈账本；视频必须完整连续播放后签字，静帧不可替代",
+      "promotion_to_manual": [
+        "Style Bible 补齐并通过 style_bible_gates 编译（0 violations）",
+        "声明—执行对齐审计通过：说了必须做、做了必须说",
+        "至少 1 个真实素材经队长明确选择并 human_accepted（写入反馈账本）",
+        "validate-catalog、validate_data 与双解释器全量测试全绿"
+      ],
+      "promotion_to_active": [
+        "不少于 12 张开发照片＋40 张独立留出照片完成三档单调与方向门",
+        "不少于 2 段真实视频完整连续播放人工通过",
+        "肤色／白位／记忆色门全绿，任何一项明显退化即审美失败",
+        "盲测可辨识且情绪词方向一致",
+        "队长明确签字；单素材接受不得外推为跨素材晋级"
+      ]
+    }
+  ]
+}
