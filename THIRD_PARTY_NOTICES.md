@@ -10,4 +10,10 @@ Apple 照片、醒图、Lightroom、Premiere Pro、DaVinci Resolve、iPhone 等�
 
 v1.3视频指导中的CapCut／剪映、Premiere和DaVinci名称仅用于软件路由与工具语义说明。156个视频种子是本项目的标准化方向数据，不是这些软件的原生预设，也未获得相关厂商背书。
 
-v4.9.0 发布演示视频使用 Alejandro Magaña 的音乐 `Digital Clouds`（Mixkit item 175），依据 [Mixkit Stock Music Free License](https://mixkit.co/license/) 混入成片。原始音乐文件不进入本仓库或 Skill 安装包；完整说明见 `showcase/VIDEO_CREDITS.md`。
+## 4.9.2 发布视频
+
+横竖两版 48 秒视频使用的照片、视频、音乐、音效及字体，逐项列于 [视频素材与许可](https://github.com/dososo/blcaptain-color-formula/blob/main/showcase/VIDEO_CREDITS_4.9.2.md)。该页面仅记录成片实际使用内容，并注明作者、来源、许可及调色、截帧、编排等修改。
+
+其中 Basile Morin 的工艺摄影与 Thilo Parg 的披萨视频采用 CC BY-SA 4.0；本项目制作的相关调色对比改编图及改编贡献继续采用 CC BY-SA 4.0。Blender Foundation 的《Tears of Steel》素材采用 CC BY 3.0，Wilfredor 的魁北克竖琴师照片采用 CC0 1.0。其余素材分别遵守 Mixkit、Pixabay、Pexels 与字体的原有许可，均不因代码的 MIT License 改变权利归属。
+
+配乐为 Michael Ramir C. 的《Gimme that Groove!》（Mixkit），音效来自 Pixabay。音乐及音效仅嵌入成片发布，不以独立原曲、音效包或混合分轨形式公开分发。

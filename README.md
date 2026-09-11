@@ -1,10 +1,43 @@
-# BLCaptain 摄影视觉导演与调色公式 Skill v4.9.1
+# BLCaptain 摄影视觉导演与调色公式 Skill v4.9.2
 
-[中文](README.md) · [English](README.en.md) · [62 个公式-媒体入口与前后对比](FORMULAS.md) · [下载最新版](https://github.com/dososo/blcaptain-color-formula/releases/latest) · [报告问题](https://github.com/dososo/blcaptain-color-formula/issues)
+[中文](README.md) · [English](README.en.md)
+
+[![版本](https://img.shields.io/github/v/release/dososo/blcaptain-color-formula)](https://github.com/dososo/blcaptain-color-formula/releases/latest) [![验证](https://github.com/dososo/blcaptain-color-formula/actions/workflows/ci.yml/badge.svg)](https://github.com/dososo/blcaptain-color-formula/actions/workflows/ci.yml) [![许可](https://img.shields.io/badge/License-MIT-blue)](LICENSE) ![Python](https://img.shields.io/badge/Python-3.9%2B-blue) ![本地处理](https://img.shields.io/badge/处理方式-本地优先-426953)
+
+**一张照片、一段视频 → 看懂画面，选对色彩，确认后生成新成片。**
+
+[立即下载](https://github.com/dososo/blcaptain-color-formula/releases/latest) · [三步开始](#安装) · [查看全部 62 个前后对比](FORMULAS.md)
+
+![BLCaptain 摄影视觉导演与调色公式](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/hero-1600x900.png)
+
+| 完整公式 | 照片 | 普通 SDR 视频 | 原片保护 |
+| :---: | :---: | :---: | :---: |
+| **32 个** | **31 个** | **31 个** | **不覆盖原图** |
+
+## 48 秒看懂它
+
+[观看横版视频（16:9）](https://github.com/dososo/blcaptain-color-formula/releases/download/v4.9.2/blcaptain-color-formula-4.9.2-landscape.mp4) · [观看竖版视频（9:16）](https://github.com/dososo/blcaptain-color-formula/releases/download/v4.9.2/blcaptain-color-formula-4.9.2-portrait.mp4)
+
+真实照片前后变化、同源多风格、动态视频对比、确认后生成流程与完整公式全景；两版均配有连续 BGM 与动作音效。[素材与音乐署名](https://github.com/dososo/blcaptain-color-formula/blob/main/showcase/VIDEO_CREDITS_4.9.2.md)。
+
+## 它是什么
 
 把照片或普通 SDR 视频交给 Codex：它先看懂画面，最多推荐 3 个合适方向；你也可以从完整目录直接选择。确认当前 `plan_id` 后，它才在本地生成成片和前后对比。**不覆盖原图。**
 
-> v4.9.1 公开测试版包含 32 个正式调色公式：照片 31 个、视频 31 个，声明支持的公式都可直接选择、计划和执行。每份素材仍须独立通过安全预演；“能执行”不等于“任意原图都适配”，技术通过也不等于审美通过。完整边界见 [公开测试范围](references/public-beta-scope.md)。
+这是给 Codex 使用的 Skill：既可以直接生成照片与视频调色结果，也可以指导你在常用编辑软件中手动调整。32 个公式包含 21 个通用方向与 11 个 BLCaptain 原创作者风格，照片 31 个、视频 31 个；声明支持的公式都可直接选择、计划和执行。
+
+## 能帮你解决什么
+
+| 你的需求 | BLCaptain 的做法 | 你会得到 |
+| --- | --- | --- |
+| 不知道这张图适合怎么调 | 先看曝光、白平衡、主体和情绪，再推荐最多 3 个方向 | 有理由的选择，减少盲试 |
+| 想要风格，也想保住肤色和细节 | 先建立基础影调，再加入风格并检查肤色、黑白位 | 更可控的色彩变化 |
+| 想明确看出调色前后的价值 | 从同一份原素材生成结果与前后对比 | 可并排审看的真实变化 |
+| 不满意，希望继续调整 | 根据反馈从原片重新建立方案，等你确认 | 新结果与保留完整的原文件 |
+
+适合摄影爱好者、旅行与人像创作者、短视频创作者，以及希望用自然语言完成调色的 Codex 用户。摄影新手可以直接描述感受；熟练用户可以指定公式、强度或索取手动调整步骤。
+
+> 当前为公开测试版。每份素材都会独立检查是否适合所选方向；遇到肤色、黑白位或剪切风险时，会提示换方向或降低强度。支持范围见 [公开测试说明](references/public-beta-scope.md)。
 
 ## 安装
 
@@ -12,7 +45,7 @@
 
 ### 方法一：下载 Release（推荐）
 
-1. 从 [Latest Release](https://github.com/dososo/blcaptain-color-formula/releases/latest) 下载 `blcaptain-color-formula-4.9.1.zip` 和对应 `.sha256`。
+1. 从 [Latest Release](https://github.com/dososo/blcaptain-color-formula/releases/latest) 下载 `blcaptain-color-formula-4.9.2.zip` 和对应 `.sha256`。
 2. 解压 ZIP，在解压后的目录运行：
 
 ```bash
@@ -27,6 +60,8 @@ python3 scripts/install_skill.py
 
 默认安装到 `~/.codex/skills/blcaptain-color-formula`。若同名目录已存在，安装器会停止且不会覆盖；请先自行改名保留旧版本。
 
+如果不熟悉终端，可直接把解压后的文件夹交给 Codex，说：“请先检查 Python 与 FFmpeg 环境，再运行这个目录里的安装器；如果已有旧版本，先告诉我。”安装完成后重新打开 Codex。
+
 ### 方法二：Git 克隆
 
 ```bash
@@ -40,6 +75,9 @@ git clone https://github.com/dososo/blcaptain-color-formula.git ~/.codex/skills/
 你会依次看到：画面诊断 → 最多 3 个推荐方向 → 当前方案和唯一 `plan_id` → 确认后生成成片、前后对比、色卡与回执。想指定风格时可直接说中文名或使用目录 ID；不满意时从原图重新调整，不在旧结果上反复叠加。
 
 推荐项的 `executable` 只表示本次素材通过了同链路预演，不是审美签字。需要修改时运行 `refine`，它只生成新方向和新确认单，不覆盖原图；成片、对比、色卡与回执任一失败都会回滚整组。
+
+<details>
+<summary>展开终端操作：照片、视频与局部处理</summary>
 
 ## 新用户 Quick Start（照片）
 
@@ -72,6 +110,8 @@ python3 scripts/blcaptain_color.py render --plan /输出目录/video-plan.json -
 
 需要语义局部处理时，先用 `plan --detect-local` 只查看本素材的真实候选；确认类别、覆盖率和边缘风险后，渲染时再提供 `render --confirm-local <策略>`。没有这道确认，不执行局部蒙版。
 
+</details>
+
 ## 完整全景：照片 31 个，视频 31 个
 
 正式目录共 32 个公式。`french-warm` 法式暖调仅照片，`night-black-gold` 夜景黑金仅视频，其余 30 个同时支持两种媒体。
@@ -89,6 +129,8 @@ python3 scripts/blcaptain_color.py render --plan /输出目录/video-plan.json -
 ![31 个视频公式前后对比](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/formula-atlas/video-contact-sheet.jpg)
 
 [查看 62 个入口逐项大图、核心视觉作用、证据等级和素材许可](FORMULAS.md)。绿色“人工接受样例”严格绑定图中那份素材、强度和结果；“公开公式对比”只展示方向，不表示人工审美接受。原图按可塑空间和调整余量盲选，不按公式名称挑选已经自带目标色的素材。
+
+图谱共 62 项：13 项复用已获人工接受的结果（照片 2 项、视频 11 项），49 项展示公开素材上的公式方向。每张都保留同源前后对比，方便你先看变化再选择；视频静帧用于比较色彩，不能代替完整动态审片。
 
 ## 它和滤镜包有什么不同
 
@@ -109,7 +151,7 @@ python3 scripts/blcaptain_color.py render --plan /输出目录/video-plan.json -
 
 ## 验证
 
-Python 3.9+ 核心运行合同与 Python 3.10.18 完整开发测试合同分开。v4.9.1 Release 只以对应标签的 CI、候选包核验与冷安装记录为准。
+Python 3.9+ 核心运行合同与 Python 3.10.18 完整开发测试合同分开。v4.9.2 Release 只以对应标签的 CI、候选包核验与冷安装记录为准。
 
 ```bash
 python3 -m unittest tests.test_v491_all_formulas_executable tests.test_public_formula_atlas tests.test_skill_package tests.test_portable_startup
@@ -121,6 +163,14 @@ python3 scripts/build_skill_package.py audit --root . --public-assets
 ## 常见问题
 
 **会覆盖原图吗？** 不会，结果写入新目录。
+
+**必须会写命令吗？** 不需要。安装后附上素材，用自然语言描述希望得到的感觉；终端命令供需要精确控制的用户展开查看。
+
+**安装后 Codex 找不到它怎么办？** 重新打开 Codex，并明确说“使用 BLCaptain 调色公式”。仍不可用时，检查安装器报告的目标目录内是否有 `SKILL.md`。
+
+**提示缺少 FFmpeg 或 Python 怎么办？** 请 Codex 检查 `python3 --version`、`ffmpeg -version` 与 `ffprobe -version`，根据当前系统补齐依赖后重试。不要把安装成功当作素材处理成功。
+
+**32 个公式为什么有 62 个入口？** 30 个公式同时支持照片与视频；法式暖调仅照片，夜景黑金仅视频，因此两类各有 31 个。
 
 **为什么全部可执行还会拒绝某张素材？** 公式可执行说明入口真实存在；拒绝只说明当前原图在该方向或强度下会伤害黑白位、肤色、记忆色或变化边界。
 
