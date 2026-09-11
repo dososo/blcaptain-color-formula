@@ -38,18 +38,12 @@ class PortableStartupTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertNotIn("Traceback", result.stderr)
 
-    def test_quick_start_uses_only_active_examples(self):
-        import json
-
-        catalog = json.loads((ROOT / "references/recipes.json").read_text(encoding="utf-8"))
-        recipes = catalog["recipes"]
-        by_id = {recipe["id"]: recipe for recipe in recipes}
+    def test_quick_start_does_not_hardcode_one_formula_as_universal(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         section = readme.split("## 新用户 Quick Start（视频）", 1)[1].split("### 明确记录", 1)[0]
         styles = re.findall(r"--style ([a-z0-9-]+)", section)
-        self.assertTrue(styles)
-        for style in styles:
-            self.assertEqual(by_id[style]["status"], "active", style)
+        self.assertEqual(styles, [])
+        self.assertIn("选择的风格ID", section)
 
     def test_video_quick_start_shows_boundaries_before_confirmation(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")

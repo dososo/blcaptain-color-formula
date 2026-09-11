@@ -28,9 +28,20 @@ class PublicBetaDocsTests(unittest.TestCase):
         readme = (ROOT / 'README.md').read_text(encoding='utf-8')
         scope = (ROOT / 'references' / 'public-beta-scope.md').read_text(encoding='utf-8')
         self.assertNotIn('874 项、3 条失败', readme)
+        self.assertNotIn('v4.8.3', readme)
+        self.assertNotIn('1040', readme)
         self.assertNotIn('修复前不作为首发旗舰展示', scope)
-        self.assertIn('只以对应标签的 CI、候选包核验与冷安装记录为准', readme)
+        self.assertIn('v4.9.1 Release', readme)
         self.assertIn('素材级', scope)
+
+    def test_public_docs_present_full_executable_media_contract(self):
+        readme = (ROOT / 'README.md').read_text(encoding='utf-8')
+        scope = (ROOT / 'references' / 'public-beta-scope.md').read_text(encoding='utf-8')
+        self.assertIn('照片 31 个、视频 31 个', readme)
+        self.assertIn('声明支持的公式都可直接选择、计划和执行', readme)
+        self.assertIn('所有声明支持的入口都可直接选择、建立计划并执行', scope)
+        for stale in ('manual-executable', '研究候选', '点名执行'):
+            self.assertNotIn(stale, readme)
 
     def test_runtime_and_development_interpreter_contracts_are_separate(self):
         readme = (ROOT / 'README.md').read_text(encoding='utf-8')

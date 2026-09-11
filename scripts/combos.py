@@ -4,7 +4,7 @@
 「随机」不是随机搅拌滑杆。一个组合只能由四条轴上互相兼容的选项构成：
     一个一级影调策略 + 一个主色彩语法 + 一个材质策略 + 一组局部策略
 并且：
-- 组合的执行体永远是已验证的正式配方，微调限制在既有安全机制内，研究候选不得借此转正；
+- 组合的执行体永远来自正式目录，微调限制在既有安全机制内；
 - 同一输入 + 同一随机种子必须复现；
 - 三组之间必须有可测差异；
 - 冲突率必须为 0，冲突由显式禁止表判定，不靠运气。
@@ -18,9 +18,9 @@ import hashlib
 import json
 from pathlib import Path
 if __package__:
-    from .recipe_access import admitted_media, media_statuses
+    from .recipe_access import apply_execution_overrides, executable_media
 else:
-    from recipe_access import admitted_media, media_statuses
+    from recipe_access import apply_execution_overrides, executable_media
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "references" / "recipes.json"
@@ -197,10 +197,12 @@ def _derive_tags_from_parameters(recipe: dict) -> dict:
 def load_tagged_catalog(catalog_path: Path = CATALOG,
                         *, include_research: bool = False,
                         media_type: str | None = None) -> list[dict]:
-    payload = json.loads(catalog_path.read_text(encoding="utf-8"))
+    """读取用户可执行目录；include_research 仅保留参数兼容，不改变结果。"""
+    payload = apply_execution_overrides(
+        json.loads(catalog_path.read_text(encoding="utf-8")))
     recipes = []
     for recipe in payload["recipes"]:
-        available = list(media_statuses(recipe)) if include_research else admitted_media(recipe, automatic=True)
+        available = executable_media(recipe)
         if not available or (media_type is not None and media_type not in available):
             continue
         tags = derive_tags(recipe)
@@ -446,7 +448,7 @@ def build_combinations(
         },
         "boundary": (
             (empty_reason or "") +
-            "组合只在已验证正式配方与既有安全边界内取值；不发明新参数，不让研究候选借道转正。"
+            "组合只在正式目录与既有安全边界内取值；不发明新参数。"
             "每组仍需生成计划并由用户确认 plan_id 后才会渲染。"
         ),
     }

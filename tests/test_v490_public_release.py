@@ -1,4 +1,4 @@
-"""v4.9.0 首次公开发布合同：普通用户入口、双语门面与公开包必须一致。"""
+"""公开发布合同：普通用户入口、双语门面与公开包必须一致。"""
 
 from __future__ import annotations
 
@@ -14,13 +14,13 @@ from scripts import build_skill_package as package
 ROOT = Path(__file__).resolve().parents[1]
 
 
-class PublicRelease490Tests(unittest.TestCase):
+class PublicReleaseTests(unittest.TestCase):
     def test_version_and_bilingual_readmes_are_aligned(self):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-        self.assertEqual(version, "4.9.0")
+        self.assertEqual(version, "4.9.1")
         for name in ("README.md", "README.en.md"):
             text = (ROOT / name).read_text(encoding="utf-8")
-            self.assertIn("4.9.0", text, name)
+            self.assertIn("4.9.1", text, name)
             self.assertIn("https://github.com/dososo/blcaptain-color-formula", text, name)
 
     def test_public_root_documents_are_in_the_package_contract(self):

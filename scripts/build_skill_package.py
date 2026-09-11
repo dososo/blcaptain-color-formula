@@ -14,7 +14,8 @@ except ImportError:
     import style_atlas_sources
 
 ROOT_FILES = (
-    'SKILL.md', 'README.md', 'README.en.md', 'ABOUT.md', 'PRIVACY.md',
+    'SKILL.md', 'README.md', 'README.en.md', 'FORMULAS.md', 'FORMULAS.en.md',
+    'ABOUT.md', 'PRIVACY.md',
     'SECURITY.md', 'CONTRIBUTING.md', 'CHANGELOG.md', 'THIRD_PARTY_NOTICES.md',
     'LICENSE', 'VERSION', 'requirements.txt', 'requirements-optional.txt',
     '.blcaptain-interpreter',
@@ -26,7 +27,13 @@ MANIFEST = PREFIX + 'PACKAGE_MANIFEST.json'
 PRIVATE_PATH = re.compile(r'(?<![A-Za-z0-9/])(?:/(?:Users|home)/[^/\s"\']+/|/var/'
                           r'folders/|[A-Za-z]:[\\/]Users[\\/])')
 TOKEN = re.compile(r'[?&](?:xsec_token|access_token|signature|sig)=', re.I)
-INTERNAL = {'scripts/research_replay.py', 'scripts/film_soft_replay_driver.py'}
+INTERNAL = {
+    'scripts/research_replay.py',
+    'scripts/film_soft_replay_driver.py',
+    'scripts/build_style_atlas_gallery.py',
+    'scripts/build_public_formula_atlas.py',
+    'scripts/build_public_formula_docs.py',
+}
 ASSETS = 'research/style_atlas_sources.json'
 PUBLIC_EXCLUDED = {
     'references/archive_changes.json',

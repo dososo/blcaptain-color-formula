@@ -8614,6 +8614,52 @@
       }
     }
   ],
+  "execution_overrides": {
+    "cream-soft": {
+      "parameters": {"brightness": 0.0, "contrast": 0.814, "saturation": 0.81, "gamma": 1.40063, "temperature": 0.0388, "tint": 0.0186, "sharpness": 0.037, "vignette": 0.026, "grain": 0.0},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "korean-cool": {
+      "parameters": {"brightness": 0.0, "contrast": 0.9, "saturation": 0.709, "gamma": 1.33195, "temperature": -0.0697, "tint": 0.0388, "sharpness": 0.124, "vignette": 0.0, "grain": 0.0},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "film-soft": {
+      "parameters": {"brightness": 0.0, "contrast": 0.8605, "saturation": 0.748, "gamma": 1.0, "temperature": 0.031, "tint": -0.0155, "sharpness": 0.0, "vignette": 0.13, "grain": 3.3},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "sunset-warm": {
+      "parameters": {"brightness": -0.031, "contrast": 1.031, "saturation": 1.256, "gamma": 0.9845, "temperature": 0.1162, "tint": 0.0279, "sharpness": 0.037, "vignette": 0.104, "grain": 1.1},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "cinematic-muted": {
+      "parameters": {"brightness": -0.045, "contrast": 1.18, "saturation": 0.57, "gamma": 0.964, "temperature": -0.0324, "tint": 0.0108, "sharpness": 0.06, "vignette": 0.156, "grain": 2.2},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "food-vivid": {
+      "parameters": {"brightness": 0.0, "contrast": 1.1085, "saturation": 1.04, "gamma": 1.12969, "temperature": 0.085, "tint": 0.0093, "sharpness": 0.432, "vignette": 0.065, "grain": 0.0},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "night-cool-neon": {
+      "parameters": {"brightness": -0.0465, "contrast": 1.155, "saturation": 1.132, "gamma": 1.0, "temperature": -0.0465, "tint": 0.0155, "sharpness": 0.202, "vignette": 0.13, "grain": 0.0},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "warm-cozy": {
+      "parameters": {"brightness": 0.0, "contrast": 1.062, "saturation": 1.1125, "gamma": 1.16932, "temperature": 0.0543, "tint": 0.0093, "sharpness": 0.005, "vignette": 0.039, "grain": 0.0},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "rainy-blue-green": {
+      "parameters": {"brightness": -0.036, "contrast": 1.126, "saturation": 0.749, "gamma": 1.018, "temperature": -0.099, "tint": -0.045, "sharpness": 0.0025, "vignette": 0.104, "grain": 0.55, "teal_orange": 0.056},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "blue-hour": {
+      "parameters": {"brightness": -0.054, "contrast": 1.144, "saturation": 0.815, "gamma": 1.0, "temperature": -0.099, "tint": 0.027, "sharpness": 0.0, "vignette": 0.078, "grain": 0.33},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    },
+    "captain-deep-sea": {
+      "parameters": {"brightness": -0.05, "contrast": 1.28, "saturation": 0.645, "gamma": 0.96, "temperature": -0.11, "tint": -0.035, "sharpness": 0.055, "vignette": 0.12, "grain": 0.55, "teal_orange": 0.095},
+      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+    }
+  },
   "style_bible_schema": {
     "version": "1.0.0",
     "active_requirement": "完整字段必填；calibration_status 不得被解释为审美通过",

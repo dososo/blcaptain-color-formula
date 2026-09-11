@@ -826,6 +826,8 @@ def build(path: Path, mode: str = "smart", count: int = 3, seed: int | None = No
         options = []
         deferred = []
         explicit_only = []
+        preflight_attempts = 0
+        preflight_limit = smart_preflight_budget(count) if mode == "smart" else None
         for scored in ranked_all:
             recipe = engine.find_recipe(catalog_raw, scored["recipe_id"], media_type)
             if mode == "smart" and polished_photo and recipe["id"] == "natural-clean":
@@ -837,6 +839,9 @@ def build(path: Path, mode: str = "smart", count: int = 3, seed: int | None = No
                     "reason": "黑白等强不可逆风格需要用户明确选择，不参与无偏好智能推荐",
                 })
                 continue
+            if preflight_limit is not None and preflight_attempts >= preflight_limit:
+                break
+            preflight_attempts += 1
             option = _option_from_score(
                 scored, catalog_raw, source, source_palette,
                 0.30 if polished_photo else strength, person_present
@@ -874,6 +879,12 @@ def build(path: Path, mode: str = "smart", count: int = 3, seed: int | None = No
             payload["feedback_suppressed"] = options
             options = []
         payload["options"] = options[:count] if mode == "smart" else options
+        if mode == "smart":
+            payload["preflight_scope"] = {
+                "attempted": preflight_attempts,
+                "limit": preflight_limit,
+                "boundary": "只预演适配排序靠前的有限候选；完整目录仍可直接点名并独立预演。",
+            }
         if explicit_only:
             payload["explicit_only_deferred"] = explicit_only
         if mode == "all":
@@ -938,6 +949,11 @@ def build(path: Path, mode: str = "smart", count: int = 3, seed: int | None = No
 SUPPORTED_FEEDBACK = {
     "更多色彩", "更有氛围", "更有情绪", "更自然", "肤色回退", "暗部提亮",
 }
+
+
+def smart_preflight_budget(count: int) -> int:
+    """智能推荐只预演排序靠前的有限候选；完整目录仍可被直接点名。"""
+    return max(8, count)
 
 
 def partition_rejected_options(options: list[dict], state: dict,

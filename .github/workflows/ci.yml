@@ -24,6 +24,8 @@ jobs:
         run: >-
           python -m unittest
           tests.test_v490_public_release
+          tests.test_v491_all_formulas_executable
+          tests.test_public_formula_atlas
           tests.test_skill_package
           tests.test_public_beta_docs
           tests.test_portable_startup

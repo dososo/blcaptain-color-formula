@@ -1,0 +1,939 @@
+{
+  "schema_version": "1.0.0",
+  "counts": {
+    "photo": 31,
+    "video": 31
+  },
+  "entries": [
+    {
+      "id": "natural-clean",
+      "name": "自然通透",
+      "media_type": "photo",
+      "summary": "先纠正曝光与中性色偏，只恢复原片本来应有的层次和颜色，不主动添加风格。",
+      "image": "photo/01-natural-clean.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "cream-soft",
+      "name": "奶油柔光",
+      "media_type": "photo",
+      "summary": "Foundation 之后只在未剪切的低彩高光肩部注入轻微奶黄；阴影、中间调与记忆色保持中性。",
+      "image": "photo/02-cream-soft.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "korean-cool",
+      "name": "韩系清冷",
+      "media_type": "photo",
+      "summary": "从已校正 Foundation 出发，只冷化人物与近中性白位保护区以外的环境，让主体保留体温。",
+      "image": "photo/03-korean-cool.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "japanese-airy",
+      "name": "花信晴蓝",
+      "media_type": "photo",
+      "summary": "用粉蓝冷白建立清洁空气，以自然暖肤、柠檬黄和少量玫红形成生命色锚点。",
+      "image": "photo/04-japanese-airy.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "french-warm",
+      "name": "法式暖调",
+      "media_type": "photo",
+      "summary": "温暖、轻褪色、低饱和，强调松弛氛围。",
+      "image": "photo/05-french-warm.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "film-soft",
+      "name": "柔和胶片",
+      "media_type": "photo",
+      "summary": "先完成中性一级校正，再以琥珀暗部趾部、中性高光肩部、记忆色保留与亮度调制颗粒建立柔和胶片感。",
+      "image": "photo/06-film-soft.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "forest-cyan",
+      "name": "森林青绿",
+      "media_type": "photo",
+      "summary": "增强受控青绿与层次并向冷湿方向移动，适合绿色占比高的画面。",
+      "image": "photo/07-forest-cyan.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "sunset-warm",
+      "name": "日落暖金",
+      "media_type": "photo",
+      "summary": "日落叙事色成立时保持原始显示密度；只沿已有暖色可达区增加金橙层次，同时保持冷锚、区域光比、黑位与近中性白位。",
+      "image": "photo/08-sunset-warm.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "BLCaptain CC0 城市验证图",
+        "creator": "StockSnap contributor",
+        "license": "CC0 1.0",
+        "url": "https://stocksnap.io/license"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "cinematic-muted",
+      "name": "电影低饱和",
+      "media_type": "photo",
+      "summary": "从已校正 Foundation 出发，收窄非暖色环境的色彩宽度并建立趾肩密度，保留人物与记忆色。",
+      "image": "photo/09-cinematic-muted.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "teal-orange",
+      "name": "青橙电影",
+      "media_type": "photo",
+      "summary": "冷暗部与暖亮部的近似全局实现；有人像时需人工检查肤色。",
+      "image": "photo/10-teal-orange.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "food-vivid",
+      "name": "美食鲜亮",
+      "media_type": "photo",
+      "summary": "在可靠美食题材证据下，把综合色彩集中给食物并让环境退让，同时保护白盘、黑位与肤色。",
+      "image": "photo/11-food-vivid.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "landscape-crisp",
+      "name": "风景清透",
+      "media_type": "photo",
+      "summary": "先保护亮雾与黑位，再用互斥像素代理建立冷色、土色和近层结构密度；禁止全局去霾、增艳与锐化冒充空间感。",
+      "image": "photo/12-landscape-crisp.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "night-cool-neon",
+      "name": "冷调霓虹夜景",
+      "media_type": "photo",
+      "summary": "压住灯光、轻抬暗部并保留冷调霓虹。",
+      "image": "photo/13-night-cool-neon.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "warm-cozy",
+      "name": "暖调治愈",
+      "media_type": "photo",
+      "summary": "保留中性环境，只增强一个已有暖点及冷色参照，让温度来自对照而不是整幅偏黄。",
+      "image": "photo/14-warm-cozy.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "documentary-low-color",
+      "name": "克制低彩纪实",
+      "media_type": "photo",
+      "summary": "压低综合色彩，以冷静阴影和克制高光保留事件与空间结构。",
+      "image": "photo/15-documentary-low-color.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "BLCaptain 中性摄影棚公开演示图",
+        "creator": "BLCaptain",
+        "license": "项目公开演示授权",
+        "url": "https://github.com/dososo/blcaptain-color-formula"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "flash-ccd",
+      "name": "闪光CCD",
+      "media_type": "photo",
+      "summary": "强化直闪主体与深背景反差，以冷白、颗粒和压缩高光形成数码复古感。",
+      "image": "photo/16-flash-ccd.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "rainy-blue-green",
+      "name": "雨夜蓝绿",
+      "media_type": "photo",
+      "summary": "用冷蓝绿环境、压缩灯光和轻抬暗部表现湿地反射。",
+      "image": "photo/17-rainy-blue-green.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "cool-gray-sea",
+      "name": "冷灰海水",
+      "media_type": "photo",
+      "summary": "降低黄绿干扰与蓝青彩度，保留海面层次和冷灰距离感。",
+      "image": "photo/18-cool-gray-sea.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "blue-hour",
+      "name": "蓝调时刻",
+      "media_type": "photo",
+      "summary": "压住建筑灯光并保留环境蓝，让日落后与入夜前保持层次。",
+      "image": "photo/19-blue-hour.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "bw-documentary",
+      "name": "黑白纪实",
+      "media_type": "photo",
+      "summary": "以深黑位、中高对比和稳定颗粒突出事件、轮廓与空间关系。",
+      "image": "photo/20-bw-documentary.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "captain-deep-sea",
+      "name": "深海航线",
+      "media_type": "photo",
+      "summary": "以深海蓝暗部、象牙高光和克制暖色构成BLCaptain核心视觉。",
+      "image": "photo/21-captain-deep-sea.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "celadon-forest",
+      "name": "青瓷森语",
+      "media_type": "photo",
+      "summary": "将黄绿收敛为温润青瓷绿，并以微暖釉色高光保持东方空气感。",
+      "image": "photo/22-celadon-forest.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Craftmen at work, bamboo basket weaving and textile mobile sculptures",
+        "creator": "Basile Morin",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Craftmen_at_work,_bamboo_basket_weaving_and_textile_mobile_sculptures,_in_Heuan_Chan_heritage_house,_Luang_Prabang,_Laos.jpg"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "silver-morning-mist",
+      "name": "银盐晨雾",
+      "media_type": "photo",
+      "summary": "以银灰低彩、柔和趾肩和细颗粒形成安静晨雾气质。",
+      "image": "photo/23-silver-morning-mist.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Harpist in Quebec City",
+        "creator": "Wilfredor",
+        "license": "CC0 1.0",
+        "url": "https://commons.wikimedia.org/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "paper-moon-bw",
+      "name": "纸月黑白",
+      "media_type": "photo",
+      "summary": "以纸白高光、石墨灰影调和柔颗粒形成安静的情绪黑白。",
+      "image": "photo/24-paper-moon-bw.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "plateau-sacred-light",
+      "name": "高原寂光",
+      "media_type": "photo",
+      "summary": "以稀薄冷天光、矿物土色和纪念碑式影调表现辽阔与敬畏。",
+      "image": "photo/25-plateau-sacred-light.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "BLCaptain v4.8 CC0 风景验证图",
+        "creator": "StockSnap contributor",
+        "license": "CC0 1.0",
+        "url": "https://stocksnap.io/license"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "amber-afterglow",
+      "name": "琥珀余烬",
+      "media_type": "photo",
+      "summary": "以蓝黑边缘、琥珀中间调和少量余火红表现将熄未熄的记忆。",
+      "image": "photo/26-amber-afterglow.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "vermilion-snow-dream",
+      "name": "绛雪梦境",
+      "media_type": "photo",
+      "summary": "以冷白空间、绛红单点和淡紫灰阴影制造浪漫与危险并存的梦境。",
+      "image": "photo/27-vermilion-snow-dream.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "obsidian-gold-realm",
+      "name": "黑曜金界",
+      "media_type": "photo",
+      "summary": "以黑曜石暗部、石灰白和矿物金建立秩序、权力与静默。",
+      "image": "photo/28-obsidian-gold-realm.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "rain-ink-neon",
+      "name": "雨墨霓虹",
+      "media_type": "photo",
+      "summary": "以墨蓝黑、窄域青品红和湿地反射表现都市不安与夜的诗意。",
+      "image": "photo/29-rain-ink-neon.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "desert-silent-rose",
+      "name": "沙海静玫",
+      "media_type": "photo",
+      "summary": "以风化沙色、灰玫瑰和乳白高光表现温柔与荒凉并存。",
+      "image": "photo/30-desert-silent-rose.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "gilded-autumn-city",
+      "name": "鎏金城纪",
+      "media_type": "photo",
+      "summary": "以可读暗部、暖石材、铜金秋叶和克制冷天空建立城市秋日的时间感。",
+      "image": "photo/31-gilded-autumn-city.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "natural-clean",
+      "name": "自然通透",
+      "media_type": "video",
+      "summary": "先纠正曝光与中性色偏，只恢复原片本来应有的层次和颜色，不主动添加风格。",
+      "image": "video/01-natural-clean.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Tears of Steel",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "cream-soft",
+      "name": "奶油柔光",
+      "media_type": "video",
+      "summary": "Foundation 之后只在未剪切的低彩高光肩部注入轻微奶黄；阴影、中间调与记忆色保持中性。",
+      "image": "video/02-cream-soft.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Girl reading a book sitting near a window，item 42741",
+        "creator": "Mixkit contributor",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/girl-reading-a-book-sitting-near-a-window-42741/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "korean-cool",
+      "name": "韩系清冷",
+      "media_type": "video",
+      "summary": "从已校正 Foundation 出发，只冷化人物与近中性白位保护区以外的环境，让主体保留体温。",
+      "image": "video/03-korean-cool.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "A happy young couple on the couch，item 51659",
+        "creator": "Mixkit contributor",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/a-happy-young-couple-on-the-couch-enjoy-the-soft-51659/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "japanese-airy",
+      "name": "花信晴蓝",
+      "media_type": "video",
+      "summary": "用粉蓝冷白建立清洁空气，以自然暖肤、柠檬黄和少量玫红形成生命色锚点。",
+      "image": "video/04-japanese-airy.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "film-soft",
+      "name": "柔和胶片",
+      "media_type": "video",
+      "summary": "先完成中性一级校正，再以琥珀暗部趾部、中性高光肩部、记忆色保留与亮度调制颗粒建立柔和胶片感。",
+      "image": "video/05-film-soft.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "forest-cyan",
+      "name": "森林青绿",
+      "media_type": "video",
+      "summary": "增强受控青绿与层次并向冷湿方向移动，适合绿色占比高的画面。",
+      "image": "video/06-forest-cyan.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Lush forest with tall trees and dense greenery，item 100185",
+        "creator": "Mixkit contributor",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/lush-forest-with-tall-trees-and-dense-greenery-100185/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "sunset-warm",
+      "name": "日落暖金",
+      "media_type": "video",
+      "summary": "日落叙事色成立时保持原始显示密度；只沿已有暖色可达区增加金橙层次，同时保持冷锚、区域光比、黑位与近中性白位。",
+      "image": "video/07-sunset-warm.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Sunset silhouette of a couple，item 100926",
+        "creator": "Mixkit contributor",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/sunset-silhouette-of-a-couple-100926/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "cinematic-muted",
+      "name": "电影低饱和",
+      "media_type": "video",
+      "summary": "从已校正 Foundation 出发，收窄非暖色环境的色彩宽度并建立趾肩密度，保留人物与记忆色。",
+      "image": "video/08-cinematic-muted.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "teal-orange",
+      "name": "青橙电影",
+      "media_type": "video",
+      "summary": "冷暗部与暖亮部的近似全局实现；有人像时需人工检查肤色。",
+      "image": "video/09-teal-orange.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "night-black-gold",
+      "name": "夜景黑金",
+      "media_type": "video",
+      "summary": "城市远景中收敛蓝色环境，让已有暖亮点形成金色强调；保留暗部轮廓、白灯与红色信号。仅独立分层研究预演。",
+      "image": "video/10-night-black-gold.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "food-vivid",
+      "name": "美食鲜亮",
+      "media_type": "video",
+      "summary": "在可靠美食题材证据下，把综合色彩集中给食物并让环境退让，同时保护白盘、黑位与肤色。",
+      "image": "video/11-food-vivid.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Trento Pizza cut with scissors",
+        "creator": "Thilo Parg",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Trento_Pizza_cut_with_scissors.webm"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "landscape-crisp",
+      "name": "风景清透",
+      "media_type": "video",
+      "summary": "先保护亮雾与黑位，再用互斥像素代理建立冷色、土色和近层结构密度；禁止全局去霾、增艳与锐化冒充空间感。",
+      "image": "video/12-landscape-crisp.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Mountain lake drone footage，Pexels 13465553",
+        "creator": "Pexels contributor",
+        "license": "Pexels License",
+        "url": "https://www.pexels.com/video/mountain-lake-drone-footage-13465553/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "night-cool-neon",
+      "name": "冷调霓虹夜景",
+      "media_type": "video",
+      "summary": "压住灯光、轻抬暗部并保留冷调霓虹。",
+      "image": "video/13-night-cool-neon.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "warm-cozy",
+      "name": "暖调治愈",
+      "media_type": "video",
+      "summary": "保留中性环境，只增强一个已有暖点及冷色参照，让温度来自对照而不是整幅偏黄。",
+      "image": "video/14-warm-cozy.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Interior of a department room，item 3112",
+        "creator": "Mixkit contributor",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/interior-of-a-department-room-3112/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "documentary-low-color",
+      "name": "克制低彩纪实",
+      "media_type": "video",
+      "summary": "压低综合色彩，以冷静阴影和克制高光保留事件与空间结构。",
+      "image": "video/15-documentary-low-color.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "flash-ccd",
+      "name": "闪光CCD",
+      "media_type": "video",
+      "summary": "强化直闪主体与深背景反差，以冷白、颗粒和压缩高光形成数码复古感。",
+      "image": "video/16-flash-ccd.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "rainy-blue-green",
+      "name": "雨夜蓝绿",
+      "media_type": "video",
+      "summary": "用冷蓝绿环境、压缩灯光和轻抬暗部表现湿地反射。",
+      "image": "video/17-rainy-blue-green.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Rain street brake lights，Pixabay 151426",
+        "creator": "Pixabay contributor",
+        "license": "Pixabay Content License",
+        "url": "https://pixabay.com/videos/rain-street-brake-lights-151426/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "cool-gray-sea",
+      "name": "冷灰海水",
+      "media_type": "video",
+      "summary": "降低黄绿干扰与蓝青彩度，保留海面层次和冷灰距离感。",
+      "image": "video/18-cool-gray-sea.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "Skyline view of a beach during a cloudy day，item 51474",
+        "creator": "Mixkit contributor",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/skyline-view-of-a-beach-during-a-cloudy-day-51474/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "blue-hour",
+      "name": "蓝调时刻",
+      "media_type": "video",
+      "summary": "压住建筑灯光并保留环境蓝，让日落后与入夜前保持层次。",
+      "image": "video/19-blue-hour.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "City skyline reflections at dusk，Pexels 29172651",
+        "creator": "Pexels contributor",
+        "license": "Pexels License",
+        "url": "https://www.pexels.com/video/city-skyline-reflections-at-dusk-29172651/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "bw-documentary",
+      "name": "黑白纪实",
+      "media_type": "video",
+      "summary": "以深黑位、中高对比和稳定颗粒突出事件、轮廓与空间关系。",
+      "image": "video/20-bw-documentary.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "captain-deep-sea",
+      "name": "深海航线",
+      "media_type": "video",
+      "summary": "以深海蓝暗部、象牙高光和克制暖色构成BLCaptain核心视觉。",
+      "image": "video/21-captain-deep-sea.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "A couple walks at night in the street，item 2401",
+        "creator": "Mixkit contributor",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/a-couple-walks-at-night-in-the-street-2401/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "celadon-forest",
+      "name": "青瓷森语",
+      "media_type": "video",
+      "summary": "将黄绿收敛为温润青瓷绿，并以微暖釉色高光保持东方空气感。",
+      "image": "video/22-celadon-forest.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "silver-morning-mist",
+      "name": "银盐晨雾",
+      "media_type": "video",
+      "summary": "以银灰低彩、柔和趾肩和细颗粒形成安静晨雾气质。",
+      "image": "video/23-silver-morning-mist.jpg",
+      "evidence": "human-accepted-example",
+      "source": {
+        "title": "A happy young couple on the couch，item 51659",
+        "creator": "Mixkit contributor",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/a-happy-young-couple-on-the-couch-enjoy-the-soft-51659/"
+      },
+      "boundary": "该标记只说明这一份素材、强度和结果曾获人工接受，不外推到其他素材。"
+    },
+    {
+      "id": "paper-moon-bw",
+      "name": "纸月黑白",
+      "media_type": "video",
+      "summary": "以纸白高光、石墨灰影调和柔颗粒形成安静的情绪黑白。",
+      "image": "video/24-paper-moon-bw.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "plateau-sacred-light",
+      "name": "高原寂光",
+      "media_type": "video",
+      "summary": "以稀薄冷天光、矿物土色和纪念碑式影调表现辽阔与敬畏。",
+      "image": "video/25-plateau-sacred-light.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "amber-afterglow",
+      "name": "琥珀余烬",
+      "media_type": "video",
+      "summary": "以蓝黑边缘、琥珀中间调和少量余火红表现将熄未熄的记忆。",
+      "image": "video/26-amber-afterglow.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "vermilion-snow-dream",
+      "name": "绛雪梦境",
+      "media_type": "video",
+      "summary": "以冷白空间、绛红单点和淡紫灰阴影制造浪漫与危险并存的梦境。",
+      "image": "video/27-vermilion-snow-dream.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "obsidian-gold-realm",
+      "name": "黑曜金界",
+      "media_type": "video",
+      "summary": "以黑曜石暗部、石灰白和矿物金建立秩序、权力与静默。",
+      "image": "video/28-obsidian-gold-realm.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "rain-ink-neon",
+      "name": "雨墨霓虹",
+      "media_type": "video",
+      "summary": "以墨蓝黑、窄域青品红和湿地反射表现都市不安与夜的诗意。",
+      "image": "video/29-rain-ink-neon.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "desert-silent-rose",
+      "name": "沙海静玫",
+      "media_type": "video",
+      "summary": "以风化沙色、灰玫瑰和乳白高光表现温柔与荒凉并存。",
+      "image": "video/30-desert-silent-rose.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    },
+    {
+      "id": "gilded-autumn-city",
+      "name": "鎏金城纪",
+      "media_type": "video",
+      "summary": "以可读暗部、暖石材、铜金秋叶和克制冷天空建立城市秋日的时间感。",
+      "image": "video/31-gilded-autumn-city.jpg",
+      "evidence": "public-demo",
+      "source": {
+        "title": "Tears of Steel original footage，04_5a 片段",
+        "creator": "Blender Foundation / mango.blender.org",
+        "license": "CC BY 3.0",
+        "url": "https://mango.blender.org/"
+      },
+      "boundary": "公开许可素材上的公式对比，用于看方向；不代表人工审美接受。"
+    }
+  ]
+}

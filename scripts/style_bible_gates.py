@@ -33,17 +33,18 @@ def _forbidden_binding(rule: str) -> dict:
 
 def compile_profile(recipe: dict) -> dict:
     bible = recipe.get("style_bible") or {}
+    has_bible = bool(bible)
     violations = []
     five_zone = bible.get("five_zone_tone") or {}
     palette = bible.get("palette") or {}
     strengths = bible.get("strength_targets") or {}
     forbidden = bible.get("forbidden") or []
 
-    if set(five_zone) != ZONES:
+    if has_bible and set(five_zone) != ZONES:
         violations.append("five_zone_tone 必须逐一声明 black/toe/mid/shoulder/white")
-    if set(palette) != PALETTE_PARTS:
+    if has_bible and set(palette) != PALETTE_PARTS:
         violations.append("palette 必须逐一声明 primary/secondary/accent/hue_family_budget")
-    if set(strengths) != STRENGTH_LEVELS:
+    if has_bible and set(strengths) != STRENGTH_LEVELS:
         violations.append("strength_targets 必须逐一声明 30/55/80/monotonicity")
 
     targets = recipe.get("visual_targets") or {}
@@ -78,6 +79,7 @@ def compile_profile(recipe: dict) -> dict:
         "schema_version": "1.0.0",
         "recipe_id": recipe.get("id"),
         "calibration_status": bible.get("calibration_status"),
+        "coverage": "style-bible" if has_bible else "structured-recipe",
         "bindings": {
             "five_zone_tone": {
                 "source": five_zone,

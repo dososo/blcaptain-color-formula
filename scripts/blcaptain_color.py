@@ -24,7 +24,7 @@ if __name__ == "__main__":
     bootstrap_or_exit(Path(__file__).resolve().parents[1])
 
 from aesthetic_audit import evaluate_direction, impact_profile, measure
-from recipe_access import admitted_media, media_statuses, status_for
+from recipe_access import admitted_media, apply_execution_overrides, executable_media
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -145,8 +145,9 @@ def validate_parameters(parameters: dict, label: str) -> None:
 
 def load_catalog(path: Path = DEFAULT_CATALOG) -> dict:
     try:
-        payload = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError) as error:
+        payload = apply_execution_overrides(
+            json.loads(path.read_text(encoding="utf-8")))
+    except (OSError, json.JSONDecodeError, ValueError) as error:
         raise SkillError(f"无法读取配方库：{error}") from error
     recipes = payload.get("recipes")
     if payload.get("schema_version") != "4.0.0" or not isinstance(recipes, list):
@@ -189,12 +190,14 @@ def load_catalog(path: Path = DEFAULT_CATALOG) -> dict:
             accessible_media = admitted_media(item)
         except ValueError as error:
             raise SkillError(f"配方 {item['id']} 媒体准入无效：{error}", 3) from error
-        if accessible_media:
-            style_bible = item.get("style_bible")
-            if (not isinstance(style_bible, dict)
-                    or not style_bible_required <= set(style_bible)
-                    or style_bible.get("id") != item["id"]):
-                raise SkillError(f"active 配方 Style Bible 不完整：{item['id']}")
+        style_bible = item.get("style_bible")
+        if style_bible is not None and not isinstance(style_bible, dict):
+            raise SkillError(f"配方 Style Bible 不完整：{item['id']}")
+        if accessible_media and (
+                not style_bible
+                or not style_bible_required <= set(style_bible)
+                or style_bible.get("id") != item["id"]):
+            raise SkillError(f"配方 Style Bible 不完整：{item['id']}")
         signature_fields = {"collection", "design_fingerprint"} & set(item)
         if signature_fields:
             fingerprint = item.get("design_fingerprint")
@@ -592,25 +595,19 @@ def find_recipe(catalog: dict, recipe_id: str, media_type: str,
     for item in catalog["recipes"]:
         if item["id"] == recipe_id:
             try:
-                tier = media_statuses(item).get(media_type, item["status"])
+                available = executable_media(item)
             except ValueError as error:
                 raise SkillError(f"配方 {recipe_id} 媒体准入无效：{error}", 3) from error
-            if tier == "research":
-                raise SkillError(
-                    f"配方 {recipe_id} 当前是研究候选，不能生成正式计划或成片。"
-                    "用 `list-styles` 查看已经进入可执行面的风格；历史数值仍完整保存在研究层。", 3,
-                    recovery_step="运行 `python3 scripts/blcaptain_color.py list-styles` 选择可执行配方；"
-                                  "研究状态不能靠重新检查素材解除。")
-            if tier == "manual-executable" and not allow_manual:
-                raise SkillError(
-                    f"配方 {recipe_id} 尚待审美晋级，只能在用户明确点名后进入真实预演。"
-                    "它不会参加无偏好智能推荐；请从 `list-styles` 的人工可执行区明确选择。", 3)
-            if media_type not in item["media_types"]:
+            if media_type not in available:
                 kind = "照片" if media_type == "photo" else "视频"
                 declared = "、".join(item["media_types"])
                 raise SkillError(
                     f"配方 {recipe_id} 不支持{kind}——它声明的媒体类型是 {declared}。"
-                    "用 `list-styles` 看每套风格支持什么。", 3)
+                    "用 `list-styles` 看每套风格支持什么。", 3,
+                    recovery_step=(
+                        "运行 `python3 scripts/blcaptain_color.py list-styles --media "
+                        f"{media_type}`，选择支持当前媒体的公式。"
+                    ))
             return item
     raise SkillError(
         f"未知配方：{recipe_id}。请使用 `list-styles` 输出中的配方 id"
@@ -640,30 +637,15 @@ def recipe_for_media(recipe: dict, media_type: str) -> dict:
 def style_payload(recipe: dict, media_type: str | None = None) -> dict:
     import style_bible_gates
 
-    keys = ["id", "name", "aliases", "summary", "warnings", "evidence"]
+    keys = ["id", "name", "aliases", "summary", "warnings"]
     payload = {key: recipe[key] for key in keys}
     for key in ("collection", "design_fingerprint", "art_direction", "impact", "suitability",
                 "visual_targets", "style_bible", "execution_role"):
         if key in recipe:
             payload[key] = recipe[key]
     payload["gate_profile"] = style_bible_gates.compile_profile(recipe)
-    if media_type is None and "media_status" in recipe:
-        raise SkillError("媒体级配方必须明确照片或视频后生成执行信息。", 3)
-    tier = status_for(recipe, media_type) if media_type is not None else recipe["status"]
-    if media_type is not None and "media_status" in recipe:
-        payload.update({
-            "media_type": media_type,
-            "execution_tier": tier,
-            "explicit_selection_required": tier == "manual-executable",
-            "auto_recommendable": tier == "active",
-        })
-    if tier == "manual-executable":
-        payload.update({
-            "execution_tier": "manual-executable",
-            "explicit_selection_required": True,
-            "auto_recommendable": False,
-            "aesthetic_maturity": "pending-human-promotion",
-        })
+    if media_type is not None:
+        payload["media_type"] = media_type
     return payload
 
 
@@ -4114,40 +4096,12 @@ def main() -> int:
             catalog = load_catalog(Path(args.catalog))
             styles = []
             for item in catalog["recipes"]:
-                available = admitted_media(item)
+                available = executable_media(item)
                 if not available or (args.media_type and args.media_type not in available):
                     continue
-                style = {key: item[key] for key in ["id", "name", "aliases", "status", "media_types", "scenes", "summary", "warnings", "evidence"]}
+                style = {key: item[key] for key in ["id", "name", "aliases", "media_types", "scenes", "summary", "warnings"]}
                 style["collection"] = item.get("collection", "Core")
-                statuses = media_statuses(item)
-                if "media_status" in item:
-                    style["media_status"] = statuses
-                    style["media_types"] = [args.media_type] if args.media_type else available
-                tiers = {statuses[media] for media in ([args.media_type] if args.media_type else available)}
-                tier = next(iter(tiers)) if len(tiers) == 1 else "mixed"
-                if "media_status" in item:
-                    style["catalog_status"] = item["status"]
-                    style["status"] = tier
-                if tier == "manual-executable":
-                    style.update({
-                        "execution_tier": "manual-executable",
-                        "explicit_selection_required": True,
-                        "auto_recommendable": False,
-                        "notice": "已有公式可真实预演，但尚待审美晋级；必须由用户明确点名。",
-                    })
-                elif tier == "active":
-                    style.update({
-                        "execution_tier": "active",
-                        "explicit_selection_required": False,
-                        "auto_recommendable": True,
-                    })
-                else:
-                    style.update({
-                        "execution_tier": "mixed",
-                        "explicit_selection_required": True,
-                        "auto_recommendable": False,
-                        "notice": "照片与视频的执行档不同，请按媒体分别查看，不代表整套自动可用。",
-                    })
+                style["media_types"] = [args.media_type] if args.media_type else available
                 styles.append(style)
             emit({"styles": styles})
         elif args.command == "inspect":
