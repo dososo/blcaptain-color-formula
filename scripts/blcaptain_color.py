@@ -640,7 +640,7 @@ def style_payload(recipe: dict, media_type: str | None = None) -> dict:
     keys = ["id", "name", "aliases", "summary", "warnings"]
     payload = {key: recipe[key] for key in keys}
     for key in ("collection", "design_fingerprint", "art_direction", "impact", "suitability",
-                "visual_targets", "style_bible", "execution_role"):
+                "visual_targets", "style_bible", "execution_role", "direction_scope"):
         if key in recipe:
             payload[key] = recipe[key]
     payload["gate_profile"] = style_bible_gates.compile_profile(recipe)
@@ -785,7 +785,14 @@ def _foundation_five_zone_curve(tone: dict) -> dict:
     target01 = max(0.06, p01 - min(0.04, (p01 - 0.04) * 0.40)) if raised_black else p01
     target05 = max(0.11, p05 - min(0.035, (p05 - 0.05) * 0.20)) if raised_black else p05
     target50 = max(p50, min(0.24, p50 * 1.20)) if low_contrast and p50 < 0.24 else p50
-    highlight_gain = min(0.04, max(0.0, 0.42 - (p95 - p05)) * 0.20)
+    # 校正量必须覆盖自身 Readiness 的实际跨度目标，不能只取离0.42的
+    # 距离再乘0.2；接近阈值的素材此前只增加约0.004，却要求增加0.04。
+    highlight_gain = max(0.03, (p95 - p05) * 0.10) if low_contrast else 0.0
+    if low_contrast:
+        # 滤镜中间态存在8位量化；给目标亮度留两个编码级的执行余量，
+        # 不修改Readiness阈值，避免理论恰达标而实际差一个量化级。
+        encoded_target = min(1.0, encode_srgb(p95 + highlight_gain) + 2.0 / 255.0)
+        highlight_gain = max(highlight_gain, srgb_linear(round(encoded_target * 255)) - p95)
     target95 = max(p95, min(0.68, p95 + highlight_gain)) if low_contrast else p95
     target99 = max(p99, min(0.82, p99 + highlight_gain * 1.5)) if low_contrast else p99
     raw = [
@@ -885,16 +892,10 @@ def foundation_grade(source: dict) -> dict:
         curve = _foundation_five_zone_curve(tone)
         neutral = _foundation_neutral_balance(color)
         recovery = _foundation_color_recovery(color)
-        # 低反差曲线会逐通道放大原有彩度。素材本身已具大面积叙事色时，
-        # 使用更强的等亮度补偿，避免天空与地景被修成可识别的风景滤镜；
-        # 低彩素材仍保留较温和补偿，让独立的诊断恢复轴有工作余量。
-        tone_chroma_compensation = (
-            0.86
-            if curve["mode"] == "five-zone-display-referred"
-            and neutral["mode"] == "preserve-narrative-color"
-            else 0.92 if curve["mode"] == "five-zone-display-referred"
-            else 1.0
-        )
+        # 没有测到过量增彩就不预先全局褪色。旧固定0.86/0.92会把
+        # 白平衡已消除的偏色再削一次，使真实素材跌破90%的保彩下限。
+        # 实际过量增彩仍由原Readiness上限拒绝，不能为补偿而放宽门。
+        tone_chroma_compensation = 1.0
         active_axes = []
         if curve["mode"] == "five-zone-display-referred":
             active_axes.append("tone_span")
@@ -1404,6 +1405,14 @@ def plan_fingerprint(plan: dict) -> str:
         "receipt_path": plan["receipt_path"],
         "renderer": RENDERER_VERSION,
     }
+    if "korean_cool_protection" in plan:
+        payload["korean_cool_protection"] = plan["korean_cool_protection"]
+        payload["korean_execution_sha256"] = plan.get("korean_execution_sha256")
+        payload["execution_preflight"] = plan.get("execution_preflight")
+    if "signature_regions" in plan:
+        payload["signature_regions"] = plan["signature_regions"]
+        payload["signature_execution_sha256"] = plan.get("signature_execution_sha256")
+        payload["execution_preflight"] = plan.get("execution_preflight")
     encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(encoded.encode("utf-8")).hexdigest()[:16]
 
@@ -1452,6 +1461,12 @@ def semantic_local_status(media_type: str, local_plan: dict | None = None) -> di
       detected     —— 已探测并给出候选策略，等用户确认
       executable   —— 用户已确认某个策略，本次渲染会真的走蒙版
     """
+    if local_plan and local_plan.get("strategy") == "korean-cool-protection":
+        return {"level": "L2", "status": "detected",
+                "scope": "当前素材独立人物与近中性亮部保护；需单独确认。视频为逐帧分割，不是身份跟踪。"}
+    if local_plan and local_plan.get('strategy') == 'signature-regions':
+        return {'level': 'manual-regions', 'status': 'detected',
+                'scope': '本次人工区域与显式完整帧区间，须独立确认；不做自动材质理解或身份跟踪。'}
     if media_type != "photo":
         return {"level": "L2", "status": "unavailable",
                 "scope": "视频的语义局部需要蒙版跨帧跟踪（L3），尚未实现；本次只做全局与镜头级"}
@@ -1939,6 +1954,44 @@ def make_plan(args: argparse.Namespace) -> dict:
     visual_brief = visual_brief_for(recipe, args.visual_brief_file)
     composition = composition_for(source, args.composition_file)
     attention_map = attention_for(args.attention_file)
+    import signature_regions as signature_module
+    signature_evidence = None
+    if recipe['id'] in signature_module.ROLES:
+        signature_module.check_options({
+            'composition': composition, 'attention_map': attention_map,
+            'shot_grade': getattr(args, 'shot_grade', False), 'adjustments': adjustments,
+            'detect_local': getattr(args, 'detect_local', False)})
+        specification = getattr(args, 'signature_regions', None)
+        if not specification:
+            raise SkillError('当前签名需要本次实际区域审查：请提供 --signature-regions，不能回落全局版本。', 4)
+        protection_root = Path(args.output_dir).expanduser().resolve() / 'masks'
+        protection_root.mkdir(parents=True, exist_ok=True)
+        evidence_dir = Path(tempfile.mkdtemp(prefix='signature-', dir=protection_root)) / 'evidence'
+        signature_evidence = signature_module.prepare(
+            source, specification, evidence_dir, signature_module.foundation_filter({'source': source}))
+        if signature_evidence['specification']['style_id'] != recipe['id']:
+            raise SkillError('区域声明的配方与当前请求不一致。', 3)
+        recipe['_signature_regions'] = signature_evidence
+        recipe['_signature_preview_dir'] = str(evidence_dir.parent / 'previews')
+    elif getattr(args, 'signature_regions', None):
+        raise SkillError('当前配方不接受六套签名区域协议。', 3)
+    korean_protection = None
+    if recipe['id'] == 'korean-cool':
+        import korean_cool_execution
+        import korean_cool_protection
+        korean_cool_execution.check_options({
+            'composition': composition, 'attention_map': attention_map,
+            'shot_grade': getattr(args, 'shot_grade', False), 'adjustments': adjustments})
+        protection_root = Path(args.output_dir).expanduser().resolve() / 'masks'
+        protection_root.mkdir(parents=True, exist_ok=True)
+        evidence_dir = Path(tempfile.mkdtemp(prefix='korean-', dir=protection_root)) / 'evidence'
+        try:
+            korean_protection = korean_cool_protection.prepare(
+                source, evidence_dir, korean_cool_execution.foundation_filter({'source': source}))
+        except korean_cool_protection.ProtectionError as error:
+            raise SkillError(f'当前素材人物保护无法建立：{error}；不会回落全局调色。', 4) from error
+        recipe['_korean_protection'] = korean_protection
+        recipe['_korean_preview_dir'] = str(evidence_dir.parent / 'previews')
     shot_grade_plan = None
     if getattr(args, "shot_grade", False):
         if source["media_type"] != "video":
@@ -2018,6 +2071,11 @@ def make_plan(args: argparse.Namespace) -> dict:
                 f"当前方向未达到可确认计划资格：{execution_preflight.get('reason', '预演被阻断')}。"
                 "原文件未改动；不会生成待确认计划。需要换方向时用 suggest 重新推荐。", 5,
                 recovery_step=recovery_step)
+        if korean_protection is not None and execution_preflight.get('status') != 'executable':
+            raise SkillError('韩系保护预演仍有风险，不能生成可确认计划：'
+                             + execution_preflight.get('reason', '未达执行资格'), 5)
+        if signature_evidence is not None and execution_preflight.get('status') != 'executable':
+            raise SkillError('人工签名区域预演未取得执行资格：' + execution_preflight.get('reason', ''), 5)
         if not isinstance(monotonicity, dict):
             raise SkillError(
                 f"无法完成逐素材三档预演：{execution_preflight.get('reason', '未知原因')}。"
@@ -2045,7 +2103,16 @@ def make_plan(args: argparse.Namespace) -> dict:
     # 不随全局方案一起生效。
     local_plan = None
     skin_strength_decision = None
-    if getattr(args, "detect_local", False):
+    if signature_evidence is not None:
+        local_plan = {'strategy': 'signature-regions', 'candidates': [],
+                      'confirmation_required': True,
+                      'reason': '人工限定区域与显式帧区间；请确认 signature-regions，不是自动跟踪。'}
+    elif korean_protection is not None:
+        local_plan = {'strategy': 'korean-cool-protection', 'candidates': [],
+                      'confirmation_required': True,
+                      'review_mask_path': korean_protection['mask']['path'],
+                      'reason': '请看过当次蒙版边缘和三档预演后，独立确认 korean-cool-protection。'}
+    elif getattr(args, "detect_local", False):
         if source["media_type"] != "photo":
             local_plan = {"candidates": [],
                           "reason": "视频的语义局部需要蒙版跨帧跟踪（L3），尚未实现"}
@@ -2115,7 +2182,16 @@ def make_plan(args: argparse.Namespace) -> dict:
         "comparison_path": str(comparison_path),
         "receipt_path": str(output_dir / f"{stem}__{recipe['id']}{variant}__receipt.json"),
     }
-    plan["local_grade"] = preflight_local_candidates(plan)
+    if signature_evidence is not None:
+        plan['signature_regions'] = signature_evidence
+        plan['signature_execution_sha256'] = signature_module.implementation_hash()
+        plan['execution_preflight'] = execution_preflight
+    elif korean_protection is not None:
+        plan['korean_cool_protection'] = korean_protection
+        plan['korean_execution_sha256'] = korean_cool_execution.implementation_hash()
+        plan['execution_preflight'] = execution_preflight
+    else:
+        plan["local_grade"] = preflight_local_candidates(plan)
     plan["capability_profile"] = capability_profile_for(
         source["media_type"], bool(shot_grade_plan), plan["local_grade"])
     plan["plan_id"] = plan_fingerprint(plan)
@@ -2317,7 +2393,7 @@ def rgb_to_oklab(red: int, green: int, blue: int, profile: str) -> tuple[float, 
     )
 
 
-def tone_response_thresholds(filtergraph: str) -> dict:
+def tone_response_thresholds(filtergraph: str, transform=None) -> dict:
     """把灰阶推过本方案的真实滤镜链，求出「哪些输入亮度会被压到死黑／推到过曝」。
 
     风险带不能用一个拍脑袋的常数。同一个 0.06 阈值，在某些夹具上刚好漏掉
@@ -2333,7 +2409,7 @@ def tone_response_thresholds(filtergraph: str) -> dict:
     try:
         import palette as palette_module
         ramp = [(value, value, value) for value in range(0, 256, 8)]
-        transformed = palette_module.transform_colors(ramp, filtergraph)
+        transformed = transform(ramp) if transform else palette_module.transform_colors(ramp, filtergraph)
     except Exception:  # noqa: BLE001
         # 求不出就退回保守常数，并在回执里标明用的是回退值。
         return {"crush_input": 0.06, "blow_input": 0.94, "derived": False,
@@ -2561,6 +2637,10 @@ def visual_grammar_gates(plan: dict, original: bytes, output: bytes,
     lift = grammar.additive_lift_of_chain(
         build_filter, plan["parameters"], plan.get("tone_curve"),
         plan.get("hsl_bands"), _probe_black)
+    if plan.get('korean_cool_protection'):
+        import korean_cool_execution
+        black = korean_cool_execution.probe_colors(plan, [(0, 0, 0)], with_foundation=False)[0]
+        lift = sum(c * w for c, w in zip(black, (.2126, .7152, .0722))) / 255
     if lift < 0:
         report["gates"]["additive_lift"] = {
             "gate": "additive_lift", "passed": None, "status": "skipped",
@@ -2590,7 +2670,11 @@ def visual_grammar_gates(plan: dict, original: bytes, output: bytes,
             probe_colors.append(tuple(base))
     try:
         import palette as palette_module
-        transformed = palette_module.transform_colors(probe_colors, filtergraph)
+        if plan.get('korean_cool_protection'):
+            import korean_cool_execution
+            transformed = korean_cool_execution.probe_colors(plan, probe_colors)
+        else:
+            transformed = palette_module.transform_colors(probe_colors, filtergraph)
     except Exception:  # noqa: BLE001
         transformed = []
     protection = plan.get("highlight_protection") or {"mode": "path-to-white"}
@@ -2751,12 +2835,35 @@ def low_change_recovery(strength: float, basis: str) -> str:
 def validate_visual_impact(source: Path, rendered: Path, plan: dict, filtergraph: str = "",
                            minimum_override: float | None = None,
                            creative_baseline: Path | None = None) -> dict:
+    signature_validation = None
+    if plan.get('signature_regions'):
+        import signature_regions
+        if creative_baseline is None:
+            raise SkillError('人工区域验收必须使用本次同链 Foundation。', 6)
+        signature_validation = signature_regions.measure(plan, creative_baseline, rendered)
+        # 多输入空间链没有唯一全局 RGB 探针；不得把空间处理伪装成全局色卡。
+        filtergraph = ''
+    protected_validation = None
+    if plan.get('korean_cool_protection'):
+        import korean_cool_validation
+        if creative_baseline is None:
+            raise SkillError('韩系保护验收缺少同执行链 Foundation，不能拿原片替代。', 6)
+        protected_validation = korean_cool_validation.measure(plan, creative_baseline, rendered)
+        if not protected_validation['passed']:
+            failures = protected_validation['signature_report'].get('blocking_failures') or []
+            raise SkillError('韩系空间签名或逐帧保护验收未通过：' + '、'.join(failures)
+                             + f"；失败帧 {protected_validation['failed_frame_indices'][:12]}", 6)
     composition = composition_filter(plan)
     original = sample_rgb(source, plan["source"]["media_type"], plan["source"]["duration"], composition)
     output = sample_rgb(rendered, plan["source"]["media_type"], plan["source"]["duration"])
     usable = min(len(original), len(output)) // 3 * 3
     profile = plan["source"]["color"]["profile"]
-    thresholds = tone_response_thresholds(filtergraph) if filtergraph else {
+    transform = None
+    if plan.get('korean_cool_protection'):
+        import korean_cool_execution
+        transform = lambda colors: korean_cool_execution.probe_colors(plan, colors)
+    thresholds = (tone_response_thresholds(filtergraph, transform) if transform
+                  else tone_response_thresholds(filtergraph)) if filtergraph else {
         "crush_input": 0.06, "blow_input": 0.94, "derived": False,
         "reason": "未提供滤镜链，使用保守常数"}
     crush_input = float(thresholds["crush_input"])
@@ -2888,13 +2995,30 @@ def validate_visual_impact(source: Path, rendered: Path, plan: dict, filtergraph
         attention = plan.get("attention_map")
         direction_source = (
             creative_baseline
-            if ((plan.get("style") or {}).get("execution_role") == "foundation-only"
+            if ((plan.get("style") or {}).get("execution_role") in {'foundation-only', 'person-protected-environment'}
                 and creative_baseline is not None)
             else source
         )
         baseline_metrics = measure(direction_source, video, attention)
         output_metrics = measure(rendered, video, attention)
         directional = evaluate_direction(baseline_metrics, output_metrics, plan["style"]["visual_targets"])
+        if protected_validation:
+            signature = protected_validation['signature']
+            prior, current = signature['baseline'], signature['candidate']
+            directional['global_observation'] = copy.deepcopy(directional['checks'])
+            directional['checks']['colorfulness'] = {
+                'intent': 'preserve', 'scope': '绑定人物与近中性亮部相对 Foundation',
+                'before': prior['protected_chroma'], 'after': current['protected_chroma'],
+                'passed': current['protected_chroma'] >= prior['protected_chroma'] * .96}
+            spatial_required = .018 * max(.3, min(1, plan['strength'] * 100 / 55))
+            directional['checks']['subject_separation'] = {
+                'intent': 'increase', 'scope': '绑定蒙版的环境与保护区冷偏差',
+                'before': prior['spatial_cool_partition'], 'after': current['spatial_cool_partition'],
+                'required_delta': spatial_required,
+                'passed': current['spatial_cool_partition'] >= prior['spatial_cool_partition'] + spatial_required}
+            directional['failed_dimensions'] = [name for name, check in directional['checks'].items()
+                                                if not check['passed']]
+            directional['status'] = 'failed' if directional['failed_dimensions'] else 'passed'
         confirmed = (plan.get("local_grade") or {}).get("confirmed")
         if confirmed and plan["source"]["media_type"] == "photo":
             import local_grade
@@ -2949,6 +3073,7 @@ def validate_visual_impact(source: Path, rendered: Path, plan: dict, filtergraph
         raise SkillError(f"视觉语法验收失败（{names}）：{details}", 6)
     return {
         "status": visual_top_level_status(directional, grammar_report["gates"], tonal_health),
+        **({'signature_regions': signature_validation} if signature_validation else {}),
         "metric": "sampled OKLab distance；只验证变化幅度与技术安全，不代表审美通过",
         "sampling": sampling,
         "coverage_note": (
@@ -2993,6 +3118,7 @@ def validate_visual_impact(source: Path, rendered: Path, plan: dict, filtergraph
         "impact_profile": impact,
         "visual_grammar": grammar_report,
         "tonal_health": tonal_health,
+        **({'korean_protection': protected_validation} if protected_validation else {}),
     }
 
 
@@ -3113,6 +3239,13 @@ def render_photo(plan: dict, vf: str, baseline_vf: str | None = None) -> tuple[l
         output_cmd = [ffmpeg, "-v", "error", "-n", "-i", str(source), "-frames:v", "1", "-vf", tagged_filter]
     output_cmd += ["-c:v", "png", "-pix_fmt", plan["color_pipeline"]["pixel_format"]]
     output_cmd.append(str(temp_output))
+    if plan.get('korean_cool_protection'):
+        import korean_cool_execution
+        output_cmd, vf = korean_cool_execution.command(
+            plan, baseline_vf, temp_output)
+    if plan.get('signature_regions'):
+        import signature_regions
+        output_cmd, vf = signature_regions.command(plan, baseline_vf, temp_output)
     foundation_readiness_report = None
     try:
         if baseline_vf is not None:
@@ -3138,6 +3271,11 @@ def render_photo(plan: dict, vf: str, baseline_vf: str | None = None) -> tuple[l
                 "-c:v", "png", "-pix_fmt", plan["color_pipeline"]["pixel_format"],
                 str(temp_baseline),
             ]
+            if plan.get('korean_cool_protection'):
+                baseline_cmd, _ = korean_cool_execution.command(
+                    plan, baseline_vf, temp_baseline, strength=0.0)
+            if plan.get('signature_regions'):
+                baseline_cmd, _ = signature_regions.command(plan, baseline_vf, temp_baseline, strength=0.0)
             run(baseline_cmd)
             before_foundation = plan["source"].get("foundation_diagnosis")
             readiness_targets = (
@@ -3253,6 +3391,16 @@ def render_video(plan: dict, vf: str, baseline_vf: str | None = None) -> tuple[l
         "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709",
         "-c:a", "copy", "-movflags", "+faststart", str(temp_output),
     ]
+    if plan.get('korean_cool_protection'):
+        import korean_cool_execution
+        output_cmd, vf = korean_cool_execution.command(
+            plan, baseline_vf, temp_output, include_audio=True)
+        baseline_cmd, _ = korean_cool_execution.command(
+            plan, baseline_vf, temp_baseline, strength=0.0)
+    if plan.get('signature_regions'):
+        import signature_regions
+        output_cmd, vf = signature_regions.command(plan, baseline_vf, temp_output, include_audio=True)
+        baseline_cmd, _ = signature_regions.command(plan, baseline_vf, temp_baseline, strength=0.0)
     foundation_readiness_report = None
     try:
         if baseline_cmd is not None:
@@ -3613,6 +3761,13 @@ def render_plan(args: argparse.Namespace) -> dict:
     expected_style = style_payload(recipe, plan["source"]["media_type"])
     if plan["style"] != expected_style:
         raise SkillError("计划风格信息与正式配方库不一致，请重新生成并确认。", 2)
+    if recipe['id'] != 'korean-cool' and any(
+            key in plan for key in ('korean_cool_protection', 'korean_execution_sha256')):
+        raise SkillError("非韩系计划不能携带韩系保护协议，请重新生成并确认。", 2)
+    import signature_regions as signature_module
+    if recipe['id'] not in signature_module.ROLES and any(
+            key in plan for key in ('signature_regions', 'signature_execution_sha256')):
+        raise SkillError('非签名配方不能携带人工区域协议。', 2)
     expected_snapshot = recipe_execution_snapshot(
         recipe, plan.get("adjustments") or {})
     if any(plan.get(key) != value for key, value in expected_snapshot.items()):
@@ -3695,7 +3850,12 @@ def render_plan(args: argparse.Namespace) -> dict:
     # 语义局部必须单独确认：它只作用于蒙版内，而蒙版边缘在发丝、树枝、
     # 电线处不可靠——那是必须由人看过才能签字的东西，不能随全局方案一起过。
     chosen_local = getattr(args, "confirm_local", None)
-    if chosen_local:
+    if recipe['id'] in signature_module.ROLES:
+        signature_module.confirm(plan, chosen_local)
+    elif recipe['id'] == 'korean-cool':
+        import korean_cool_execution
+        korean_cool_execution.confirm(plan, chosen_local)
+    elif chosen_local:
         pool = (plan.get("local_grade") or {}).get("candidates") or []
         match = next((c for c in pool if c["strategy"] == chosen_local), None)
         if match is None:
@@ -3741,6 +3901,12 @@ def render_plan(args: argparse.Namespace) -> dict:
         timeline_trim=(shot_grade_plan or {}).get("trim_filter", ""),
         highlight_protection=plan.get("highlight_protection"),
     )
+    if recipe['id'] == 'korean-cool':
+        baseline_vf = korean_cool_execution.foundation_filter(plan)
+        vf = korean_cool_execution.build_graph(plan, baseline_vf)
+    if recipe['id'] in signature_module.ROLES:
+        baseline_vf = signature_module.foundation_filter(plan)
+        vf = signature_module.build_graph(plan, baseline_vf)
     if plan["source"]["media_type"] == "photo":
         (output_cmd, compare_cmd, color_validation, visual_validation,
          staged_output, staged_comparison) = render_photo(plan, vf, baseline_vf)
@@ -3751,6 +3917,18 @@ def render_plan(args: argparse.Namespace) -> dict:
     if after != before:
         cleanup_staged([staged_output, staged_comparison])
         raise SkillError("原文件指纹发生变化，验收失败。", 6)
+    if recipe['id'] == 'korean-cool':
+        try:
+            korean_cool_execution.validate(plan)
+        except Exception:
+            cleanup_staged([staged_output, staged_comparison])
+            raise
+    if recipe['id'] in signature_module.ROLES:
+        try:
+            signature_module.validate(plan)
+        except Exception:
+            cleanup_staged([staged_output, staged_comparison])
+            raise
 
     directional = visual_validation.get("directional_audit") or {}
     if directional.get("should_block"):
@@ -3771,7 +3949,10 @@ def render_plan(args: argparse.Namespace) -> dict:
     # 三色卡：原图 / 目标 / 结果。目标由滤镜链逐点变换得出（预测），
     # 结果由真实输出重新提取（事实），两者比对把预测变成可证伪的。
     palette_block = None
-    if not getattr(args, "no_palette", False):
+    if recipe['id'] == 'korean-cool':
+        palette_block = {'available': False,
+                         'reason': '本次人物保护随位置变化，不以全局色块预测冒充局部目标；请看真实预演和成片。'}
+    elif not getattr(args, "no_palette", False):
         try:
             import palette as palette_module
             working = "display-p3" if plan["source"]["color"]["profile"] == "display-p3" else "srgb"
@@ -3881,6 +4062,14 @@ def render_plan(args: argparse.Namespace) -> dict:
         "filtergraph": vf,
         "commands": [output_cmd, compare_cmd],
     }
+    if recipe['id'] == 'korean-cool':
+        result['korean_cool_protection'] = plan['korean_cool_protection']
+        result['korean_execution_sha256'] = plan['korean_execution_sha256']
+        result['local_confirmation'] = chosen_local
+    if recipe['id'] in signature_module.ROLES:
+        result['signature_regions'] = plan['signature_regions']
+        result['signature_execution_sha256'] = plan['signature_execution_sha256']
+        result['local_confirmation'] = chosen_local
     staged_receipt = partial_path(receipt)
     try:
         staged_receipt.write_text(
@@ -3929,6 +4118,7 @@ def parser() -> argparse.ArgumentParser:
     plan.add_argument("--visual-brief-file")
     plan.add_argument("--composition-file")
     plan.add_argument("--attention-file")
+    plan.add_argument('--signature-regions', help='六套签名的本次人工区域/逐帧区间 JSON；不是自动语义识别')
     plan.add_argument("--detect-local", action="store_true",
                       help="探测语义类别并给出候选局部策略（L2）。约需 1-2 秒；"
                            "探测出的策略仍需在 render 时用 --confirm-local 单独确认")

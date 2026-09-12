@@ -1,8 +1,10 @@
-# 可选依赖。全部不装也能用——不装时全程走 L0 全局链路，
-# 语义局部（人物／天空／植被／建筑／商品蒙版）自动降级并在回执里写明原因。
+# 可选能力依赖；不装时仍可使用通用全局方向。
+# 韩系清冷依赖人物保护，缺少依赖时必须阻断，不能回落无保护全局版本。
 #
 # 核心链路（inspect / suggest / plan / render / diagnose / palette / shots）
-# 只要 Python 3.9+ 与 ffmpeg、ffprobe，不需要本文件里的任何一项。
+# 的通用全局路径只要 Python 3.9+ 与 ffmpeg、ffprobe。
+# 韩系清冷最小额外依赖为 NumPy 与下列两个 macOS Python 绑定，不需要场景模型。
+# 六套人工签名区域只需 NumPy、Pillow，不需要场景模型或自动跟踪后端。
 
 # --- 人物类语义（person / face / salient_foreground / skin）---
 # 仅 macOS 可用；调用系统自带的 Apple Vision，但需要 Python 绑定。

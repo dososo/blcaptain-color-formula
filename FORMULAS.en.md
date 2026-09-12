@@ -1,5 +1,7 @@
 # 62 Executable Formula-Media Paths and Comparisons
 
+> This page preserves the full catalog and historical comparisons. The [new high-resolution gallery](showcase/真实样例/README.md) uses distinct sources and replaces the two old overview sheets on the repository homepage. Historical images below are not newly regenerated or reapproved.
+
 The catalog contains 32 formulas: 31 support photos and 31 support standard SDR video. `french-warm` is photo-only, `night-black-gold` is video-only, and the other 30 support both. Every declared path can be selected and planned; each source still has to pass safety preflight and current `plan_id` confirmation.
 
 A green “Human-accepted example” badge applies only to that exact source, strength, and result. “Public formula demo” uses rights-cleared public media to show direction, not universal aesthetic approval. Sources are selected blind to formula names and must have genuine grading headroom.

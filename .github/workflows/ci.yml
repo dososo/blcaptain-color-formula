@@ -26,8 +26,30 @@ jobs:
           tests.test_v490_public_release
           tests.test_v491_all_formulas_executable
           tests.test_public_formula_atlas
+          tests.test_verified_gallery
           tests.test_skill_package
           tests.test_public_beta_docs
           tests.test_portable_startup
       - name: Audit public package
         run: python scripts/build_skill_package.py audit --root . --public-assets
+  region-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: 准备区域像素验证依赖
+        run: |
+          sudo apt-get update && sudo apt-get install -y ffmpeg
+          python -m pip install numpy Pillow
+      - name: 验证保护与签名执行
+        run: >-
+          python -m unittest
+          tests.test_korean_cool_execution
+          tests.test_korean_cool_protection
+          tests.test_korean_cool_validation
+          tests.test_korean_pipeline_safety
+          tests.test_korean_lut_boundary
+          tests.test_korean_plan_integration
+          tests.test_signature_regions

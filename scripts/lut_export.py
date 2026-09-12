@@ -14,6 +14,16 @@ from color_diff import delta_e_2000, rgb8_to_lab
 
 
 def color_only_filter(engine, plan: dict) -> str:
+    from signature_regions import ROLES
+    if ((plan.get('style') or {}).get('id') in ROLES or any(
+            key in plan for key in ('signature_regions', 'signature_execution_sha256'))):
+        raise ValueError('当前签名依赖人工区域或序列时序，普通 3D LUT 无法保留，拒绝全局替代导出。')
+    if ((plan.get("style") or {}).get("id") == "korean-cool" or any(
+            key in plan for key in ('korean_cool_protection', 'korean_execution_sha256'))):
+        raise ValueError(
+            "韩系清冷依赖当前素材的空间保护，普通 3D LUT 无法表达人物与亮部蒙版。"
+            "不会导出丢失保护的全局版本；旧计划也不例外。"
+            "请重新 plan，并确认计划编号与 korean-cool-protection 后使用 render 生成成片。")
     parameters = dict(plan["parameters"])
     for spatial in ("sharpness", "vignette", "grain"):
         parameters[spatial] = 0.0

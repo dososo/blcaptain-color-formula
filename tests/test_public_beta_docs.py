@@ -31,7 +31,7 @@ class PublicBetaDocsTests(unittest.TestCase):
         self.assertNotIn('v4.8.3', readme)
         self.assertNotIn('1040', readme)
         self.assertNotIn('修复前不作为首发旗舰展示', scope)
-        self.assertIn('v4.9.2 Release', readme)
+        self.assertIn('v' + (ROOT / 'VERSION').read_text().strip() + ' Release', readme)
         self.assertIn('素材级', scope)
 
     def test_public_docs_present_full_executable_media_contract(self):

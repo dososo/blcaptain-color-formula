@@ -1,4 +1,4 @@
-# BLCaptain Visual Director & Color Formula Skill v4.9.2
+# BLCaptain Visual Director & Color Formula Skill v4.9.3
 
 [中文](README.md) · [English](README.en.md)
 
@@ -6,7 +6,7 @@
 
 **A photo or video → understand the image, choose its color direction, approve a new result.**
 
-[Download](https://github.com/dososo/blcaptain-color-formula/releases/latest) · [Start in three steps](#install) · [Explore all 62 comparisons](FORMULAS.en.md)
+[Download](https://github.com/dososo/blcaptain-color-formula/releases/latest) · [Start in three steps](#install) · [New high-resolution comparisons](showcase/真实样例/README.md) · [Full formula catalog](FORMULAS.en.md)
 
 ![BLCaptain 调色 Skill：先看懂画面，再决定色彩](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/hero-editorial.png)
 
@@ -16,11 +16,11 @@
 | :---: | :---: | :---: | :---: |
 | **32** | **31** | **31** | **Never overwritten** |
 
-## See it in 48 seconds
+## See it in 80 seconds
 
-[Watch landscape video (16:9)](https://github.com/dososo/blcaptain-color-formula/releases/download/v4.9.2/blcaptain-color-formula-4.9.2-landscape.mp4) · [Watch portrait video (9:16)](https://github.com/dososo/blcaptain-color-formula/releases/download/v4.9.2/blcaptain-color-formula-4.9.2-portrait.mp4)
+[Watch/download landscape (16:9)](showcase/videos/blcaptain-color-formula-4.9.3-landscape.mp4) · [Watch/download portrait (9:16)](showcase/videos/blcaptain-color-formula-4.9.3-portrait.mp4)
 
-Real photo transformations, multiple looks from one source, moving video comparisons, the approval workflow, and the full formula overview. Both versions include continuous background music and action sound effects. [Media and music credits](https://github.com/dososo/blcaptain-color-formula/blob/main/showcase/VIDEO_CREDITS_4.9.2.md).
+Same-source photo comparisons and continuous moving footage, followed by the formula catalog, preserved originals, and installation. The workflow is explicitly labeled as an illustration, not a software recording. Both versions are 80 seconds at 30 fps, with continuous instrumental music, six action sound cues, and no narration. [Media and music credits](showcase/VIDEO_CREDITS_4.9.3.md).
 
 ## What it is
 
@@ -45,7 +45,7 @@ For photography enthusiasts, travel and portrait creators, short-video creators,
 
 Verified on macOS with Python **3.9+** and FFmpeg/ffprobe. Windows and Linux cold installation has not yet been verified.
 
-1. Download `blcaptain-color-formula-4.9.2.zip` and its `.sha256` file from the [latest release](https://github.com/dososo/blcaptain-color-formula/releases/latest).
+1. Download `blcaptain-color-formula-4.9.3.zip` and its `.sha256` file from the [latest release](https://github.com/dososo/blcaptain-color-formula/releases/latest).
 2. Unzip and run:
 
 ```bash
@@ -111,17 +111,17 @@ There are 32 unique formulas. `french-warm` is photo-only, `night-black-gold` is
 
 `natural-clean`, `cream-soft`, `korean-cool`, `japanese-airy`, `french-warm`, `film-soft`, `forest-cyan`, `sunset-warm`, `cinematic-muted`, `teal-orange`, `food-vivid`, `landscape-crisp`, `night-cool-neon`, `warm-cozy`, `documentary-low-color`, `flash-ccd`, `rainy-blue-green`, `cool-gray-sea`, `blue-hour`, `bw-documentary`, `captain-deep-sea`, `celadon-forest`, `silver-morning-mist`, `paper-moon-bw`, `plateau-sacred-light`, `amber-afterglow`, `vermilion-snow-dream`, `obsidian-gold-realm`, `rain-ink-neon`, `desert-silent-rose`, `gilded-autumn-city`.
 
-![31 photo formula comparisons](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/formula-atlas/photo-contact-sheet.jpg)
+![New photo examples with a distinct source per formula](showcase/真实样例/photo-contact-sheet.jpg)
 
 ### Video formulas (31)
 
 `natural-clean`, `cream-soft`, `korean-cool`, `japanese-airy`, `film-soft`, `forest-cyan`, `sunset-warm`, `cinematic-muted`, `teal-orange`, `night-black-gold`, `food-vivid`, `landscape-crisp`, `night-cool-neon`, `warm-cozy`, `documentary-low-color`, `flash-ccd`, `rainy-blue-green`, `cool-gray-sea`, `blue-hour`, `bw-documentary`, `captain-deep-sea`, `celadon-forest`, `silver-morning-mist`, `paper-moon-bw`, `plateau-sacred-light`, `amber-afterglow`, `vermilion-snow-dream`, `obsidian-gold-realm`, `rain-ink-neon`, `desert-silent-rose`, `gilded-autumn-city`.
 
-![31 video formula comparisons](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/formula-atlas/video-contact-sheet.jpg)
+![New video examples with aligned before and after frames](showcase/真实样例/video-contact-sheet.jpg)
 
-[Open all 62 large comparisons with visual intent, evidence level, and source license](FORMULAS.en.md). “Human-accepted example” applies only to the exact source, strength, and result shown. “Public formula demo” shows direction on rights-cleared media and is not human aesthetic approval. Sources are selected for genuine grading headroom, never because they already match a formula name.
+[Open the new full-size examples and source licenses](showcase/真实样例/README.md). These two sheets now show newly sourced, actually executed examples, **not a completed replacement of all 31 photo and 31 video examples**. The gallery states its actual coverage. Sources are neither artificially flattened nor AI-repainted to exaggerate results.
 
-The atlas includes 13 human-accepted results (2 photo entries and 11 video entries) and 49 public formula demonstrations. Every comparison uses the same source before and after. Video stills compare color; full moving footage must be reviewed separately.
+The formula count is unchanged; unsuitable examples are not used to fill gaps. Video comparisons align the same source frame; some executions use full-frame excerpts from longer works. Stills do not replace motion review. The [full catalog and historical comparisons](FORMULAS.en.md) remain separate and are not presented as newly reapproved.
 
 ## What makes it different
 
@@ -142,7 +142,7 @@ You must have the right to process and publish your media. The MIT License cover
 
 ## Verification
 
-The Python 3.9+ core runtime contract is separate from the Python 3.10.18 full development-test contract. The v4.9.2 Release is governed by its tagged CI, package verification, and clean-install evidence. Full tests apply only to the development repository; the Release Skill package excludes tests, historical evidence, user media, workspaces, atlas-build scripts, and Git metadata.
+The Python 3.9+ core runtime contract is separate from the Python 3.10.18 full development-test contract. Each Release is governed by its tagged CI, package verification, and clean-install evidence. Full tests apply only to the development repository; the Release Skill package excludes tests, historical evidence, user media, workspaces, atlas-build scripts, and Git metadata.
 
 ```bash
 python3 -m unittest tests.test_v491_all_formulas_executable tests.test_public_formula_atlas tests.test_skill_package tests.test_portable_startup

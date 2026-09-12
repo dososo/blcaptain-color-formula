@@ -435,6 +435,7 @@
     {
       "id": "korean-cool",
       "name": "韩系清冷",
+      "execution_role": "person-protected-environment",
       "aliases": [
         "冷白皮人像",
         "高级冷白皮"
@@ -463,7 +464,7 @@
       },
       "hsl_bands": [],
       "warnings": [
-        "视频研究链只在当前 ARRI 素材复用已验证逐帧人物联合与近中性白位保护蒙版；不得外推为跨素材肤色识别或身份跟踪"
+        "普通入口为当前素材独立生成人物与近中性亮部保护，须查看蒙版并独立确认；视频仅支持完整标签的恒定帧率 SDR，不是身份跟踪，缺分割后端不回落全局冷化"
       ],
       "evidence": {
         "provenance": "公开人像配方共识与用户附件启发",
@@ -509,14 +510,20 @@
         "fallback": "若主手势与素材光线或主题冲突，退回自然通透一级校正并重新选择方向。"
       },
       "visual_targets": {
-        "tone_span": "compress",
-        "colorfulness": "decrease",
+        "tone_span": "preserve",
+        "colorfulness": "preserve",
         "subject_separation": "increase",
-        "local_contrast": "soften",
+        "local_contrast": "preserve",
         "texture": "clean"
       },
       "capability_bindings": {
-        "subject_separation": "temporal-memory-color-protection"
+        "subject_separation": "temporal-memory-color-protection",
+        "spatial_signature": "korean-cool-protected-region-signature"
+      },
+      "direction_scope": {
+        "colorfulness": "绑定保护区相对 Foundation 的彩度保留；不要求全幅环境彩度恒定",
+        "subject_separation": "绑定人物／环境蒙版的空间冷偏差，不使用画面中心块代替人物",
+        "contract": "空间冷化专项，保留既有安全阈值"
       },
       "combo_tags": {
         "tone": "filmic-shoulder",
@@ -581,8 +588,8 @@
         "source": "基于 research/master-aesthetics-v4.json 的一手方法论重写；数值均为工程提议",
         "implementation_note": {
           "status": "approximation",
-          "how": "当前视频研究链复用 ARRI 同素材 248 帧已验证的人物分割联合与近中性白位蒙版；它不等于跨素材肤色识别、身份跟踪或通用语义能力。",
-          "render_path": "scripts/korean_cool_grade.py；Foundation、环境冷化与动态保护分层可归因。"
+          "how": "普通入口为每份原片独立生成保护证据，照片保留原色域，恒定帧率视频逐帧独立分割；不等于肤色识别、身份跟踪或所有素材已获审美接受。历史受限视频实验保持原哈希约束。",
+          "render_path": "scripts/korean_cool_execution.py；普通预演与正式生成共用 Foundation、环境冷化和人物保护执行链。"
         }
       },
       "style_bible": {
@@ -637,7 +644,7 @@
           "tone_policy": "环境只轻收密度，不以亮度差冒充空间分离"
         },
         "memory_color_protection": {
-          "person_policy": "只复用当前 ARRI 素材的逐帧人物联合蒙版",
+          "person_policy": "为当前原片独立生成人物联合保护；照片单帧、视频逐帧独立分割，非身份跟踪",
           "white_policy": "近中性白位恢复 Foundation",
           "accent_policy": "保护区内记忆色不失血",
           "black_policy": "真实黑位不抬灰、不染蓝"
@@ -8620,8 +8627,8 @@
       "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
     },
     "korean-cool": {
-      "parameters": {"brightness": 0.0, "contrast": 0.9, "saturation": 0.709, "gamma": 1.33195, "temperature": -0.0697, "tint": 0.0388, "sharpness": 0.124, "vignette": 0.0, "grain": 0.0},
-      "basis": "既有可执行全局底座；逐素材安全门继续决定本次是否适配"
+      "parameters": {"brightness": 0.0, "contrast": 1.0, "saturation": 1.0, "gamma": 1.0, "temperature": 0.0, "tint": 0.0, "sharpness": 0.0, "vignette": 0.0, "grain": 0.0},
+      "basis": "普通入口使用独立人物保护执行层；全局创意参数保持中性，不再给人物提白或降饱和"
     },
     "film-soft": {
       "parameters": {"brightness": 0.0, "contrast": 0.8605, "saturation": 0.748, "gamma": 1.0, "temperature": 0.031, "tint": -0.0155, "sharpness": 0.0, "vignette": 0.13, "grain": 3.3},

@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import json
 import shlex
+import shutil
 import sys
 import tempfile
 from pathlib import Path
@@ -245,6 +246,12 @@ def feedback_compatibility(feedback: str, visual_targets: dict) -> dict:
 
 def _render_photo_preflight_file(recipe: dict, source: dict, strength: float,
                                  output: Path) -> tuple[str, dict]:
+    import signature_regions
+    if recipe['id'] in signature_regions.ROLES:
+        return signature_regions.preview(recipe, source, strength, output)
+    if recipe['id'] == 'korean-cool':
+        import korean_cool_execution
+        return korean_cool_execution.preview(recipe, source, strength, output)
     filtergraph = _filtergraph_for(recipe, source, strength)
     effective = engine.perceptual_strength(recipe, strength)
     parameters = engine.scaled_parameters(recipe["parameters"], 1.0)
@@ -296,6 +303,25 @@ def _mean_delta_between(left: Path, right: Path, source: dict) -> float:
     return sum(differences) / len(differences) if differences else 0.0
 
 
+def _retain_korean_preview(recipe: dict, output: Path, strength: float) -> dict | None:
+    """只复制本次已验收预演；独占创建，不能覆盖或冒充正式成片。"""
+    import signature_regions
+    directory_path = None
+    if recipe.get('id') == 'korean-cool':
+        directory_path = recipe.get('_korean_preview_dir')
+    elif recipe.get('id') in signature_regions.ROLES and recipe.get('_signature_regions'):
+        directory_path = recipe.get('_signature_preview_dir')
+    if not directory_path:
+        return None
+    directory = Path(directory_path).resolve()
+    directory.mkdir(parents=True, exist_ok=True)
+    label = 'foundation' if strength == 0 else f'strength-{strength:.6f}'
+    target = directory / f'{label}-internal-preview{output.suffix}'
+    with target.open('xb') as destination, output.open('rb') as source:
+        shutil.copyfileobj(source, destination)
+    return {'path': str(target), 'sha256': engine.sha256(target), 'strength': strength}
+
+
 def _run_photo_preflight_once(recipe: dict, source: dict, strength: float,
                               baseline_path: Path | None = None) -> dict:
     """运行单一强度的真实全分辨率预演，不用固定最小变化门提前截断测量。"""
@@ -307,6 +333,7 @@ def _run_photo_preflight_once(recipe: dict, source: dict, strength: float,
                 recipe, source, strength, output)
             validation = engine.validate_visual_impact(
                 Path(source["path"]), output, plan_stub, filtergraph, minimum_override=0.0,
+                creative_baseline=baseline_path if (recipe['id'] == 'korean-cool' or recipe.get('_signature_regions')) else None,
             )
             predicted = float(validation["mean_delta_e_ok"])
             direction = validation.get("directional_audit") or {}
@@ -320,6 +347,9 @@ def _run_photo_preflight_once(recipe: dict, source: dict, strength: float,
             if baseline_path is not None:
                 report["creative_delta_e_ok"] = round(
                     _mean_delta_between(baseline_path, output, source), 6)
+            preview = _retain_korean_preview(recipe, output, strength)
+            if preview is not None:
+                report['preview'] = preview
             return report
         except Exception as error:  # noqa: BLE001
             return {
@@ -331,6 +361,12 @@ def _run_photo_preflight_once(recipe: dict, source: dict, strength: float,
 
 def _render_video_preflight_file(recipe: dict, source: dict, strength: float,
                                  output: Path) -> tuple[str, dict]:
+    import signature_regions
+    if recipe['id'] in signature_regions.ROLES:
+        return signature_regions.preview(recipe, source, strength, output)
+    if recipe['id'] == 'korean-cool':
+        import korean_cool_execution
+        return korean_cool_execution.preview(recipe, source, strength, output)
     filtergraph = _filtergraph_for(recipe, source, strength)
     effective = engine.perceptual_strength(recipe, strength)
     plan_stub = {
@@ -361,14 +397,15 @@ def _render_video_preflight_file(recipe: dict, source: dict, strength: float,
 
 def _run_video_preflight_once(recipe: dict, source: dict, strength: float,
                               baseline_path: Path | None = None) -> dict:
-    """用完整时间轴运行单档视频预演；不生成对比、不保留临时文件。"""
+    """用完整时间轴运行单档视频预演；仅韩系计划可指定独立留存目录。"""
     with tempfile.TemporaryDirectory(prefix="blcaptain-video-preflight-") as folder:
         output = Path(folder) / "preview.mp4"
         try:
             filtergraph, plan_stub = _render_video_preflight_file(
                 recipe, source, strength, output)
             validation = engine.validate_visual_impact(
-                Path(source["path"]), output, plan_stub, filtergraph, minimum_override=0.0)
+                Path(source["path"]), output, plan_stub, filtergraph, minimum_override=0.0,
+                creative_baseline=baseline_path if (recipe['id'] == 'korean-cool' or recipe.get('_signature_regions')) else None)
             direction = validation.get("directional_audit") or {}
             report = {
                 "predicted_delta": round(float(validation["mean_delta_e_ok"]), 6),
@@ -379,6 +416,9 @@ def _run_video_preflight_once(recipe: dict, source: dict, strength: float,
             if baseline_path is not None:
                 report["creative_delta_e_ok"] = round(
                     _mean_delta_between(baseline_path, output, source), 6)
+            preview = _retain_korean_preview(recipe, output, strength)
+            if preview is not None:
+                report['preview'] = preview
             return report
         except Exception as error:  # noqa: BLE001
             return {"status": "blocked",
@@ -401,6 +441,21 @@ def preflight_change_for_gate(requested: dict) -> float:
 
 def run_execution_preflight(recipe: dict, source: dict, strength: float) -> dict:
     """照片候选逐素材实测 30/55/80 三档，并用素材相对门判断。"""
+    import signature_regions
+    if recipe['id'] in signature_regions.ROLES and not recipe.get('_signature_regions'):
+        return {'status': 'blocked', 'code': 'signature-regions-required',
+                'reason': '当前签名需要本次人工区域/序列时序证据；没有证据不预演全局替代版。'}
+    if recipe['id'] == 'korean-cool' and not recipe.get('_korean_protection'):
+        import korean_cool_protection
+        import korean_cool_execution
+        with tempfile.TemporaryDirectory(prefix='blcaptain-korean-three-levels-') as folder:
+            try:
+                evidence = korean_cool_protection.prepare(
+                    source, Path(folder) / 'evidence', korean_cool_execution.foundation_filter({'source': source}))
+                return run_execution_preflight({**recipe, '_korean_protection': evidence}, source, strength)
+            except Exception as error:
+                return {'status': 'blocked', 'code': 'protection-unavailable',
+                        'reason': f'新素材人物保护无法建立：{error}；不回落全局调色。'}
     if (source["media_type"] == "photo"
             and recipe.get("execution_role") == "foundation-only"):
         with tempfile.TemporaryDirectory(prefix="blcaptain-foundation-only-") as folder:
@@ -470,16 +525,24 @@ def run_execution_preflight(recipe: dict, source: dict, strength: float) -> dict
                     "reason": f"Foundation 预演失败：{type(error).__name__}: {error}",
                     "evidence": "same-chain-full-resolution-foundation-readiness",
                 }
+    requested_level = round(strength * 100)
+    if (recipe['id'] == 'korean-cool' or recipe.get('_signature_regions')) and strength != requested_level / 100:
+        requested_level = strength * 100
+    baseline_artifact = None
     if source["media_type"] == "photo":
         with tempfile.TemporaryDirectory(prefix="blcaptain-preflight-baseline-") as folder:
             baseline = Path(folder) / "baseline.png"
             try:
                 _render_photo_preflight_file(recipe, source, 0.0, baseline)
+                baseline_artifact = _retain_korean_preview(recipe, baseline, 0.0)
                 measured = {
                     level: _run_photo_preflight_once(
                         recipe, source, level / 100.0, baseline_path=baseline)
                     for level in (30, 55, 80)
                 }
+                if (recipe['id'] == 'korean-cool' or recipe.get('_signature_regions')) and requested_level not in measured:
+                    measured[requested_level] = _run_photo_preflight_once(
+                        recipe, source, strength, baseline_path=baseline)
             except Exception as error:  # noqa: BLE001
                 return {"status": "blocked", "code": "preview-failed",
                         "reason": f"基础校正预演失败：{type(error).__name__}: {error}",
@@ -489,11 +552,15 @@ def run_execution_preflight(recipe: dict, source: dict, strength: float) -> dict
             baseline = Path(folder) / "baseline.mp4"
             try:
                 _render_video_preflight_file(recipe, source, 0.0, baseline)
+                baseline_artifact = _retain_korean_preview(recipe, baseline, 0.0)
                 measured = {
                     level: _run_video_preflight_once(
                         recipe, source, level / 100.0, baseline_path=baseline)
                     for level in (30, 55, 80)
                 }
+                if (recipe['id'] == 'korean-cool' or recipe.get('_signature_regions')) and requested_level not in measured:
+                    measured[requested_level] = _run_video_preflight_once(
+                        recipe, source, strength, baseline_path=baseline)
             except Exception as error:  # noqa: BLE001
                 return {"status": "blocked", "code": "preview-failed",
                         "reason": f"视频基础校正预演失败：{type(error).__name__}: {error}",
@@ -532,7 +599,7 @@ def run_execution_preflight(recipe: dict, source: dict, strength: float) -> dict
             "evidence": "same-chain-full-resolution-preview",
             "monotonicity": monotonicity,
         }
-    requested = measured.get(round(strength * 100))
+    requested = measured.get(requested_level)
     if requested is None:
         requested = (
             _run_photo_preflight_once(recipe, source, strength)
@@ -563,6 +630,10 @@ def run_execution_preflight(recipe: dict, source: dict, strength: float) -> dict
         "preview_size": requested["preview_size"],
         "working_profile": requested["working_profile"],
         "monotonicity": monotonicity,
+        **({'preview_artifacts': {
+            'status': 'internal-preview-not-final', 'baseline': baseline_artifact,
+            'levels': [item['preview'] for item in measured.values()],
+        }} if baseline_artifact is not None else {}),
     }
 
 
@@ -601,6 +672,8 @@ def apply_video_topic_gate(catalog: list[dict], evidence: dict | None) -> tuple[
 
 
 def _filtergraph_for(recipe: dict, source: dict, strength: float) -> str:
+    if recipe['id'] == 'korean-cool':
+        raise engine.SkillError('韩系清冷必须使用当前素材的独立保护执行链，不支持全局滤镜替代。', 4)
     effective = engine.perceptual_strength(recipe, strength)
     return engine.build_filter(
         engine.scaled_parameters(recipe["parameters"], 1.0),
@@ -656,11 +729,14 @@ def _option_from_score(scored: dict, catalog_raw: dict, source: dict,
                         "仍需用户确认"
                     )
                     break
-        filtergraph = _filtergraph_for(recipe, source, selected_strength)
         try:
-            target = palette_module.predict_target_palette(
-                source_palette, filtergraph, source["color"]["profile"], person_present
-            )
+            if recipe['id'] == 'korean-cool':
+                target = {'available': False, 'reason': '人物保护随像素位置变化，不能用全局色块预测；请查看真实预演。'}
+            else:
+                filtergraph = _filtergraph_for(recipe, source, selected_strength)
+                target = palette_module.predict_target_palette(
+                    source_palette, filtergraph, source["color"]["profile"], person_present
+                )
         except palette_module.PaletteError as error:
             target = {"error": str(error)}
         predicted_delta = float(target.get("mean_delta_e_ok") or 0.0)

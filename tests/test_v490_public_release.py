@@ -17,10 +17,10 @@ ROOT = Path(__file__).resolve().parents[1]
 class PublicReleaseTests(unittest.TestCase):
     def test_version_and_bilingual_readmes_are_aligned(self):
         version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
-        self.assertEqual(version, "4.9.2")
+        self.assertEqual(version, "4.9.3")
         for name in ("README.md", "README.en.md"):
             text = (ROOT / name).read_text(encoding="utf-8")
-            self.assertIn("4.9.2", text, name)
+            self.assertIn("v" + version, text.splitlines()[0], name)
             self.assertIn("https://github.com/dososo/blcaptain-color-formula", text, name)
 
     def test_public_root_documents_are_in_the_package_contract(self):

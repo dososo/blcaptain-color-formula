@@ -1,4 +1,4 @@
-# BLCaptain 摄影视觉导演与调色公式 Skill v4.9.2
+# BLCaptain 摄影视觉导演与调色公式 Skill v4.9.3
 
 [中文](README.md) · [English](README.en.md)
 
@@ -6,7 +6,7 @@
 
 **一张照片、一段视频 → 看懂画面，选对色彩，确认后生成新成片。**
 
-[立即下载](https://github.com/dososo/blcaptain-color-formula/releases/latest) · [三步开始](#安装) · [查看全部 62 个前后对比](FORMULAS.md)
+[立即下载](https://github.com/dososo/blcaptain-color-formula/releases/latest) · [三步开始](#安装) · [查看高清实测对比](showcase/真实样例/README.md) · [完整公式目录](FORMULAS.md)
 
 ![BLCaptain 调色 Skill：先看懂画面，再决定色彩](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/hero-editorial.png)
 
@@ -16,11 +16,11 @@
 | :---: | :---: | :---: | :---: |
 | **32 个** | **31 个** | **31 个** | **不覆盖原图** |
 
-## 48 秒看懂它
+## 80 秒看懂它
 
-[观看横版视频（16:9）](https://github.com/dososo/blcaptain-color-formula/releases/download/v4.9.2/blcaptain-color-formula-4.9.2-landscape.mp4) · [观看竖版视频（9:16）](https://github.com/dososo/blcaptain-color-formula/releases/download/v4.9.2/blcaptain-color-formula-4.9.2-portrait.mp4)
+[观看／下载横版（16:9）](showcase/videos/blcaptain-color-formula-4.9.3-landscape.mp4) · [观看／下载竖版（9:16）](showcase/videos/blcaptain-color-formula-4.9.3-portrait.mp4)
 
-真实照片前后变化、同源多风格、动态视频对比、确认后生成流程与完整公式全景；两版均配有连续 BGM 与动作音效。[素材与音乐署名](https://github.com/dososo/blcaptain-color-formula/blob/main/showcase/VIDEO_CREDITS_4.9.2.md)。
+真实同源照片与连续视频前后对比，接着介绍公式目录、结果保留与安装。使用流程明确标为示意，不冒充软件录屏。两版均为 80 秒、30 fps，包含贯穿全片的连续器乐与六处动作音效；无旁白。[素材与音乐署名](showcase/VIDEO_CREDITS_4.9.3.md)。
 
 ## 它是什么
 
@@ -47,7 +47,7 @@
 
 ### 方法一：下载 Release（推荐）
 
-1. 从 [Latest Release](https://github.com/dososo/blcaptain-color-formula/releases/latest) 下载 `blcaptain-color-formula-4.9.2.zip` 和对应 `.sha256`。
+1. 从 [Latest Release](https://github.com/dososo/blcaptain-color-formula/releases/latest) 下载 `blcaptain-color-formula-4.9.3.zip` 和对应 `.sha256`。
 2. 解压 ZIP，在解压后的目录运行：
 
 ```bash
@@ -122,17 +122,17 @@ python3 scripts/blcaptain_color.py render --plan /输出目录/video-plan.json -
 
 自然通透 `natural-clean` · 奶油柔光 `cream-soft` · 韩系清冷 `korean-cool` · 花信晴蓝 `japanese-airy` · 法式暖调 `french-warm` · 柔和胶片 `film-soft` · 森林青绿 `forest-cyan` · 日落暖金 `sunset-warm` · 电影低饱和 `cinematic-muted` · 青橙电影 `teal-orange` · 美食鲜亮 `food-vivid` · 风景清透 `landscape-crisp` · 冷调霓虹夜景 `night-cool-neon` · 暖调治愈 `warm-cozy` · 克制低彩纪实 `documentary-low-color` · 闪光CCD `flash-ccd` · 雨夜蓝绿 `rainy-blue-green` · 冷灰海水 `cool-gray-sea` · 蓝调时刻 `blue-hour` · 黑白纪实 `bw-documentary` · 深海航线 `captain-deep-sea` · 青瓷森语 `celadon-forest` · 银盐晨雾 `silver-morning-mist` · 纸月黑白 `paper-moon-bw` · 高原寂光 `plateau-sacred-light` · 琥珀余烬 `amber-afterglow` · 绛雪梦境 `vermilion-snow-dream` · 黑曜金界 `obsidian-gold-realm` · 雨墨霓虹 `rain-ink-neon` · 沙海静玫 `desert-silent-rose` · 鎏金城纪 `gilded-autumn-city`。
 
-![31 个照片公式前后对比](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/formula-atlas/photo-contact-sheet.jpg)
+![新原片照片实测对比：每个样例独立选材](showcase/真实样例/photo-contact-sheet.jpg)
 
 ### 视频公式（31）
 
 自然通透 `natural-clean` · 奶油柔光 `cream-soft` · 韩系清冷 `korean-cool` · 花信晴蓝 `japanese-airy` · 柔和胶片 `film-soft` · 森林青绿 `forest-cyan` · 日落暖金 `sunset-warm` · 电影低饱和 `cinematic-muted` · 青橙电影 `teal-orange` · 夜景黑金 `night-black-gold` · 美食鲜亮 `food-vivid` · 风景清透 `landscape-crisp` · 冷调霓虹夜景 `night-cool-neon` · 暖调治愈 `warm-cozy` · 克制低彩纪实 `documentary-low-color` · 闪光CCD `flash-ccd` · 雨夜蓝绿 `rainy-blue-green` · 冷灰海水 `cool-gray-sea` · 蓝调时刻 `blue-hour` · 黑白纪实 `bw-documentary` · 深海航线 `captain-deep-sea` · 青瓷森语 `celadon-forest` · 银盐晨雾 `silver-morning-mist` · 纸月黑白 `paper-moon-bw` · 高原寂光 `plateau-sacred-light` · 琥珀余烬 `amber-afterglow` · 绛雪梦境 `vermilion-snow-dream` · 黑曜金界 `obsidian-gold-realm` · 雨墨霓虹 `rain-ink-neon` · 沙海静玫 `desert-silent-rose` · 鎏金城纪 `gilded-autumn-city`。
 
-![31 个视频公式前后对比](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/formula-atlas/video-contact-sheet.jpg)
+![新原片视频实测对比：同源同帧，独立选材](showcase/真实样例/video-contact-sheet.jpg)
 
-[查看 62 个入口逐项大图、核心视觉作用、证据等级和素材许可](FORMULAS.md)。绿色“人工接受样例”严格绑定图中那份素材、强度和结果；“公开公式对比”只展示方向，不表示人工审美接受。原图按可塑空间和调整余量盲选，不按公式名称挑选已经自带目标色的素材。
+[逐张打开新样例大图与素材许可](showcase/真实样例/README.md)。以上两张图已换为本轮独立选材、正式执行的真实样例，**不是全部 31＋31 个公式的新图谱**；实际收录数量与逐项说明见样例页。没有为放大差异而给原片洗灰，也没有用 AI 重绘替代成片。
 
-图谱共 62 项：13 项复用已获人工接受的结果（照片 2 项、视频 11 项），49 项展示公开素材上的公式方向。每张都保留同源前后对比，方便你先看变化再选择；视频静帧用于比较色彩，不能代替完整动态审片。
+完整公式数量不变；尚未满足展示标准的新版对比不凑数。视频使用同源同帧对比，部分原作品节选为完整画幅的短片段进行执行；静帧不能代替动态审片。[完整目录与历史对比资料](FORMULAS.md)单独保留，不代表本轮全部重新验收。
 
 ## 它和滤镜包有什么不同
 
@@ -153,7 +153,7 @@ python3 scripts/blcaptain_color.py render --plan /输出目录/video-plan.json -
 
 ## 验证
 
-Python 3.9+ 核心运行合同与 Python 3.10.18 完整开发测试合同分开。v4.9.2 Release 只以对应标签的 CI、候选包核验与冷安装记录为准。
+Python 3.9+ 核心运行合同与 Python 3.10.18 完整开发测试合同分开。v4.9.3 Release 只以对应标签的 CI、安装包核验与冷安装记录为准。
 
 ```bash
 python3 -m unittest tests.test_v491_all_formulas_executable tests.test_public_formula_atlas tests.test_skill_package tests.test_portable_startup

@@ -1,0 +1,280 @@
+{
+  "schema_version": "2.0.0",
+  "scope": "新原片已核验样例；不是全部31照片加31视频图谱",
+  "counts": {
+    "photo": 12,
+    "video": 6
+  },
+  "entries": [
+    {
+      "id": "natural-clean",
+      "name": "自然通透",
+      "media_type": "photo",
+      "summary": "先纠正曝光与中性色偏，只恢复原片本来应有的层次和颜色，不主动添加风格。",
+      "image": "photo/natural-clean.jpg",
+      "strength_percent": 30.0,
+      "source": {
+        "title": "港湾中的船、城镇与远山",
+        "creator": "Wilfredor",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Panoramic_of_Juan_Griego.jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "cream-soft",
+      "name": "奶油柔光",
+      "media_type": "photo",
+      "summary": "Foundation 之后只在未剪切的低彩高光肩部注入轻微奶黄；阴影、中间调与记忆色保持中性。",
+      "image": "photo/cream-soft.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "白织物上的黑釉咖啡杯",
+        "creator": "Jubair1985",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Espresso_Coffee_01.jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "korean-cool",
+      "name": "韩系清冷",
+      "media_type": "photo",
+      "summary": "从已校正 Foundation 出发，只冷化人物与近中性白位保护区以外的环境，让主体保留体温。",
+      "image": "photo/korean-cool.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "玻璃前穿白外套的红发女性",
+        "creator": "Brooke Cagle brookecagle",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Woman_in_front_of_window_(Unsplash).jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "japanese-airy",
+      "name": "花信晴蓝",
+      "media_type": "photo",
+      "summary": "用粉蓝冷白建立清洁空气，以自然暖肤、柠檬黄和少量玫红形成生命色锚点。",
+      "image": "photo/japanese-airy.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "帐篷下缝纫的人与白布",
+        "creator": "Shixart1985",
+        "license": "CC BY 2.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Woman_sewing_at_craft_event_in_outdoor_tent_setting.jpg",
+        "license_url": "https://creativecommons.org/licenses/by/2.0"
+      }
+    },
+    {
+      "id": "film-soft",
+      "name": "柔和胶片",
+      "media_type": "photo",
+      "summary": "先完成中性一级校正，再以琥珀暗部趾部、中性高光肩部、记忆色保留与亮度调制颗粒建立柔和胶片感。",
+      "image": "photo/film-soft.jpg",
+      "strength_percent": 80.0,
+      "source": {
+        "title": "海岸岩面、白建筑与绿色植被",
+        "creator": "Wilfredor",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Coastal_landscape_in_Arraial_do_Cabo,_Rio_de_Janeiro_state,_Brazil.jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "cinematic-muted",
+      "name": "电影低饱和",
+      "media_type": "photo",
+      "summary": "从已校正 Foundation 出发，收窄非暖色环境的色彩宽度并建立趾肩密度，保留人物与记忆色。",
+      "image": "photo/cinematic-muted.jpg",
+      "strength_percent": 80.0,
+      "source": {
+        "title": "自然日光中的植被土壤与天空",
+        "creator": "Wilfredor",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Stenocereus_heptagonus_from_Macanao_Peninsula.jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "teal-orange",
+      "name": "青橙电影",
+      "media_type": "photo",
+      "summary": "冷暗部与暖亮部的近似全局实现；有人像时需人工检查肤色。",
+      "image": "photo/teal-orange.jpg",
+      "strength_percent": 80.0,
+      "source": {
+        "title": "厨房中的木桌、黑炉与白门窗",
+        "creator": "Andy Li",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Standen_House_kitchen_2024-10-08.jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "documentary-low-color",
+      "name": "克制低彩纪实",
+      "media_type": "photo",
+      "summary": "压低综合色彩，以冷静阴影和克制高光保留事件与空间结构。",
+      "image": "photo/documentary-low-color.jpg",
+      "strength_percent": 40.0,
+      "source": {
+        "title": "广场上的街头音乐演奏者",
+        "creator": "Wilfredor",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:Street_photography_in_Montreal_001.jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "celadon-forest",
+      "name": "青瓷森语",
+      "media_type": "photo",
+      "summary": "将黄绿收敛为温润青瓷绿，并以微暖釉色高光保持东方空气感。",
+      "image": "photo/celadon-forest.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "竹编工坊的劳动者与竹木材料",
+        "creator": "Basile Morin",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Craftmen_at_work,_bamboo_basket_weaving_and_textile_mobile_sculptures,_in_Heuan_Chan_heritage_house,_Luang_Prabang,_Laos.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    },
+    {
+      "id": "paper-moon-bw",
+      "name": "纸月黑白",
+      "media_type": "photo",
+      "summary": "以纸白高光、石墨灰影调和柔颗粒形成安静的情绪黑白。",
+      "image": "photo/paper-moon-bw.jpg",
+      "strength_percent": 100.0,
+      "source": {
+        "title": "斜射光中的木窗白墙建筑",
+        "creator": "Basile Morin",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Library_of_Amantaka_luxury_Resort_%26_Hotel_in_Luang_Prabang_Laos.jpg",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+      }
+    },
+    {
+      "id": "captain-deep-sea",
+      "name": "深海航线",
+      "media_type": "photo",
+      "summary": "以深海蓝暗部、象牙高光和克制暖色构成BLCaptain核心视觉。",
+      "image": "photo/captain-deep-sea.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "日光下的山谷土路、绿树与远山",
+        "creator": "Wilfredor",
+        "license": "CC0",
+        "url": "https://commons.wikimedia.org/wiki/File:San_Juan_Valley.jpg",
+        "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+      }
+    },
+    {
+      "id": "silver-morning-mist",
+      "name": "银盐晨雾",
+      "media_type": "photo",
+      "summary": "以银灰低彩、柔和趾肩和细颗粒形成安静晨雾气质。",
+      "image": "photo/silver-morning-mist.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "街头竖琴师与弦列",
+        "creator": "Wilfredor",
+        "license": "CC0 1.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Harpist_playing_in_the_street,_Quebec_City.jpg",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      }
+    },
+    {
+      "id": "cinematic-muted",
+      "name": "电影低饱和",
+      "media_type": "video",
+      "summary": "从已校正 Foundation 出发，收窄非暖色环境的色彩宽度并建立趾肩密度，保留人物与记忆色。",
+      "image": "video/cinematic-muted.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "面包师在桌上准备面粉",
+        "creator": "Mixkit",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/baker-preparing-the-flour-on-a-table-42463/",
+        "license_url": "https://mixkit.co/license/#videoFree"
+      }
+    },
+    {
+      "id": "teal-orange",
+      "name": "青橙电影",
+      "media_type": "video",
+      "summary": "冷暗部与暖亮部的近似全局实现；有人像时需人工检查肤色。",
+      "image": "video/teal-orange.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "街头跳街舞的年轻人",
+        "creator": "Mixkit",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/young-people-dancing-hip-hop-on-the-street-3625/",
+        "license_url": "https://mixkit.co/license/#videoFree"
+      }
+    },
+    {
+      "id": "rainy-blue-green",
+      "name": "雨夜蓝绿",
+      "media_type": "video",
+      "summary": "用冷蓝绿环境、压缩灯光和轻抬暗部表现湿地反射。",
+      "image": "video/rainy-blue-green.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "雨中街道与刹车灯",
+        "creator": "Sayakulov",
+        "license": "Pixabay Content License",
+        "url": "https://pixabay.com/videos/rain-street-brake-lights-151426/",
+        "license_url": "https://pixabay.com/service/license-summary/"
+      }
+    },
+    {
+      "id": "bw-documentary",
+      "name": "黑白纪实",
+      "media_type": "video",
+      "summary": "以深黑位、中高对比和稳定颗粒突出事件、轮廓与空间关系。",
+      "image": "video/bw-documentary.jpg",
+      "strength_percent": 65.0,
+      "source": {
+        "title": "陶艺师在工作室制作陶器",
+        "creator": "Mixkit",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/ceramic-artist-working-in-the-workshop-1971/",
+        "license_url": "https://mixkit.co/license/#videoFree"
+      }
+    },
+    {
+      "id": "paper-moon-bw",
+      "name": "纸月黑白",
+      "media_type": "video",
+      "summary": "以纸白高光、石墨灰影调和柔颗粒形成安静的情绪黑白。",
+      "image": "video/paper-moon-bw.jpg",
+      "strength_percent": 70.0,
+      "source": {
+        "title": "拿相机拍照的年轻摄影师",
+        "creator": "Mixkit",
+        "license": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/free-stock-video/portrait-of-a-woman-taking-a-photo-with-a-camera-44109/",
+        "license_url": "https://mixkit.co/license/#videoFree"
+      }
+    },
+    {
+      "id": "food-vivid",
+      "name": "美食鲜亮",
+      "media_type": "video",
+      "summary": "在可靠美食题材证据下，把综合色彩集中给食物并让环境退让，同时保护白盘、黑位与肤色。",
+      "image": "video/food-vivid.jpg",
+      "strength_percent": 55.0,
+      "source": {
+        "title": "剪刀分切披萨",
+        "creator": "Thilo Parg",
+        "license": "CC BY-SA 4.0",
+        "url": "https://commons.wikimedia.org/wiki/File:Trento_Pizza_cut_with_scissors.webm",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    }
+  ]
+}

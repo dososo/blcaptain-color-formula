@@ -1,8 +1,8 @@
-# 核心链路不需要任何 Python 第三方包。
+# 通用全局链路不需要 Python 第三方包；人物保护与人工签名区域路径例外。
 #
 # 需要的是系统工具：
 #   - Python 3.9 或更高
 #   - ffmpeg 与 ffprobe（brew install ffmpeg）
 #
 # 可选能力（语义局部）的依赖见 requirements-optional.txt；
-# 不装也能用，只是不做语义蒙版。
+# 不装仍可使用全局方向；需保护/人工区域的方向明确阻断，不降级为无保护版本。
