@@ -49,9 +49,15 @@ class SignatureRegionsTests(unittest.TestCase):
         return [tuple(data[i:i + 3]) for i in range(0, len(data), 3)]
 
     def test_cli_preflight_has_complete_composition_contract(self):
-        from PIL import Image, ImageCms
+        from PIL import Image, PngImagePlugin
         image = Image.open(self.source)
-        image.save(self.source, icc_profile=ImageCms.ImageCmsProfile(ImageCms.createProfile('sRGB')).tobytes())
+        tags = PngImagePlugin.PngInfo()
+        tags.add(b'sRGB', bytes([0]))
+        tags.add(b'cICP', bytes([1, 13, 0, 1]))
+        image.save(self.source, pnginfo=tags)
+        stream = next(item for item in engine.probe(self.source)['streams'] if item['codec_type'] == 'video')
+        self.assertEqual(stream.get('color_primaries'), 'bt709')
+        self.assertEqual(stream.get('color_transfer'), 'iec61966-2-1')
         self.spec['source_sha256'] = engine.sha256(self.source)
         spec = self.root / 'regions.json'
         spec.write_text(json.dumps(self.spec), encoding='utf-8')
