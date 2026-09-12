@@ -8,7 +8,9 @@
 
 [Download](https://github.com/dososo/blcaptain-color-formula/releases/latest) · [Start in three steps](#install) · [Explore all 62 comparisons](FORMULAS.en.md)
 
-![BLCaptain Visual Director and Color Formula](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/hero-1600x900.png)
+![BLCaptain 调色 Skill：先看懂画面，再决定色彩](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/hero-editorial.png)
+
+<sub>AI 生成宣传主视觉；不是调色前后实测。实际效果请看下方同源对比。</sub>
 
 | Unique formulas | Photos | Standard SDR video | Original protection |
 | :---: | :---: | :---: | :---: |

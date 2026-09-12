@@ -8,7 +8,9 @@
 
 [立即下载](https://github.com/dososo/blcaptain-color-formula/releases/latest) · [三步开始](#安装) · [查看全部 62 个前后对比](FORMULAS.md)
 
-![BLCaptain 摄影视觉导演与调色公式](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/hero-1600x900.png)
+![BLCaptain 调色 Skill：先看懂画面，再决定色彩](https://raw.githubusercontent.com/dososo/blcaptain-color-formula/main/showcase/hero-editorial.png)
+
+<sub>AI 生成宣传主视觉；不是调色前后实测。实际效果请看下方同源对比。</sub>
 
 | 完整公式 | 照片 | 普通 SDR 视频 | 原片保护 |
 | :---: | :---: | :---: | :---: |
